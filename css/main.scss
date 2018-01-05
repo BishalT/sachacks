@@ -7,7 +7,7 @@ body {
 }
 
 .main {
-  position: absolute;
+  position: block;
   margin: 0;
   padding: 0;
   height: 100vh;
@@ -26,8 +26,7 @@ body {
     display: inline-block;
     img {
       padding-left: 3%;
-      width: 24%;
-      height: 15%;
+      width: 28%;
     }
   }
 
@@ -42,6 +41,41 @@ body {
       opacity: 0.8;
     }
   }
+}
 
+.present {
+  text-align:center;
+  display:block;
 
+  .desktop {
+    img {
+      padding-left: 3%;
+      width: 55%;
+      margin-right: 3.2%;
+    }
+
+    p{
+      position: absolute;
+      bottom: 23%;
+      left: 0;
+      width: 100%;
+      font-size: 4.5em;
+      color: white;
+      font-weight: 300;
+      letter-spacing: .05em;
+    }
+  }
+}
+
+.who_we_are {
+  text-align: center;
+  display: block;
+  padding: 3%;
+
+  p{
+    padding-top: 1%;
+    margin: 0% 25%;
+    line-height: 1.7em;
+    font-size: 1.2em;
+  }
 }
