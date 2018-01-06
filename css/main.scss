@@ -52,16 +52,20 @@ body {
 
   .desktop {
     .desk_img {
+      position: absolute;
       max-width: 55%;
-      margin-left: 10%;
-      margin-top: 5vh;
+
+      margin-top: 5%;
+      // top: 3%;
+      z-index: 10;
     }
 
     .mouse_img {
-      max-width: 7%;
-      max-height: 25%;
-      margin-left: 29%;
-      margin-top: -26vh;
+      position: absolute;
+      // max-height: 25%;
+
+      top: 60%;
+      // margin-top: -30vh;
     }
 
     .rocket {
@@ -69,13 +73,11 @@ body {
       z-index: 11;
       max-width: 7%;
       max-height: 25%;
-      margin-left: 40%;
-      margin-top: 2vh;
     }
 
     p{
       position: absolute;
-      bottom: 13vh;
+      bottom: 0vh;
       left: 0;
       width: 100%;
       font-size: 10vh;
@@ -137,4 +139,82 @@ body {
     50%  { transform: translate(0, 15px) rotate(-5deg); }
     75%  { transform: translate(0, 15px) rotate(10deg); }
     100%   { transform: translate(0, -0px) rotate(5deg); }
+}
+
+@media (max-width:999px) and (min-width:500px) {
+  .mouse_img {
+    margin-left: 12%;
+    max-width: 11vh;
+  }
+
+  .rocket {
+    margin-top: 10%;
+  }
+
+  .desk_img {
+    bottom: 15%;
+    left: 22%;
+  }
+
+  p {
+    color:red;
+  }
+}
+
+@media (max-width:1499px) and (min-width:1000px) {
+  .mouse_img {
+    margin-left: 13%;
+    max-width: 11vh;
+  }
+
+  .rocket {
+    margin-top: 5%;
+  }
+
+  .desk_img {
+    bottom: 10%;
+    left: 21.5%;
+  }
+
+  p {
+    color:yellow;
+  }
+}
+
+@media (max-width:1900px) and (min-width:1500px) {
+  .mouse_img {
+    margin-left: 11%;
+    max-width: 11vh;
+  }
+
+  .desk_img{
+    left: 22%;
+  }
+
+  .rocket {
+    margin-top: 3%;
+  }
+
+  p {
+    color:blue;
+  }
+}
+
+@media (max-width:20000px) and (min-width:1900px) {
+  .mouse_img {
+    margin-left: 9%;
+    max-width: 11vh;
+  }
+
+  .desk_img{
+    left: 22%;
+  }
+
+  .rocket {
+    margin-top: 4%;
+  }
+
+  p {
+    color:purple;
+  }
 }
