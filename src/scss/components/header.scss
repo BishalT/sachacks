@@ -1,0 +1,14 @@
+// main header
+.header {
+  margin: 0px 2%;
+  max-width: 800px; 
+  .logo {
+    width: 80%;
+    display: inline-block;
+    img {
+      padding-left: 3vh;
+      max-height: 200px ;
+    }
+  }
+}
+

@@ -1,0 +1,31 @@
+.schedule {
+  text-align: center;
+  h1{
+    color: white;
+    font-size: $title;
+  }
+  h3{
+    color:white;
+    font-size: $detail;
+  }
+  .progress-box{
+    div{
+      margin: 0 auto;
+      height: 30px;
+      width: 600px;
+      border:0.5px solid $yellow;
+      @include flex-center;
+      align-items: flex-start;
+      div{
+        margin: 0 0 0 5px;
+        height: 20px;
+        width: 70%;
+        background-color: $yellow;
+      }
+    }
+    p{
+      margin: 5px;
+      color: $yellow;
+    }
+  }
+}
