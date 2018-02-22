@@ -1,0 +1,32 @@
+.sponsor{
+  text-align: center;
+  h1 {
+    color: white;
+    font-size: $title;
+  }
+  .list-sponsor {
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    img {
+      width: 150px;
+      height: 150px;
+      margin: 20px;
+    }
+  }
+  h3 {
+    margin: 20px auto;
+    width: 800px;
+    color: white;
+    text-align: center;
+    font-size: $header;
+    line-height: $detailHeight;
+    span{
+      color: $yellow;
+    }
+    a{
+      color: white;
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.FAQ {
+  text-align: center;
+  h1{
+    color: white;
+    font-size: $title;
+  }
+  .Q-and-A{
+    width: 900px;
+    margin: 0 auto;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px 40px;;
+    li{
+      list-style: none;
+      h3{
+        color: $yellow;
+        font-size: $header;
+        margin: 0;
+      }
+      p{
+        color:white;
+        font-size: $detail;
+        line-height: $detailHeight;
+        text-align: left;
+        a{
+          // text-decoration: underline;
+          text-underline-position: under;
+          color: white;
+        }
+      }
+    }
+  }
+  h3{
+    color: white;
+    font-size: $header;
+    a{
+      color: $yellow;
+      text-decoration: none;
+    }
+  }
+}

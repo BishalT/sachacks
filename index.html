@@ -1,55 +1,51 @@
----
----
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> SacHacks </title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon" href="{{ "/images/blue_rocket.png" | prepend: site.baseurl }}" type="image/png" sizes="16x16">
-    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-  </head>
-  <body>
-    <div class="main">
-      <div class="header">
-        <div class="logo">
-          <img src="{{ "/images/logo-MLH.png" | prepend: site.baseurl }}">
-        </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hack Sacramento</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <div class="logo">
+        <img src="images/logo-MLH.png">
       </div>
-      <div class="navbar">
-        <div class="container">
-          <div class="rocket">
-            <img src="{{ "/images/rocket.png" | prepend: site.baseurl }}" alt="">
-            <div></div>
-          </div>        
-          <ul class="control-btn">
-            <li name="0">Home</li>
-            <li name="1">About</li>
-            <li name="2">Schedule</li>
-            <li name="3">FAQ</li>
-            <li name="4">Sponsor</li>
-            <li name="4">Contact</li>
-          </ul>
-        </div>
+    </div>
+    <div class="navbar">
+      <div class="container">
+        <div class="rocket">
+          <img src="images/rocket-white.png" alt="">
+          <div></div>
+        </div>        
+        <ul class="control-btn">
+          <li name="0">Home</li>
+          <li name="1">About</li>
+          <li name="2">Schedule</li>
+          <li name="3">FAQ</li>
+          <li name="4">Sponsor</li>
+        </ul>
       </div>
-      <div class="page homepage">
-        <img src="{{ "/images/hacksac.png" | prepend: site.baseurl }}" alt="">
+    </div>
+    <div class="page homepage">
+      <img src="images/hacksac.png" alt="">
+      <div class="detail">
         <h2>
           <span>Design.</span>
           <span>Code.</span>
           <span>Launch.</span>
         </h2>
-        <h3>October 13-14,2018|Sacramento,CA</h3>
+        <h3>October 13 - 14, 2018 | Sacramento , CA</h3>
         <div>
-          <button>Apply</button>
-          <button>Mentor</button>
+          <button class="btn">Apply</button>
+          <button class="btn">Mentor</button>
         </div>
       </div>
-      <div class="page about">
-        <h1>A BIT ABOUT US</h1>
+    </div>
+    <div class="page about">
+      <h1>A BIT ABOUT US</h1>
+      <div class="detail">
         <p>
             SacHacks is the first major collegiate hackathon in the Sacramento, California area. Our passion is to create opportunities for those with potential to launch their ideas in a public venue. We provide the place, you bring your ideas, and we have a friendly competition between all creative coders to launch their ideas into action during a 36-hour hackathon.
         </p>
@@ -57,13 +53,72 @@
             Food and refreshments will be provided by our team. Just bring yourself and your laptop! And maybe your sleepingbag.
         </p>
       </div>
-      <div class="page schedule">
-      </div>
-      <div class="page FAQ"></div>
-      <div class="page sponsor"></div>
-      <div class="page contact"></div>
     </div>
+    <div class="page schedule">
+      <h1>SCHEDULE</h1>
+      <h3>October 13-14, 2018 | Sacramento, CA</h3>
+      <div class="progress-box">
+        <div> <div></div> </div>
+        <p>loading...we are trying, really!</p>
+      </div>
+      <h3>Check back for more info later</h3>
+    </div>
+    <div class="page FAQ">
+      <h1>FAQ</h1>
+      <div class="Q-and-A">
+        <li>
+          <h3>What is hackathon</h3>
+          <p>
+            A hackathon occurs when passionate people gather together to create, build, and launch their ideas with tech.
+          </p>
+        </li>
+        <li>
+          <h3>How much does it cost?</h3>
+          <p>
+            Everything is provided by our team and sponsors. Event is free to attend.
+          </p>
+        </li>
+        <li>
+          <h3>Who can attend?</h3>
+          <p>
+            Any undergraduate student, graduate student, or industry professionals over the age of 18 are welcome!
+          </p>
+        </li>
+        <li>
+          <h3>Code of Conduct?</h3>
+          <p>
+            All participants of our event must follow the MLH Code of Conduct. Click to download pdf for more information:
+            <a href="#">MLH Code of Conduct PDF</a>
+          </p>
+        </li>
+        <li>
+          <h3>I’m not the best coder. Can I still attend?</h3>
+          <p>
+            Yes, we embrace diversity. It will be a great opporunity to pick up new skills from other coders at the event. Applications are not filtered based on experience.
+          </p>
+        </li>
+        <li>
+          <h3>I don’t have a team. Can I still attend?</h3>
+          <p>
+            Yes! We will have a team mixer for hackers to form teams.
+          </p>
+        </li>
+      </div>
+      <h3>
+          Have more questions? Feel free to email us at <a href="mailto:team@sachacks.io">team@sachacks.io.</a>
+      </h3>
+    </div>
+    <div class="page sponsor">
+      <h1>SPONSOR</h1>
+      <div class="list-sponsor">
+        <img src="images/ascend_logo.jpg" alt="">
+        <img src="images/hs_logo.jpg" alt="">
+      </div>
+      <button class="btn">SPONSOR</button>
+      <h3>Interested in sponsoring? Download our <span>Sponsorship Deck PDF</span> for more information or email us at <a href="mailto:team@sachacks.io">team@sachacks.io.</a></h3>
+    </div>
+  </div>
+  <script src="./dist/bundle.js"></script>
 
-    <script src="{{ "/js/main.js" | prepend: site.baseurl }}"></script>
-  </body>
+</body>
 </html>

@@ -1,0 +1,142 @@
+---
+---
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+// main background
+.main {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  background: url('{{ "/images/star-bg.png" | prepend: site.baseurl }}' );
+  background-attachment: fixed;
+  background-size: 100% 100vh;
+}
+
+// main header
+.header {
+  margin: 0px 2%;
+  max-width: 800px; 
+  .logo {
+    width: 80%;
+    display: inline-block;
+    img {
+      padding-left: 3vh;
+      max-height: 200px ;
+    }
+  }
+}
+
+// navbar 
+.navbar{
+  height: 100%;
+  width: 120px;
+  position: absolute;
+  right: 10px;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  .container{
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 70%;
+    width: 100%;
+  }
+}
+.rocket{
+  height: 100%;
+  width: 60px;
+  position: absolute;
+  left: 0;
+  text-align: center;
+  margin: 0;
+  img{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    display: block;
+    z-index: 1;
+    left: 0;
+    top: 10px;
+    transform: rotate(180deg);
+  }
+  div{
+    width: 1px;
+    background-color: #9E9E9E;
+    height: 100%;
+    z-index: -1;
+    margin: 0 auto;
+  }
+}
+
+.control-btn {
+  height: 80%;
+  right: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  li{
+    text-align: center;
+    padding: 2px;
+    width: 50px;
+    height: 20px;
+    color: #546E7A;
+    filter: grayscale(0%);
+    &:hover{
+      cursor: pointer;
+      color: white;
+      font-weight: 600;
+    }
+  }
+  .active{
+    color:white;
+    font-weight: 600;
+  }
+}
+
+
+
+// homepage
+.homepage{
+  text-align: center;
+  img{
+    max-width: 100%;
+    width: 800px;
+  }
+  h2{
+    font-size: 2.6em;
+    color: #DAAA00;
+    span{
+      margin: 5px 20px;
+    }
+  }
+  h3{
+    color:white;
+    font-size: 2.1em;
+    -webkit-margin-before: 0;
+  }
+  button{
+    color: black;
+    background-color: white;
+    font-size: 1.6em;
+  }
+}
+
+// about page
+.about{
+  h1{
+    color: white;
+    text-align: center;
+  }
+}
