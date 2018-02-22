@@ -1,0 +1,65 @@
+// font size
+$title : 2.8em;
+$header: 1.6em;
+$detail: 1.2em;
+$detailHeight: 1.6em;
+
+// color
+$yellow : #DAAA00;
+
+// layout
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+}
+@mixin flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@import './components/navbar.scss';
+@import './components/header.scss';
+@import './components/homepage.scss';
+@import './components/about.scss';
+@import './components/schedule.scss';
+@import './components/FAQ.scss';
+@import './components/sponsor.scss';
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+// main background
+.wrapper {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  background-attachment: fixed;
+  background-size: 100% 100vh;
+}
+
+.btn {
+  color: white;
+  background-color: transparent;
+  font-size: 1.6em;
+  padding: 5px 20px;
+  text-align: center;
+  border-radius: 20px;  
+  margin: 0 20px;
+  border: 2px solid white;
+  &:hover{
+    background-color: $yellow;
+    border: 2px solid $yellow;
+    cursor: pointer;
+  }  
+}
+
