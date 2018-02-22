@@ -70,9 +70,6 @@
 "use strict";
 
 
-<<<<<<< HEAD
-var _navbar = __webpack_require__(1);
-=======
 var _changeBgImg = __webpack_require__(1);
 
 var _changeBgImg2 = _interopRequireDefault(_changeBgImg);
@@ -90,26 +87,12 @@ var wrapper = document.querySelector('.wrapper');
 
 // scss
 // javascript helpers
->>>>>>> master
 
-var _navbar2 = _interopRequireDefault(_navbar);
-
-__webpack_require__(2);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// javascript helpers
 var allSlides = document.querySelectorAll('.page');
-
-// scss
-
 var controllBtns = document.querySelectorAll('.control-btn li');
 
-<<<<<<< HEAD
-=======
 _changeBgImg2.default.target(wrapper);
 
->>>>>>> master
 var navbar = new _navbar2.default(allSlides, controllBtns);
 
 // initiate the sliders
@@ -132,8 +115,6 @@ controllBtns.forEach(function (btn) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-<<<<<<< HEAD
-=======
 var path2Img = '../../../images/star-bg.png';
 var changeBgImg = {
   target: function target(_target) {
@@ -157,7 +138,6 @@ exports.default = changeBgImg;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
->>>>>>> master
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -216,19 +196,11 @@ function removeAllActiveClass() {
 exports.default = NavBar;
 
 /***/ }),
-<<<<<<< HEAD
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(3);
-=======
 /* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 var content = __webpack_require__(4);
->>>>>>> master
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -242,11 +214,7 @@ var options = {"hmr":true}
 options.transform = transform
 options.insertInto = undefined;
 
-<<<<<<< HEAD
-var update = __webpack_require__(5)(content, options);
-=======
 var update = __webpack_require__(6)(content, options);
->>>>>>> master
 
 if(content.locals) module.exports = content.locals;
 
@@ -278,36 +246,21 @@ if(false) {
 }
 
 /***/ }),
-<<<<<<< HEAD
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(4)(false);
-=======
 /* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(5)(false);
->>>>>>> master
 // imports
 
 
 // module
-<<<<<<< HEAD
-exports.push([module.i, ".navbar {\n  height: 100%;\n  width: 120px;\n  position: absolute;\n  right: 10px;\n  top: 0;\n  bottom: 0;\n  z-index: 100;\n  display: flex;\n  align-items: center; }\n  .navbar .container {\n    display: flex;\n    align-items: center;\n    position: relative;\n    height: 70%;\n    width: 100%; }\n\n.rocket {\n  height: 100%;\n  width: 60px;\n  position: absolute;\n  left: 0;\n  text-align: center;\n  margin: 0; }\n  .rocket img {\n    width: 60px;\n    height: 60px;\n    position: absolute;\n    display: block;\n    z-index: 1;\n    left: 0;\n    top: 10px;\n    transform: rotate(180deg); }\n  .rocket div {\n    width: 1px;\n    background-color: #9E9E9E;\n    height: 100%;\n    z-index: -1;\n    margin: 0 auto; }\n\n.control-btn {\n  height: 80%;\n  right: 0;\n  list-style: none;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: center;\n  margin: 0; }\n  .control-btn li {\n    text-align: center;\n    padding: 2px;\n    width: 50px;\n    height: 20px;\n    color: #546E7A;\n    filter: grayscale(0%); }\n    .control-btn li:hover {\n      cursor: pointer;\n      color: white;\n      font-weight: 600; }\n  .control-btn .active {\n    color: white;\n    font-weight: 600; }\n\n.header {\n  margin: 0px 2%;\n  max-width: 800px; }\n  .header .logo {\n    width: 80%;\n    display: inline-block; }\n    .header .logo img {\n      padding-left: 3vh;\n      max-height: 200px; }\n\n.homepage {\n  text-align: center; }\n  .homepage img {\n    max-width: 100%;\n    width: 800px; }\n  .homepage .detail {\n    max-width: 800px;\n    margin: 0 auto; }\n    .homepage .detail h2 {\n      font-size: 2.6em;\n      color: #DAAA00; }\n      .homepage .detail h2 span {\n        margin: 5px 20px; }\n    .homepage .detail h3 {\n      white-space: pre-wrap;\n      color: white;\n      font-size: 2.1em;\n      -webkit-margin-before: 0; }\n    .homepage .detail div {\n      width: 90%;\n      display: flex;\n      flex-direction: row;\n      justify-content: flex-end; }\n      .homepage .detail div button {\n        color: white;\n        background-color: transparent;\n        font-size: 1.6em;\n        padding: 5px 20px;\n        text-align: center;\n        border-radius: 20px;\n        margin: 0 20px;\n        border: 2px solid white; }\n        .homepage .detail div button:hover {\n          background-color: #DAAA00;\n          border: 2px solid #DAAA00;\n          cursor: pointer; }\n\n.about h1 {\n  color: white;\n  text-align: center;\n  font-size: 2.8em; }\n\n.about .detail {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center; }\n  .about .detail p {\n    max-width: 800px;\n    color: white;\n    font-size: 1.2em;\n    line-height: 1.6em; }\n\n.schedule {\n  text-align: center; }\n  .schedule h1 {\n    color: white;\n    font-size: 2.8em; }\n  .schedule h3 {\n    color: white;\n    font-size: 2.1em; }\n  .schedule .progress-box div {\n    margin: 0 auto;\n    height: 30px;\n    width: 600px;\n    border: 0.5px solid #DAAA00;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    align-items: flex-start; }\n    .schedule .progress-box div div {\n      margin: 0 0 0 5px;\n      height: 20px;\n      width: 70%;\n      background-color: #DAAA00; }\n  .schedule .progress-box p {\n    margin: 5px;\n    color: #DAAA00; }\n\n.FAQ {\n  text-align: center; }\n  .FAQ h1 {\n    color: white;\n    font-size: 2.8em; }\n  .FAQ .Q-and-A h3 {\n    color: yellow; }\n  .FAQ .Q-and-A p {\n    color: white; }\n\nbody {\n  margin: 0;\n  padding: 0; }\n\n.wrapper {\n  position: relative;\n  margin: 0;\n  padding: 0;\n  height: 100vh;\n  width: 100%;\n  background: url(\"/images/star-bg.png\");\n  background-attachment: fixed;\n  background-size: 100% 100vh; }\n", ""]);
-=======
-exports.push([module.i, ".navbar {\n  height: 100%;\n  width: 120px;\n  position: absolute;\n  right: 10px;\n  top: 0;\n  bottom: 0;\n  z-index: 100;\n  display: flex;\n  align-items: center; }\n  .navbar .container {\n    display: flex;\n    align-items: center;\n    position: relative;\n    height: 70%;\n    width: 100%; }\n\n.rocket {\n  height: 100%;\n  width: 60px;\n  position: absolute;\n  left: 0;\n  text-align: center;\n  margin: 0; }\n  .rocket img {\n    width: 60px;\n    height: 60px;\n    position: absolute;\n    display: block;\n    z-index: 1;\n    left: 0;\n    top: 10px;\n    transform: rotate(180deg); }\n  .rocket div {\n    width: 1px;\n    background-color: #9E9E9E;\n    height: 100%;\n    z-index: -1;\n    margin: 0 auto; }\n\n.control-btn {\n  height: 80%;\n  right: 0;\n  list-style: none;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: center;\n  margin: 0; }\n  .control-btn li {\n    text-align: center;\n    padding: 2px;\n    width: 50px;\n    height: 20px;\n    color: #546E7A;\n    filter: grayscale(0%); }\n    .control-btn li:hover {\n      cursor: pointer;\n      color: white;\n      font-weight: 600; }\n  .control-btn .active {\n    color: white;\n    font-weight: 600; }\n\n.header {\n  margin: 0px 2%;\n  max-width: 800px; }\n  .header .logo {\n    width: 80%;\n    display: inline-block; }\n    .header .logo img {\n      padding-left: 3vh;\n      max-height: 200px; }\n\n.homepage {\n  text-align: center; }\n  .homepage img {\n    max-width: 100%;\n    width: 800px; }\n  .homepage .detail {\n    max-width: 800px;\n    margin: 0 auto; }\n    .homepage .detail h2 {\n      font-size: 2.6em;\n      color: #DAAA00; }\n      .homepage .detail h2 span {\n        margin: 5px 20px; }\n    .homepage .detail h3 {\n      white-space: pre-wrap;\n      color: white;\n      font-size: 2.1em;\n      -webkit-margin-before: 0; }\n    .homepage .detail div {\n      width: 90%;\n      display: flex;\n      flex-direction: row;\n      justify-content: flex-end; }\n      .homepage .detail div button {\n        color: white;\n        background-color: transparent;\n        font-size: 1.6em;\n        padding: 5px 20px;\n        text-align: center;\n        border-radius: 20px;\n        margin: 0 20px;\n        border: 2px solid white; }\n        .homepage .detail div button:hover {\n          background-color: #DAAA00;\n          border: 2px solid #DAAA00;\n          cursor: pointer; }\n\n.about h1 {\n  color: white;\n  text-align: center;\n  font-size: 2.8em; }\n\n.about .detail {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center; }\n  .about .detail p {\n    max-width: 800px;\n    color: white;\n    font-size: 1.2em;\n    line-height: 1.6em; }\n\n.schedule {\n  text-align: center; }\n  .schedule h1 {\n    color: white;\n    font-size: 2.8em; }\n  .schedule h3 {\n    color: white;\n    font-size: 2.1em; }\n  .schedule .progress-box div {\n    margin: 0 auto;\n    height: 30px;\n    width: 600px;\n    border: 0.5px solid #DAAA00;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    align-items: flex-start; }\n    .schedule .progress-box div div {\n      margin: 0 0 0 5px;\n      height: 20px;\n      width: 70%;\n      background-color: #DAAA00; }\n  .schedule .progress-box p {\n    margin: 5px;\n    color: #DAAA00; }\n\n.FAQ {\n  text-align: center; }\n  .FAQ h1 {\n    color: white;\n    font-size: 2.8em; }\n  .FAQ .Q-and-A h3 {\n    color: yellow; }\n  .FAQ .Q-and-A p {\n    color: white; }\n\nbody {\n  margin: 0;\n  padding: 0; }\n\n.wrapper {\n  position: relative;\n  margin: 0;\n  padding: 0;\n  height: 100vh;\n  width: 100%;\n  background-attachment: fixed;\n  background-size: 100% 100vh; }\n", ""]);
->>>>>>> master
+exports.push([module.i, ".navbar {\n  height: 100%;\n  width: 120px;\n  position: absolute;\n  right: 10px;\n  top: 0;\n  bottom: 0;\n  z-index: 100;\n  display: flex;\n  align-items: center; }\n  .navbar .container {\n    display: flex;\n    align-items: center;\n    position: relative;\n    height: 60%;\n    width: 100%; }\n\n.rocket {\n  height: 100%;\n  width: 60px;\n  position: absolute;\n  left: 0;\n  text-align: center;\n  margin: 0; }\n  .rocket img {\n    width: 60px;\n    height: 60px;\n    position: absolute;\n    display: block;\n    z-index: 1;\n    left: 0;\n    top: 10px;\n    transform: rotate(180deg); }\n  .rocket div {\n    width: 1px;\n    background-color: #9E9E9E;\n    height: 100%;\n    z-index: -1;\n    margin: 0 auto; }\n\n.control-btn {\n  height: 80%;\n  right: 0;\n  list-style: none;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: center;\n  margin: 0; }\n  .control-btn li {\n    text-align: center;\n    padding: 2px;\n    width: 50px;\n    height: 20px;\n    color: #546E7A;\n    filter: grayscale(0%); }\n    .control-btn li:hover {\n      cursor: pointer;\n      color: white;\n      font-weight: 600; }\n  .control-btn .active {\n    color: white;\n    font-weight: 600; }\n\n.header {\n  margin: 0px 2%;\n  max-width: 800px; }\n  .header .logo {\n    width: 80%;\n    display: inline-block; }\n    .header .logo img {\n      padding-left: 3vh;\n      max-height: 200px; }\n\n.homepage {\n  text-align: center; }\n  .homepage img {\n    max-width: 100%;\n    width: 800px; }\n  .homepage .detail {\n    max-width: 800px;\n    margin: 0 auto; }\n    .homepage .detail h2 {\n      font-size: 2.6em;\n      color: #DAAA00; }\n      .homepage .detail h2 span {\n        margin: 5px 20px; }\n    .homepage .detail h3 {\n      white-space: pre-wrap;\n      color: white;\n      font-size: 2.1em;\n      -webkit-margin-before: 0; }\n    .homepage .detail div {\n      width: 90%;\n      display: flex;\n      flex-direction: row;\n      justify-content: flex-end; }\n      .homepage .detail div button {\n        color: white;\n        background-color: transparent;\n        font-size: 1.6em;\n        padding: 5px 20px;\n        text-align: center;\n        border-radius: 20px;\n        margin: 0 20px;\n        border: 2px solid white; }\n        .homepage .detail div button:hover {\n          background-color: #DAAA00;\n          border: 2px solid #DAAA00;\n          cursor: pointer; }\n\n.about h1 {\n  color: white;\n  text-align: center;\n  font-size: 2.8em; }\n\n.about .detail {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center; }\n  .about .detail p {\n    max-width: 800px;\n    color: white;\n    font-size: 1.2em;\n    line-height: 1.6em; }\n\n.schedule {\n  text-align: center; }\n  .schedule h1 {\n    color: white;\n    font-size: 2.8em; }\n  .schedule h3 {\n    color: white;\n    font-size: 2.1em; }\n  .schedule .progress-box div {\n    margin: 0 auto;\n    height: 30px;\n    width: 600px;\n    border: 0.5px solid #DAAA00;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    align-items: flex-start; }\n    .schedule .progress-box div div {\n      margin: 0 0 0 5px;\n      height: 20px;\n      width: 70%;\n      background-color: #DAAA00; }\n  .schedule .progress-box p {\n    margin: 5px;\n    color: #DAAA00; }\n\n.FAQ {\n  text-align: center; }\n  .FAQ h1 {\n    color: white;\n    font-size: 2.8em; }\n  .FAQ .Q-and-A {\n    width: 60%;\n    margin: 0 auto;\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr;\n    grid-gap: 20px; }\n    .FAQ .Q-and-A li h3 {\n      color: #DAAA00; }\n    .FAQ .Q-and-A li p {\n      color: white; }\n\nbody {\n  margin: 0;\n  padding: 0; }\n\n.wrapper {\n  position: relative;\n  margin: 0;\n  padding: 0;\n  height: 100vh;\n  width: 100%;\n  background-attachment: fixed;\n  background-size: 100% 100vh; }\n", ""]);
 
 // exports
 
 
 /***/ }),
-<<<<<<< HEAD
-/* 4 */
-=======
 /* 5 */
->>>>>>> master
 /***/ (function(module, exports) {
 
 /*
@@ -389,11 +342,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-<<<<<<< HEAD
-/* 5 */
-=======
 /* 6 */
->>>>>>> master
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -459,11 +408,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-<<<<<<< HEAD
-var	fixUrls = __webpack_require__(6);
-=======
 var	fixUrls = __webpack_require__(7);
->>>>>>> master
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -779,11 +724,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-<<<<<<< HEAD
-/* 6 */
-=======
 /* 7 */
->>>>>>> master
 /***/ (function(module, exports) {
 
 
