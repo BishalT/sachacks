@@ -29,6 +29,7 @@ $yellow : #DAAA00;
 @import './components/about.scss';
 @import './components/schedule.scss';
 @import './components/FAQ.scss';
+@import './components/sponsor.scss';
 
 body {
   margin: 0;
@@ -46,4 +47,19 @@ body {
   background-size: 100% 100vh;
 }
 
+.btn {
+  color: white;
+  background-color: transparent;
+  font-size: 1.6em;
+  padding: 5px 20px;
+  text-align: center;
+  border-radius: 20px;  
+  margin: 0 20px;
+  border: 2px solid white;
+  &:hover{
+    background-color: $yellow;
+    border: 2px solid $yellow;
+    cursor: pointer;
+  }  
+}
 
