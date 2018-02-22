@@ -9,13 +9,18 @@
     margin: 0 auto;
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px;
+    grid-gap: 20px 40px;;
     li{
       h3{
         color: $yellow;
+        font-size: $header;
+        margin: 0;
       }
       p{
         color:white;
+        font-size: $detail;
+        line-height: $detailHeight;
+        text-align: left;
       }
     }
   }
