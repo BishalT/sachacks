@@ -5,11 +5,18 @@
     font-size: $title;
   }
   .Q-and-A{
-    h3{
-      color: yellow;
-    }
-    p{
-      color:white;
+    width: 60%;
+    margin: 0 auto;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    li{
+      h3{
+        color: $yellow;
+      }
+      p{
+        color:white;
+      }
     }
   }
 }
