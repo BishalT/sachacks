@@ -1,7 +1,7 @@
 // font size
-$title : 2.6em;
-$header: 1.4em;
-$detail: 1.2em;
+$title : 2.4em;
+$header: 1.2em;
+$detail: 1.0em;
 $detailHeight: 1.4em;
 
 // color
@@ -34,7 +34,7 @@ $yellow : #DAAA00;
 body {
   margin: 0;
   padding: 0;
-  font-family: avenir next, verdana, sans serif;
+  font-family: 'Muli', sans-serif;
 }
 
 // main background
@@ -46,6 +46,12 @@ body {
   width: 100%;
   background-attachment: fixed;
   background-size: 100% 100vh;
+}
+
+.page {
+  position: absolute;
+  top: 100px;
+  width: 100%;
 }
 
 .btn {
