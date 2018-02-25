@@ -7,21 +7,20 @@ import '../scss/index.scss';
 
 // search the DOM
 let wrapper = document.querySelector('.wrapper');
-let allSlides = document.querySelectorAll('.page');
+let pages = document.querySelectorAll('.page');
 let controllBtns = document.querySelectorAll('.control-btn li');
+const rocketParent = document.querySelector('.rocket');
 
+const navbar = new NavBar(pages,controllBtns,rocketParent);
 changeBgImg.target(wrapper);
 
-
-const navbar = new NavBar(allSlides,controllBtns);
-
-// initiate the sliders
-navbar.startFirstSlide();
+// initiate first page
+navbar.init();
 
 // add click event all all control btn
-controllBtns.forEach((btn) => {
-  btn.addEventListener('click',function(){
-    navbar.handleSlideMove(this);
-  });
-})
+// controllBtns.forEach((btn) => {
+//   btn.addEventListener('click',function(){
+//     navbar.handleBtnClick(this);
+//   });
+// })
 
