@@ -1,6 +1,7 @@
 // javascript helpers
 import changeBgImg from './utils/changeBgImg';
 import NavBar from './utils/navbar';
+import switchPageOnWheel from './utils/switchPageOnWheel';
 
 // scss
 import '../scss/index.scss';
@@ -13,6 +14,7 @@ const rocketParent = document.querySelector('.rocket');
 
 // instantiate navbar
 const navbar = new NavBar(pages,controllBtns,rocketParent);
+let pageNum = 0;
 
 // initiate homepage
 navbar.init();
@@ -21,4 +23,6 @@ navbar.init();
 // EX: github/sachacks/ 
 changeBgImg.target(wrapper);
 
-
+switchPageOnWheel.init(controllBtns,(pageIndex) => {
+  navbar.handleBtnClick(pageIndex);
+});
