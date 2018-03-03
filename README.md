@@ -17,4 +17,4 @@ npm run start
 ``` 
 npm run build
 ```
-**NOTE**: This command will build/combine everything into a single *bundle.js* where is consumed by *html file*. Thus, this will be what you see if you open html directly without running **2nd command**.  
+**NOTE**: This command will build/combine everything into a single **bundle.js** in **dist folder**, which is consumed by *html file*. Thus, this will be what you see if you open html directly without running **2nd command**. You can now deloy this project using that **bundle.js**
