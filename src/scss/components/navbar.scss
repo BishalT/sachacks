@@ -7,7 +7,7 @@
   top: 0;
   bottom: 0;
   z-index: 100;
-  display: flex;
+  display: none;
   align-items: center;
   .container{
     display: flex;
@@ -15,6 +15,9 @@
     position: relative;
     height: 60%;
     width: 100%;
+  }
+  @media screen and (min-width:1024px){
+    display: flex;
   }
 }
 .rocket{

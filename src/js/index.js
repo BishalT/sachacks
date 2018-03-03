@@ -1,26 +1,35 @@
 // javascript helpers
 import changeBgImg from './utils/changeBgImg';
 import NavBar from './utils/navbar';
+// import switchPageOnWheel from './utils/switchPageOnWheel';
 
 // scss
 import '../scss/index.scss';
 
 // search the DOM
-let wrapper = document.querySelector('.wrapper');
-let pages = document.querySelectorAll('.page');
-let controllBtns = document.querySelectorAll('.control-btn li');
+const wrapper = document.querySelector('.wrapper');
+const pages = document.querySelectorAll('.page');
+const controllBtns = document.querySelectorAll('.control-btn li');
 const rocketParent = document.querySelector('.rocket');
 
+// instantiate navbar
 const navbar = new NavBar(pages,controllBtns,rocketParent);
+let pageNum = 0;
+
+
+
+// change background of wrapper - need to use JS because github add a '/' to the end point of url -> cant access background image
+// EX: github/sachacks/ 
 changeBgImg.target(wrapper);
 
-// initiate first page
-navbar.init();
+if (window.innerWidth > 1023) {
+  // initiate homepage
+  navbar.init();
+}
 
-// add click event all all control btn
-// controllBtns.forEach((btn) => {
-//   btn.addEventListener('click',function(){
-//     navbar.handleBtnClick(this);
-//   });
-// })
-
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 1023) {
+    // initiate homepage
+    navbar.init();
+  }
+})
