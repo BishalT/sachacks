@@ -1,7 +1,7 @@
 // javascript helpers
 import changeBgImg from './utils/changeBgImg';
 import NavBar from './utils/navbar';
-import switchPageOnWheel from './utils/switchPageOnWheel';
+// import switchPageOnWheel from './utils/switchPageOnWheel';
 
 // scss
 import '../scss/index.scss';
@@ -16,13 +16,20 @@ const rocketParent = document.querySelector('.rocket');
 const navbar = new NavBar(pages,controllBtns,rocketParent);
 let pageNum = 0;
 
-// initiate homepage
-navbar.init();
+
 
 // change background of wrapper - need to use JS because github add a '/' to the end point of url -> cant access background image
 // EX: github/sachacks/ 
 changeBgImg.target(wrapper);
 
-switchPageOnWheel.init(controllBtns,(pageIndex) => {
-  navbar.handleBtnClick(pageIndex);
-});
+if (window.innerWidth > 1023) {
+  // initiate homepage
+  navbar.init();
+}
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 1023) {
+    // initiate homepage
+    navbar.init();
+  }
+})

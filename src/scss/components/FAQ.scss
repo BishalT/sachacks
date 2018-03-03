@@ -5,11 +5,11 @@
     font-size: $title;
   }
   .Q-and-A{
-    width: 900px;
+    width: 100%;    
     margin: 0 auto;
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 10px 20px;;
+    grid-template-columns: 1fr;
+    grid-gap: 40px;
     li{
       list-style: none;
       h3{
@@ -29,6 +29,11 @@
           color: white;
         }
       }
+    }
+    @media screen and (min-width: 1023px) {
+      grid-gap: 10px 20px;
+      width: 900px;
+      grid-template-columns: 1fr 1fr 1fr;
     }
   }
   h3{

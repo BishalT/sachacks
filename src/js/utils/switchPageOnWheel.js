@@ -9,19 +9,10 @@ const switchPageOnWheel = (function() {
     listBtns = btns;
     scroll = false;
     let scrolled = false;
-    window.addEventListener('mousewheel', function handler(event){
-      if (!scrolled) {
-        handleWheelMove(event);
-        scrolled = true;
-        console.log(pageIndex);        
-      } else {
-        setTimeout(function() {
-          handleWheelMove(event);
-          scrolled = false;
-          console.log(pageIndex);        
-        }, 1000);
-      }
-    });
+    window.addEventListener('mousewheel', (event) =>{
+      handleWheelMove(event);
+      cb(listBtns[pageIndex]);
+    })
   };
 
   return {
