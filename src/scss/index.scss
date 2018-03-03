@@ -62,11 +62,12 @@ h1{
 .page {
   min-height: 100vh;
   width: 100%;
-  @media screen and (min-width:1024px){
-    @include flex-center;
-
-  }
 }
+.smaller-page {
+  min-height: 60vh;
+}
+
+
 
 .padding-top {
   padding: 120px 20px 0 20px;
