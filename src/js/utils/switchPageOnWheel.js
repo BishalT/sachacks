@@ -7,8 +7,20 @@ const switchPageOnWheel = (function() {
 
   const init = function(btns,cb) {
     listBtns = btns;
-    window.addEventListener('mousewheel', function(event){
-      handleWheelMove(event,cb);
+    scroll = false;
+    let scrolled = false;
+    window.addEventListener('mousewheel', function handler(event){
+      if (!scrolled) {
+        handleWheelMove(event);
+        scrolled = true;
+        console.log(pageIndex);        
+      } else {
+        setTimeout(function() {
+          handleWheelMove(event);
+          scrolled = false;
+          console.log(pageIndex);        
+        }, 1000);
+      }
     });
   };
 
@@ -17,7 +29,7 @@ const switchPageOnWheel = (function() {
   }
   
   // handle switching page index base on direction of wheel moving
-  function handleWheelMove(event,cb) {
+  function handleWheelMove(event) {
     if (event.deltaY > 50) {
       scrollDown = true;
       checkDirection();
@@ -26,9 +38,6 @@ const switchPageOnWheel = (function() {
       scrollDown = false;
       checkDirection();
     }
-
-    cb(listBtns[pageIndex]);
-
 
     // increase/decrease page index base on direction
     function checkDirection() {
