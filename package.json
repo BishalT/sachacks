@@ -29,5 +29,8 @@
   "bugs": {
     "url": "https://github.com/LambertTran/sachacks/issues"
   },
-  "homepage": "https://github.com/LambertTran/sachacks#readme"
+  "homepage": "https://github.com/LambertTran/sachacks#readme",
+  "dependencies": {
+    "animate.css": "^3.6.1"
+  }
 }

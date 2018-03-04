@@ -37,11 +37,15 @@
     }
   }
   h3{
+    margin-top: 100px;
     color: white;
     font-size: $header;
     a{
       color: $yellow;
       text-decoration: none;
+    }
+    @media screen and (min-width: 1023px) {
+      margin-top: 40px;
     }
   }
 }
