@@ -3,13 +3,16 @@
   text-align: center;
   img{
     max-width: 100%;
-    width: 800px;
+    width: 100%;
+    @media screen and (min-width: 1023px) {
+      width: 800px;
+    }
   }
   .detail {
     max-width: 800px;
     margin: 0 auto;
     h2{
-      font-size: 2.8em;
+      font-size: 2.6em;
       color: $yellow;
       span{
         margin: 5px 20px;
@@ -18,13 +21,22 @@
     h3{
       white-space: pre-wrap;
       color:white;
-      font-size: 2.4em;
+      font-size: $titleMobile;
       -webkit-margin-before: 0;
     }
     div{
-      width: 90%;
+      width: 100%;
       @include flex-row;
-      justify-content: flex-end;
+      justify-content: center;
+    }
+    @media screen and (min-width:1023px) {
+      h3 {
+        font-size: 2.4em; 
+      }
+      div{
+        width: 90%;
+        justify-content: flex-end;
+      }
     }
   }
 

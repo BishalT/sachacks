@@ -16,8 +16,8 @@
   }
   h3 {
     margin: 20px auto;
-    width: 800px;
     color: white;
+    width: 100%;
     text-align: center;
     font-size: $header;
     line-height: $detailHeight;
@@ -27,6 +27,9 @@
     a{
       color: white;
       text-decoration: none;
+    }
+    @media screen and (min-width: 1023px) {
+      width: 800px;
     }
   }
 }
