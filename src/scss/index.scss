@@ -5,6 +5,7 @@ $titleMobile: 1.8em;
 $detail: 12pt;
 $detailHeight: 15pt;
 $spacing: 1.2pt;
+$spacingDesktop: 1.5pt;
 
 // color
 $yellow : #DAAA00;
@@ -40,6 +41,9 @@ body {
 }
 p{
   letter-spacing: $spacing;
+  @media screen and (min-width: 1023px) {
+    letter-spacing: $spacingDesktop;
+  }
 }
 h1{
   margin: 0;
@@ -53,26 +57,27 @@ h1{
   padding: 0;
   width: 100%;
   background-attachment: fixed;
-  background-size: 100% 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
   @media screen and (min-width:1024px){
     height: 100%;
+    overflow: hidden;
   }
 }
 
 .page {
   min-height: 100vh;
   width: 100%;
+
 }
 .smaller-page {
   min-height: 60vh;
 }
 
-
-
 .padding-top {
   padding: 120px 20px 0 20px;
   @media screen and (min-width:1024px){
-    padding: 200px 20px 0 20px;
+    padding: 150px 20px 0 20px;
   }
 }
 
@@ -85,10 +90,22 @@ h1{
   border-radius: 20px;  
   margin: 0 20px;
   border: 2px solid white;
+  transition: all 0.300s ease-in;
   &:hover{
     background-color: $yellow;
     border: 2px solid $yellow;
     cursor: pointer;
   }  
 }
+
+// @keyframes fadeInUp {
+//   from {
+//     opacity: 0;
+//     transform: translate3d(0, 50%, 0);
+//   }
+//   to {
+//     opacity: 1;
+//     transform: none;
+//   }
+// }
 

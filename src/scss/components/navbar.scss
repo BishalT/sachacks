@@ -35,7 +35,7 @@
     z-index: 1;
     left: 0;
     top: 10px;
-    transform: rotate(180deg);
+    transition: margin-top 0.5s cubic-bezier(0.12, 0.69, 1, 1.12);
   }
   div{
     width: 1px;
