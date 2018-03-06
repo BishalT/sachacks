@@ -3,8 +3,9 @@
   margin: 0px 2%;
   max-width: 800px;
   position: absolute; 
+  display: flex;
   .logo {
-    width: 80%;
+    // width: 80%;
     display: inline-block;
     img {
       padding-left: 3vh;
@@ -12,6 +13,17 @@
       @media screen and (min-width:1024px){
         max-height: 200px;
       }
+    }
+  }
+  .header-title {
+    width: 300px;
+    display: none;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    img {
+      max-width: 100%;
+      margin: 40px;
     }
   }
 }
