@@ -12,12 +12,15 @@ const wrapper = document.querySelector('.wrapper');
 const pages = document.querySelectorAll('.page');
 const controllBtns = document.querySelectorAll('.control-btn li');
 const rocketParent = document.querySelector('.rocket');
+const navbarDOM = document.querySelector('.navbar');
+const headerTitle = document.querySelector('.header-title');
+
 
 // instantiate navbar
 const navbar = new NavBar(pages,controllBtns,rocketParent,'fadeInUp','fadeInDown');
 
 // set current page
-let pageNum = 0;
+let currPage = 0;
 
 // add animation
 pages.forEach((pg) => {
@@ -40,3 +43,13 @@ window.addEventListener('resize', () => {
   }
 });
 
+// hide and display the sachack next to logo
+navbarDOM.addEventListener('click', () => {
+  currPage = navbar.getCurrentPage();
+  if (currPage === 0 ) {
+    headerTitle.style.display = 'none';
+  } 
+  else {
+    headerTitle.style.display = 'block';
+  }
+})

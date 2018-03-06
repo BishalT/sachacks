@@ -31,6 +31,10 @@ class NavBar {
     switchPage.apply(this.pages[target])      // switch to page clicked
     addActiveBtn.apply(btn);                  // add style to btn
   }
+
+  getCurrentPage() {
+    return this.currPage;
+  }
 }
 
 function removeAnimation() {
@@ -41,12 +45,13 @@ function removeAnimation() {
 }
 
 function changeAnimation(target) {
-  if (target > this.currPage) {
-    this.pages[target].classList.add(`${this.animatedUp}`);
+  let targetPage = Number(target);
+  if (targetPage > this.currPage) {
+    this.pages[targetPage].classList.add(`${this.animatedUp}`);
   } else {
-    this.pages[target].classList.add(`${this.animatedDown}`);
+    this.pages[targetPage].classList.add(`${this.animatedDown}`);
   }
-  this.currPage = target;
+  this.currPage = targetPage;
 }
 
 function moveRocket(btn) {
@@ -99,5 +104,6 @@ function removeActiveBtn() {
     btn.classList.remove('active');
   })
 }
+
 
 export default NavBar;
