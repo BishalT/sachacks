@@ -1,8 +1,12 @@
 .FAQ {
   text-align: center;
+  @media screen and (min-width:1024px){
+    padding: 100px 20px 0 20px !important;
+  }
   h1{
     color: white;
     font-size: $title;
+    margin-bottom: 10px;
   }
   .Q-and-A{
     width: 100%;    
@@ -15,24 +19,26 @@
       h3{
         color: $yellow;
         font-size: $header;
-        margin: 0;
+        margin: 20px 0 5px 0;
+        text-align: left;
       }
       p{
         color:white;
-        font-size: $detail;
-        line-height: $detailHeight;
+        font-size: 10pt;
+        line-height: 18pt;
         text-align: left;
         margin: 0;
         a{
           // text-decoration: underline;
           text-underline-position: under;
           color: white;
+          display: block;
         }
       }
     }
     @media screen and (min-width: 1023px) {
-      grid-gap: 10px 20px;
-      width: 900px;
+      grid-gap: 10px 10px;
+      width: 700px;
       grid-template-columns: 1fr 1fr 1fr;
     }
   }
@@ -45,7 +51,7 @@
       text-decoration: none;
     }
     @media screen and (min-width: 1023px) {
-      margin-top: 40px;
+      margin-top: 20px;
     }
   }
 }

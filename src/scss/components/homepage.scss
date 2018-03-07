@@ -5,17 +5,18 @@
     max-width: 100%;
     width: 100%;
     @media screen and (min-width: 1023px) {
-      width: 800px;
+      width: 50vw;
     }
   }
   .detail {
     max-width: 800px;
     margin: 0 auto;
     h2{
+      margin: 20px 0 10px 0;
       font-size: 2.6em;
       color: $yellow;
       span{
-        margin: 5px 20px;
+        // margin: 5px 10px;
       }
     }
     h3{
@@ -31,7 +32,7 @@
     }
     @media screen and (min-width:1023px) {
       h3 {
-        font-size: 2.4em; 
+        font-size: 1.5em; 
       }
       div{
         width: 90%;
