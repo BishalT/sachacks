@@ -1,4 +1,4 @@
-const path2Img = 'images/star-bg-2.png';
+const path2Img = 'images/bg_star_3.jpg';
 const changeBgImg = {
   target: function(target) {
     if (!target) {

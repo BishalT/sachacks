@@ -4,11 +4,14 @@
     color: white;
     text-align: center;
     font-size: $title;
+    margin-bottom: 10px;
+    font-weight: 900;
   }
   .detail {
     @include flex-center;
     p{
-      max-width: 800px;
+      margin: 10px 0 0 40px;
+      max-width: 500px;
       color: white;
       font-size: $detail;
       line-height: $detailHeight;

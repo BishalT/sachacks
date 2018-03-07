@@ -3,10 +3,11 @@
   h1{
     color: white;
     font-size: $title;
+    margin-bottom: 60px;
   }
   h3{
     color:white;
-    font-size: $detail;
+    font-size: 2.0em;
   }
   .progress-box{
     div{
@@ -17,12 +18,12 @@
       align-items: flex-start;
       div{
         margin: 0 0 0 5px;
-        height: 20px;
+        height: 15px;
         width: 70%;
         background-color: $yellow;
       }
       @media screen and (min-width: 1023px) {
-        width: 600px;
+        width: 500px;
       }
     }
     p{
