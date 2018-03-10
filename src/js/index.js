@@ -31,15 +31,16 @@ pages.forEach((pg) => {
 // EX: github/sachacks/ 
 changeBgImg.target(wrapper);
 
-// activate navbar whenever screen is bigger than 1023px
 if (window.innerWidth > 1023) {
-  // initiate homepage
   navbar.init();
 }
+
 window.addEventListener('resize', () => {
-  if (window.innerWidth > 1023) {
+  if (window.innerWidth < 1023) {
     // initiate homepage
-    navbar.init();
+    navbar.deactivate();
+  } else {
+    navbar.activate();
   }
 });
 

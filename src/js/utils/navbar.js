@@ -8,16 +8,17 @@ class NavBar {
     this.rocketParent = rocketParent;
     this.animatedUp = animatedUp;
     this.animatedDown = animatedDown;
+    this.mobile = false;
     this.currPage = 0;
   }
 
   // initiating first page
   init() {
     resetAllPages.apply(this.pages);        
-    switchPage.apply(this.pages[0]);          // switch to first page
-    addActiveBtn.apply(this.controllBtns[0]); // add active class to first page
+    switchPage.apply(this.pages[this.currPage]);          // switch to first page
+    addActiveBtn.apply(this.controllBtns[this.currPage]); // add active class to first page
     initControllBtn.apply(this);
-    moveRocket.call(this,this.controllBtns[0]);   // move rocket to first button
+    moveRocket.call(this,this.controllBtns[this.currPage]);   // move rocket to first button
   }
 
   // switching page when navbar btn is clicked
@@ -34,6 +35,25 @@ class NavBar {
 
   getCurrentPage() {
     return this.currPage;
+  }
+
+  deactivate() {
+    this.pages.forEach((page) => {
+      page.style.display = "block";
+    });
+    if (this.mobile === false) {
+      let curPagePos = this.pages[this.currPage].getBoundingClientRect().top;
+      window.scrollTo(0,curPagePos)
+      this.mobile = true;
+    }
+  }
+
+  activate() {
+    if (this.mobile === false) {
+      return;
+    }
+    this.mobile = false;
+    this.init();
   }
 }
 

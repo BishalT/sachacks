@@ -27,6 +27,26 @@ $blue: #72adc4;
   align-items: center;
 }
 
+// break points
+@mixin phone-to-tablet {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin tablet-to-desktop {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin desktop-and-up {
+  @media screen and (min-width: 1023px) {
+    @content;
+  }
+}
+
+
+
 @import './components/navbar.scss';
 @import './components/header.scss';
 @import './components/homepage.scss';
@@ -42,7 +62,7 @@ body {
 }
 p{
   letter-spacing: $spacing;
-  @media screen and (min-width: 1023px) {
+  @include desktop-and-up {
     letter-spacing: $spacingDesktop;
   }
 }
@@ -60,7 +80,7 @@ h1{
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
-  @media screen and (min-width:1024px){
+  @include desktop-and-up {
     height: 100%;
     overflow: hidden;
   }
@@ -77,7 +97,7 @@ h1{
 
 .padding-top {
   padding: 120px 20px 0 20px;
-  @media screen and (min-width:1024px){
+  @include desktop-and-up {
     padding: 180px 20px 0 20px;
   }
 }
@@ -119,15 +139,3 @@ h1{
 .btn-sponsor {
   border: 2px solid #fbb03a;
 }
-
-// @keyframes fadeInUp {
-//   from {
-//     opacity: 0;
-//     transform: translate3d(0, 50%, 0);
-//   }
-//   to {
-//     opacity: 1;
-//     transform: none;
-//   }
-// }
-

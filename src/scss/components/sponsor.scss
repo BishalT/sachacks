@@ -29,7 +29,12 @@
       color: $yellow;
       text-decoration: none;
     }
-    @media screen and (min-width: 1023px) {
+
+    @include tablet-to-desktop {
+      width: 550px;
+    }
+
+    @include desktop-and-up {
       width: 600px;
     }
   }
