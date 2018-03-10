@@ -96,6 +96,9 @@ h1{
     background-color: $yellow;
     border: 2px solid $yellow;
     cursor: pointer;
+  }
+  &:focus {
+    outline: 0;
   }  
 }
 
