@@ -15,15 +15,29 @@
       margin: 20px 0 10px 0;
       font-size: 2.6em;
       color: $yellow;
-      span{
-        // margin: 5px 10px;
-      }
     }
     h3{
       white-space: pre-wrap;
       color:white;
       font-size: $titleMobile;
       -webkit-margin-before: 0;
+    }
+    h4 {
+      color: #72aec4;
+      line-height: $detailHeight;
+      letter-spacing: $spacing;
+      img {
+        width: 120px;
+        height: 100%;
+        margin: 0 5px;
+        vertical-align: middle;
+      }
+      @media screen and (min-width: 768px) {
+        font-size: 1.2em;
+        img{
+          width: 150px;
+        }
+      }
     }
     div{
       width: 100%;
