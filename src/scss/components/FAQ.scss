@@ -1,6 +1,6 @@
 .FAQ {
   text-align: center;
-  @media screen and (min-width:1024px){
+  @include desktop-and-up{
     padding: 100px 20px 0 20px !important;
   }
   h1{
@@ -36,10 +36,17 @@
         }
       }
     }
-    @media screen and (min-width: 1023px) {
+
+    @include tablet-to-desktop {
+      grid-gap: 10px 10px;
+      grid-template-columns: 1fr 1fr;
+      width: 600px;
+    }
+
+    @include desktop-and-up {
+      grid-template-columns: 1fr 1fr 1fr;
       grid-gap: 10px 10px;
       width: 700px;
-      grid-template-columns: 1fr 1fr 1fr;
     }
   }
   h3{
@@ -50,7 +57,8 @@
       color: $yellow;
       text-decoration: none;
     }
-    @media screen and (min-width: 1023px) {
+    
+    @include tablet-to-desktop {
       margin-top: 20px;
     }
   }
