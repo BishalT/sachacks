@@ -37,13 +37,14 @@
     top: 10px;
     transition: margin-top 0.5s cubic-bezier(0.12, 0.69, 1, 1.12);
   }
-  div{
-    width: 1px;
-    background-color: #72adc4;
-    height: 100%;
-    z-index: -1;
-    margin: 0 auto;
-  }
+  /** this is for the line underneath the rocket **/
+  // div{
+  //   width: 1px;
+  //   background-color: #72adc4;
+  //   height: 100%;
+  //   z-index: -1;
+  //   margin: 0 auto;
+  // }
 }
 
 .control-btn {
