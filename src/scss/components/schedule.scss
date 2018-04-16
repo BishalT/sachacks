@@ -1,3 +1,4 @@
+// schedule page
 .schedule {
   text-align: center;
   h1{
@@ -35,3 +36,111 @@
     }
   }
 }
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0px;  /* remove scrollbar space */
+  background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+// schedule box
+.carousel {
+  margin: 60px auto;
+  background-color: transparent;
+  width: 100%;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+
+  @include tablet-to-desktop {
+    width: 80%;
+  }
+
+  @include desktop-and-up {
+    width: 60%;
+  }
+
+  /* Control buttons */
+  .schedule-btn {
+    position: absolute;  
+    font-size: 1.5em;
+    cursor: pointer;
+    color: white;
+    z-index: 100;
+    top: 45px;
+  }
+
+  .left {
+    left: 0%;
+  }
+
+  .right {
+    right: 0;
+  }
+
+  .items {
+    display: flex;
+    min-width: 100%;
+    min-height: 200px;
+    overflow-x: scroll; 
+    position: relative;
+    transition: all 3000ms ease-in;
+
+    /* Time bar */
+    .timebar {
+      height: 20px;
+      background-color: #9E9E9E;
+      width: 1000px;
+      z-index: 10;
+      margin-top: 50px;
+      position: absolute;
+    }
+
+    .item {
+      background-color: transparent;
+      min-width: 200px;
+      position: relative;
+      
+      p {
+        color: white;
+        top: 110px;
+        position: absolute;
+        text-align: center;
+        width: 100px;
+        margin: auto;
+        left: 0%;
+        right: 0%;
+      }
+
+      &::before {
+        content: attr(data-time);
+        position: absolute;
+        top: 80px;
+        left: 40%;
+        color:rgba(255, 255, 255, 0.4);
+      }
+
+      &::after {
+        height: 11px;
+        width: 11px;
+        content:"";
+        box-shadow: 0 0 0 2px yellow; 
+        border-radius: 50%;
+        display: inline-block;
+        position: absolute;
+        top: 54px;
+        left: 45%;
+        background: yellow;
+        z-index: 100;
+      }
+    }
+
+  }
+}
+
+
+
+
