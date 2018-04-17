@@ -120,7 +120,7 @@ html {
     .cookie {
       &::after{
         display: block;
-        content: url('../../images/cookie.png') !important;
+        content: url('../images/cookie.png') !important;
         transform: scale(0.15);  
         top:55px !important;
         left:35% !important;
