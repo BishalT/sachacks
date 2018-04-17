@@ -212,7 +212,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(7);
+var	fixUrls = __webpack_require__(8);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -542,19 +542,22 @@ var _navbar = __webpack_require__(4);
 
 var _navbar2 = _interopRequireDefault(_navbar);
 
-__webpack_require__(5);
+var _scheduleOnClick = __webpack_require__(5);
 
-__webpack_require__(8);
+var _scheduleOnClick2 = _interopRequireDefault(_scheduleOnClick);
+
+__webpack_require__(6);
+
+__webpack_require__(9);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // search the DOM
 
-// import switchPageOnWheel from './utils/switchPageOnWheel';
 
 // scss
-// javascript helpers
-var wrapper = document.querySelector('.wrapper');
+var wrapper = document.querySelector('.wrapper'); // javascript helpers
+
 var pages = document.querySelectorAll('.page');
 var controllBtns = document.querySelectorAll('.control-btn li');
 var rocketParent = document.querySelector('.rocket');
@@ -563,6 +566,9 @@ var headerTitle = document.querySelector('.header-title');
 
 // instantiate navbar
 var navbar = new _navbar2.default(pages, controllBtns, rocketParent, 'fadeInUp', 'fadeInDown');
+
+// schedule 
+_scheduleOnClick2.default.init();
 
 // set current page
 var currPage = 0;
@@ -579,13 +585,21 @@ _changeBgImg2.default.target(wrapper);
 if (window.innerWidth > 1023) {
   navbar.init();
 }
+if (window.innerWidth < 1023) {
+  _scheduleOnClick2.default.activate();
+}
 
 window.addEventListener('resize', function () {
   if (window.innerWidth < 1023) {
     // initiate homepage
     navbar.deactivate();
+    _scheduleOnClick2.default.activate();
   } else {
     navbar.activate();
+  }
+
+  if (navbar.getCurrentPage() === 2) {
+    _scheduleOnClick2.default.activate();
   }
 });
 
@@ -596,6 +610,9 @@ navbarDOM.addEventListener('click', function () {
     headerTitle.style.display = 'none';
   } else {
     headerTitle.style.display = 'block';
+  }
+  if (currPage === 2) {
+    _scheduleOnClick2.default.activate(); // activate schedule box when user click on schedule page
   }
 });
 
@@ -788,8 +805,67 @@ exports.default = NavBar;
 /* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
 
-var content = __webpack_require__(6);
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var carousel = {};
+
+carousel.init = init;
+carousel.activate = activate;
+
+function init() {
+  carousel.element = document.querySelector('.carousel');
+  carousel.items = document.querySelector('.carousel .items');
+  carousel.leftScroll = document.querySelector('.carousel .left');
+  carousel.rightScroll = document.querySelector('.carousel .right');
+  carousel.timebar = document.querySelector('.carousel .timebar');
+}
+
+function activate() {
+  // make the line longer
+  var width = carousel.items.offsetWidth;
+  carousel.timebar.style.width = width + 'px';
+
+  carousel.leftScroll.addEventListener('click', handleLeftClick);
+  carousel.rightScroll.addEventListener('click', handleRightClick);
+}
+
+function handleRightClick() {
+  mouseWheelHandler(-100, carousel.items);
+}
+
+function handleLeftClick() {
+  mouseWheelHandler(100, carousel.items);
+}
+
+function mouseWheelHandler(distance, element) {
+  var delta = 0;
+
+  if (typeof distance === 'number') {
+    delta = distance;
+  } else {
+    if (distance.deltaX !== 0) {
+      delta = distance.deltaX;
+    } else {
+      delta = distance.deltaY;
+    }
+    distance.prevenDefault();
+  }
+
+  element.scrollLeft -= delta;
+}
+
+exports.default = carousel;
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(7);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -835,7 +911,7 @@ if(false) {
 }
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -849,7 +925,7 @@ exports.push([module.i, "@charset \"UTF-8\";\n\n/*!\n * animate.css -http://dane
 
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports) {
 
 
@@ -944,11 +1020,11 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(9);
+var content = __webpack_require__(10);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -994,18 +1070,47 @@ if(false) {
 }
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
+var escape = __webpack_require__(11);
 exports = module.exports = __webpack_require__(0)(false);
 // imports
 
 
 // module
-exports.push([module.i, ".navbar {\n  height: 100%;\n  width: 120px;\n  position: absolute;\n  right: 10px;\n  top: 0;\n  bottom: 0;\n  z-index: 100;\n  display: none;\n  align-items: center; }\n  .navbar .container {\n    display: flex;\n    align-items: center;\n    position: relative;\n    height: 75%;\n    width: 100%; }\n  @media screen and (min-width: 1024px) {\n    .navbar {\n      display: flex; } }\n\n.rocket {\n  height: 100%;\n  width: 60px;\n  position: absolute;\n  left: 0;\n  text-align: center;\n  margin: 0;\n  /** this is for the line underneath the rocket **/ }\n  .rocket img {\n    width: 60px;\n    height: 60px;\n    position: absolute;\n    display: block;\n    z-index: 1;\n    left: 0;\n    top: 10px;\n    transition: margin-top 0.5s cubic-bezier(0.12, 0.69, 1, 1.12); }\n\n.control-btn {\n  height: 80%;\n  right: 0;\n  list-style: none;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: center;\n  margin: 0; }\n  .control-btn li {\n    text-align: center;\n    padding: 2px;\n    width: 50px;\n    height: 20px;\n    color: white;\n    filter: grayscale(0%); }\n    .control-btn li:hover {\n      cursor: pointer;\n      color: white;\n      font-weight: 600; }\n  .control-btn .active {\n    color: #72adc4;\n    font-weight: 600; }\n\n.header {\n  margin: 0px 2%;\n  max-width: 800px;\n  position: absolute;\n  display: flex; }\n  .header .logo {\n    display: inline-block; }\n    .header .logo img {\n      padding-left: 3vh;\n      max-height: 100px; }\n      @media screen and (min-width: 1024px) {\n        .header .logo img {\n          max-height: 180px; } }\n  .header .header-title {\n    width: 200px;\n    display: none;\n    height: 200px;\n    line-height: 200px;\n    text-align: center; }\n    .header .header-title img {\n      max-width: 100%;\n      margin: 40px; }\n\n.homepage {\n  text-align: center; }\n  .homepage img {\n    max-width: 100%;\n    width: 100%; }\n    @media screen and (min-width: 1023px) {\n      .homepage img {\n        width: 50vw; } }\n  .homepage .detail {\n    max-width: 800px;\n    margin: 0 auto; }\n    .homepage .detail h2 {\n      margin: 20px 0 10px 0;\n      font-size: 2.6em;\n      color: #fbb03a; }\n    .homepage .detail h3 {\n      white-space: pre-wrap;\n      color: white;\n      font-size: 1.8em;\n      -webkit-margin-before: 0; }\n    .homepage .detail h4 {\n      color: #72aec4;\n      line-height: 20pt;\n      letter-spacing: 1.2pt; }\n      .homepage .detail h4 img {\n        width: 120px;\n        height: 100%;\n        margin: 0 5px;\n        vertical-align: middle; }\n      @media screen and (min-width: 768px) {\n        .homepage .detail h4 {\n          font-size: 1.2em; }\n          .homepage .detail h4 img {\n            width: 150px; } }\n    .homepage .detail div {\n      width: 100%;\n      display: flex;\n      flex-direction: row;\n      justify-content: center; }\n    @media screen and (min-width: 1023px) {\n      .homepage .detail h3 {\n        font-size: 1.5em; }\n      .homepage .detail div {\n        width: 90%;\n        justify-content: flex-end; } }\n\n.about h1 {\n  color: white;\n  text-align: center;\n  font-size: 2.4em;\n  margin-bottom: 10px;\n  font-weight: 900; }\n\n.about .detail {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center; }\n  .about .detail p {\n    margin: 10px 0 0 40px;\n    max-width: 500px;\n    color: white;\n    font-size: 12pt;\n    line-height: 20pt; }\n\n.schedule {\n  text-align: center; }\n  .schedule h1 {\n    color: white;\n    font-size: 2.4em;\n    margin-bottom: 60px; }\n  .schedule h3 {\n    color: white;\n    font-size: 2.0em; }\n  .schedule .progress-box div {\n    margin: 0 auto;\n    height: 30px;\n    border: 0.5px solid #fbb03a;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    align-items: flex-start; }\n    .schedule .progress-box div div {\n      margin: 0 0 0 5px;\n      height: 15px;\n      width: 70%;\n      background-color: #fbb03a; }\n    @media screen and (min-width: 768px) {\n      .schedule .progress-box div {\n        width: 450px; } }\n    @media screen and (min-width: 1023px) {\n      .schedule .progress-box div {\n        width: 500px; } }\n  .schedule .progress-box p {\n    margin: 5px;\n    color: #fbb03a; }\n\n.FAQ {\n  text-align: center; }\n  @media screen and (min-width: 1023px) {\n    .FAQ {\n      padding: 100px 20px 0 20px !important; } }\n  .FAQ h1 {\n    color: white;\n    font-size: 2.4em;\n    margin-bottom: 10px; }\n  .FAQ .Q-and-A {\n    width: 100%;\n    margin: 0 auto;\n    display: grid;\n    grid-template-columns: 1fr;\n    grid-gap: 40px; }\n    .FAQ .Q-and-A li {\n      list-style: none; }\n      .FAQ .Q-and-A li h3 {\n        color: #fbb03a;\n        font-size: 1.2em;\n        margin: 20px 0 5px 0;\n        text-align: left; }\n      .FAQ .Q-and-A li p {\n        color: white;\n        font-size: 10pt;\n        line-height: 18pt;\n        text-align: left;\n        margin: 0; }\n        .FAQ .Q-and-A li p a {\n          text-underline-position: under;\n          color: white;\n          display: block; }\n    @media screen and (min-width: 768px) {\n      .FAQ .Q-and-A {\n        grid-gap: 10px 10px;\n        grid-template-columns: 1fr 1fr;\n        width: 600px; } }\n    @media screen and (min-width: 1023px) {\n      .FAQ .Q-and-A {\n        grid-template-columns: 1fr 1fr 1fr;\n        grid-gap: 10px 10px;\n        width: 700px; } }\n  .FAQ h3 {\n    margin-top: 100px;\n    color: white;\n    font-size: 1.2em; }\n    .FAQ h3 a {\n      color: #fbb03a;\n      text-decoration: none; }\n    @media screen and (min-width: 768px) {\n      .FAQ h3 {\n        margin-top: 20px; } }\n\n.sponsor {\n  text-align: center; }\n  .sponsor h1 {\n    color: white;\n    font-size: 2.4em;\n    margin-bottom: 10px; }\n  .sponsor .list-sponsor {\n    margin-bottom: 50px;\n    display: flex;\n    justify-content: center; }\n    .sponsor .list-sponsor img {\n      width: 100px;\n      height: 100px;\n      margin: 20px; }\n  .sponsor h3 {\n    margin: 20px auto;\n    color: white;\n    width: 100%;\n    text-align: center;\n    font-size: 1.2em;\n    line-height: 22pt; }\n    .sponsor h3 span {\n      color: #fbb03a; }\n    .sponsor h3 a {\n      color: #fbb03a;\n      text-decoration: none; }\n    @media screen and (min-width: 768px) {\n      .sponsor h3 {\n        width: 550px; } }\n    @media screen and (min-width: 1023px) {\n      .sponsor h3 {\n        width: 600px; } }\n\nhtml, body {\n  width: 100%;\n  height: 100%;\n  margin: 0;\n  padding: 0;\n  font-family: 'Source Sans Pro', sans-serif; }\n\np {\n  letter-spacing: 1.2pt; }\n  @media screen and (min-width: 1023px) {\n    p {\n      letter-spacing: 1.5pt; } }\n\nh1 {\n  margin: 0;\n  padding: 0; }\n\n.wrapper {\n  position: absolute;\n  margin: 0;\n  padding: 0;\n  width: 100%;\n  height: 100%;\n  overflow: scroll;\n  background-size: cover;\n  background-repeat: no-repeat; }\n  @media screen and (min-width: 1023px) {\n    .wrapper {\n      height: 100%;\n      overflow: hidden; } }\n\n.page {\n  min-height: 100vh;\n  width: 100%; }\n\n.smaller-page {\n  min-height: 60vh; }\n\n.padding-top {\n  padding: 120px 20px 0 20px; }\n  @media screen and (min-width: 1023px) {\n    .padding-top {\n      padding: 180px 20px 0 20px; } }\n\n.btn {\n  color: white;\n  background-color: transparent;\n  font-size: 1.2em;\n  padding: 5px 20px;\n  text-align: center;\n  border-radius: 20px;\n  margin: 0 20px;\n  border: 2px solid #72adc4;\n  transition: all 0.300s ease-in; }\n  .btn:hover {\n    background-color: #fbb03a;\n    border: 2px solid #fbb03a;\n    cursor: pointer; }\n  .btn:focus {\n    outline: 0; }\n\n.btn-home:hover {\n  background-color: #72adc4;\n  border: 2px solid #72adc4;\n  cursor: pointer; }\n\n.btn-active {\n  background-color: #fbb03a;\n  border: 2px solid #fbb03a;\n  cursor: pointer; }\n\n.btn-sponsor {\n  border: 2px solid #fbb03a; }\n", ""]);
+exports.push([module.i, ".navbar {\n  height: 100%;\n  width: 120px;\n  position: absolute;\n  right: 10px;\n  top: 0;\n  bottom: 0;\n  z-index: 100;\n  display: none;\n  align-items: center; }\n  .navbar .container {\n    display: flex;\n    align-items: center;\n    position: relative;\n    height: 75%;\n    width: 100%; }\n  @media screen and (min-width: 1024px) {\n    .navbar {\n      display: flex; } }\n\n.rocket {\n  height: 100%;\n  width: 60px;\n  position: absolute;\n  left: 0;\n  text-align: center;\n  margin: 0;\n  /** this is for the line underneath the rocket **/ }\n  .rocket img {\n    width: 60px;\n    height: 60px;\n    position: absolute;\n    display: block;\n    z-index: 1;\n    left: 0;\n    top: 10px;\n    transition: margin-top 0.5s cubic-bezier(0.12, 0.69, 1, 1.12); }\n\n.control-btn {\n  height: 80%;\n  right: 0;\n  list-style: none;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: center;\n  margin: 0; }\n  .control-btn li {\n    text-align: center;\n    padding: 2px;\n    width: 50px;\n    height: 20px;\n    color: white;\n    filter: grayscale(0%); }\n    .control-btn li:hover {\n      cursor: pointer;\n      color: white;\n      font-weight: 600; }\n  .control-btn .active {\n    color: #72adc4;\n    font-weight: 600; }\n\n.header {\n  margin: 0px 2%;\n  max-width: 800px;\n  position: absolute;\n  display: flex; }\n  .header .logo {\n    display: inline-block; }\n    .header .logo img {\n      padding-left: 3vh;\n      max-height: 100px; }\n      @media screen and (min-width: 1024px) {\n        .header .logo img {\n          max-height: 180px; } }\n  .header .header-title {\n    width: 200px;\n    display: none;\n    height: 200px;\n    line-height: 200px;\n    text-align: center; }\n    .header .header-title img {\n      max-width: 100%;\n      margin: 40px; }\n\n.homepage {\n  text-align: center; }\n  .homepage img {\n    max-width: 100%;\n    width: 100%; }\n    @media screen and (min-width: 1023px) {\n      .homepage img {\n        width: 50vw; } }\n  .homepage .detail {\n    max-width: 800px;\n    margin: 0 auto; }\n    .homepage .detail h2 {\n      margin: 20px 0 10px 0;\n      font-size: 2.6em;\n      color: #fbb03a; }\n    .homepage .detail h3 {\n      white-space: pre-wrap;\n      color: white;\n      font-size: 1.8em;\n      -webkit-margin-before: 0; }\n    .homepage .detail h4 {\n      color: #72aec4;\n      line-height: 20pt;\n      letter-spacing: 1.2pt; }\n      .homepage .detail h4 img {\n        width: 120px;\n        height: 100%;\n        margin: 0 5px;\n        vertical-align: middle; }\n      @media screen and (min-width: 768px) {\n        .homepage .detail h4 {\n          font-size: 1.2em; }\n          .homepage .detail h4 img {\n            width: 150px; } }\n    .homepage .detail div {\n      width: 100%;\n      display: flex;\n      flex-direction: row;\n      justify-content: center; }\n    @media screen and (min-width: 1023px) {\n      .homepage .detail h3 {\n        font-size: 1.5em; }\n      .homepage .detail div {\n        width: 90%;\n        justify-content: flex-end; } }\n\n.about h1 {\n  color: white;\n  text-align: center;\n  font-size: 2.4em;\n  margin-bottom: 10px;\n  font-weight: 900; }\n\n.about .detail {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center; }\n  .about .detail p {\n    margin: 10px 0 0 40px;\n    max-width: 500px;\n    color: white;\n    font-size: 12pt;\n    line-height: 20pt; }\n\n.schedule {\n  text-align: center; }\n  .schedule h1 {\n    color: white;\n    font-size: 2.4em;\n    margin-bottom: 60px; }\n  .schedule h3 {\n    color: white;\n    font-size: 2.0em; }\n  .schedule .progress-box div {\n    margin: 0 auto;\n    height: 30px;\n    border: 0.5px solid #fbb03a;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    align-items: flex-start; }\n    .schedule .progress-box div div {\n      margin: 0 0 0 5px;\n      height: 15px;\n      width: 70%;\n      background-color: #fbb03a; }\n    @media screen and (min-width: 768px) {\n      .schedule .progress-box div {\n        width: 450px; } }\n    @media screen and (min-width: 1023px) {\n      .schedule .progress-box div {\n        width: 500px; } }\n  .schedule .progress-box p {\n    margin: 5px;\n    color: #fbb03a; }\n\nhtml {\n  overflow: scroll;\n  overflow-x: hidden; }\n\n::-webkit-scrollbar {\n  width: 0px;\n  /* remove scrollbar space */\n  background: transparent;\n  /* optional: just make scrollbar invisible */ }\n\n.carousel {\n  margin: 60px auto;\n  background-color: transparent;\n  width: 100%;\n  user-select: none;\n  position: relative;\n  overflow: hidden;\n  /* Control buttons */ }\n  @media screen and (min-width: 768px) {\n    .carousel {\n      width: 80%; } }\n  @media screen and (min-width: 1023px) {\n    .carousel {\n      width: 60%; } }\n  .carousel .schedule-btn {\n    position: absolute;\n    cursor: pointer;\n    color: white;\n    z-index: 101;\n    font-size: 2.0em;\n    top: 60px; }\n    @media screen and (min-width: 1023px) {\n      .carousel .schedule-btn {\n        font-size: 1.5em;\n        top: 65px; } }\n  .carousel .left {\n    left: 0%; }\n  .carousel .right {\n    right: 0; }\n  .carousel .items {\n    display: flex;\n    min-width: 100%;\n    min-height: 220px;\n    overflow-x: scroll;\n    position: relative;\n    transition: all 3000ms ease-in;\n    /* Time bar */ }\n    .carousel .items .timebar {\n      height: 20px;\n      background: linear-gradient(to right, rgba(224, 224, 224, 0.1), #e0e0e0, rgba(224, 224, 224, 0.1));\n      width: 100px;\n      z-index: 10;\n      margin-top: 70px;\n      position: fixed; }\n    .carousel .items .star::after {\n      font-size: 45px;\n      content: \"\\2605\";\n      display: block;\n      position: absolute;\n      top: 48px;\n      left: 40%;\n      color: #FFFF8D;\n      z-index: 100; }\n    .carousel .items .cookie::after {\n      display: block;\n      content: url(" + escape(__webpack_require__(12)) + ") !important;\n      transform: scale(0.15);\n      top: 55px !important;\n      left: 35% !important; }\n    .carousel .items .dot::after {\n      height: 11px;\n      width: 11px;\n      content: \"\";\n      box-shadow: 0 0 0 2px #fbb03a;\n      border-radius: 50%;\n      display: inline-block;\n      position: absolute;\n      top: 74px;\n      left: 45%;\n      background: #fbb03a;\n      z-index: 100; }\n    .carousel .items .item {\n      background-color: transparent;\n      min-width: 220px;\n      position: relative; }\n      .carousel .items .item h4 {\n        color: #fbb03a;\n        font-size: 1.35em;\n        position: absolute;\n        margin: auto;\n        left: 0;\n        right: 0;\n        padding: 0;\n        top: 0px; }\n      .carousel .items .item .hacking {\n        color: #FFF176; }\n      .carousel .items .item p {\n        color: white;\n        top: 130px;\n        position: absolute;\n        text-align: center;\n        width: 100px;\n        margin: auto;\n        left: 0%;\n        right: 0%; }\n      .carousel .items .item::before {\n        content: attr(data-time);\n        position: absolute;\n        top: 100px;\n        left: 40%;\n        color: rgba(255, 255, 255, 0.4); }\n\n.FAQ {\n  text-align: center; }\n  @media screen and (min-width: 1023px) {\n    .FAQ {\n      padding: 100px 20px 0 20px !important; } }\n  .FAQ h1 {\n    color: white;\n    font-size: 2.4em;\n    margin-bottom: 10px; }\n  .FAQ .Q-and-A {\n    width: 100%;\n    margin: 0 auto;\n    display: grid;\n    grid-template-columns: 1fr;\n    grid-gap: 40px; }\n    .FAQ .Q-and-A li {\n      list-style: none; }\n      .FAQ .Q-and-A li h3 {\n        color: #fbb03a;\n        font-size: 1.2em;\n        margin: 20px 0 5px 0;\n        text-align: left; }\n      .FAQ .Q-and-A li p {\n        color: white;\n        font-size: 10pt;\n        line-height: 18pt;\n        text-align: left;\n        margin: 0; }\n        .FAQ .Q-and-A li p a {\n          text-underline-position: under;\n          color: white;\n          display: block; }\n    @media screen and (min-width: 768px) {\n      .FAQ .Q-and-A {\n        grid-gap: 10px 10px;\n        grid-template-columns: 1fr 1fr;\n        width: 600px; } }\n    @media screen and (min-width: 1023px) {\n      .FAQ .Q-and-A {\n        grid-template-columns: 1fr 1fr 1fr;\n        grid-gap: 10px 10px;\n        width: 700px; } }\n  .FAQ h3 {\n    margin-top: 100px;\n    color: white;\n    font-size: 1.2em; }\n    .FAQ h3 a {\n      color: #fbb03a;\n      text-decoration: none; }\n    @media screen and (min-width: 768px) {\n      .FAQ h3 {\n        margin-top: 20px; } }\n\n.sponsor {\n  text-align: center; }\n  .sponsor h1 {\n    color: white;\n    font-size: 2.4em;\n    margin-bottom: 10px; }\n  .sponsor .list-sponsor {\n    margin-bottom: 50px;\n    display: flex;\n    justify-content: center; }\n    .sponsor .list-sponsor img {\n      width: 100px;\n      height: 100px;\n      margin: 20px; }\n  .sponsor h3 {\n    margin: 20px auto;\n    color: white;\n    width: 100%;\n    text-align: center;\n    font-size: 1.2em;\n    line-height: 22pt; }\n    .sponsor h3 span {\n      color: #fbb03a; }\n    .sponsor h3 a {\n      color: #fbb03a;\n      text-decoration: none; }\n    @media screen and (min-width: 768px) {\n      .sponsor h3 {\n        width: 550px; } }\n    @media screen and (min-width: 1023px) {\n      .sponsor h3 {\n        width: 600px; } }\n\nhtml, body {\n  width: 100%;\n  height: 100%;\n  margin: 0;\n  padding: 0;\n  font-family: 'Source Sans Pro', sans-serif; }\n\np {\n  letter-spacing: 1.2pt; }\n  @media screen and (min-width: 1023px) {\n    p {\n      letter-spacing: 1.5pt; } }\n\nh1 {\n  margin: 0;\n  padding: 0; }\n\n.wrapper {\n  position: absolute;\n  margin: 0;\n  padding: 0;\n  width: 100%;\n  height: 100%;\n  overflow: scroll;\n  background-size: cover;\n  background-repeat: no-repeat; }\n  @media screen and (min-width: 1023px) {\n    .wrapper {\n      height: 100%;\n      overflow: hidden; } }\n\n.page {\n  min-height: 100vh;\n  width: 100%; }\n\n.smaller-page {\n  min-height: 70vh; }\n\n.padding-top {\n  padding: 120px 20px 0 20px; }\n  @media screen and (min-width: 1023px) {\n    .padding-top {\n      padding: 180px 20px 0 20px; } }\n\n.btn {\n  color: white;\n  background-color: transparent;\n  font-size: 1.2em;\n  padding: 5px 20px;\n  text-align: center;\n  border-radius: 20px;\n  margin: 0 20px;\n  border: 2px solid #72adc4;\n  transition: all 0.300s ease-in; }\n  .btn:hover {\n    background-color: #fbb03a;\n    border: 2px solid #fbb03a;\n    cursor: pointer; }\n  .btn:focus {\n    outline: 0; }\n\n.btn-home:hover {\n  background-color: #72adc4;\n  border: 2px solid #72adc4;\n  cursor: pointer; }\n\n.btn-active {\n  background-color: #fbb03a;\n  border: 2px solid #fbb03a;\n  cursor: pointer; }\n\n.btn-sponsor {\n  border: 2px solid #fbb03a; }\n", ""]);
 
 // exports
 
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports) {
+
+module.exports = function escape(url) {
+    if (typeof url !== 'string') {
+        return url
+    }
+    // If url is already wrapped in quotes, remove them
+    if (/^['"].*['"]$/.test(url)) {
+        url = url.slice(1, -1);
+    }
+    // Should url be wrapped?
+    // See https://drafts.csswg.org/css-values-3/#urls
+    if (/["'() \t\n]/.test(url)) {
+        return '"' + url.replace(/"/g, '\\"').replace(/\n/g, '\\n') + '"'
+    }
+
+    return url
+}
+
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "1f4ee799944900f54ed27d7705653b64.png";
 
 /***/ })
 /******/ ]);
