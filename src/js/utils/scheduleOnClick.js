@@ -13,7 +13,7 @@ function init() {
 
 function activate() {
   // make the line longer
-  let width = carousel.items.scrollWidth;
+  let width = carousel.items.offsetWidth;
   carousel.timebar.style.width = width + 'px';
 
   carousel.leftScroll.addEventListener('click',handleLeftClick)

@@ -35,8 +35,10 @@ changeBgImg.target(wrapper);
 
 if (window.innerWidth > 1023) {
   navbar.init();
-  carousel.activate();
 }
+if (window.innerWidth < 1023) {
+  carousel.activate();
+}  
 
 window.addEventListener('resize', () => {
   if (window.innerWidth < 1023) {
@@ -46,6 +48,11 @@ window.addEventListener('resize', () => {
   } else {
     navbar.activate();
   }
+  
+  if (navbar.getCurrentPage()===2) {
+    carousel.activate();
+  }
+
 });
 
 // hide and display the sachack next to logo
