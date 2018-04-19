@@ -230,7 +230,10 @@ html {
     /* Time bar */ }
     .carousel .items .timebar {
       height: 20px;
-      background: linear-gradient(to right, rgba(224, 224, 224, 0.1), #e0e0e0, rgba(224, 224, 224, 0.1));
+      background: -moz-linear-gradient(to right, rgba(224, 224, 224, 0.1), #e0e0e0, rgba(224, 224, 224, 0.1));
+      background: -ms-linear-gradient(to right, rgba(224, 224, 224, 0.1), #e0e0e0, rgba(224, 224, 224, 0.1));
+      background: -webkit-linear-gradient(to right, rgba(224, 224, 224, 0.1), #e0e0e0, rgba(224, 224, 224, 0.1));
+      background: -o-linear-gradient(to right, rgba(224, 224, 224, 0.1), #e0e0e0, rgba(224, 224, 224, 0.1));
       width: 100px;
       z-index: 10;
       margin-top: 70px;
