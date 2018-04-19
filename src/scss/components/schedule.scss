@@ -97,10 +97,11 @@ html {
     /* Time bar */
     .timebar {
       height: 20px;
+      background: -webkit-linear-gradient(right, rgba(224,224,224,0.1),rgba(224,224,224,1),rgba(224,224,224,0.1));
       background: -moz-linear-gradient(to right, rgba(224,224,224,0.1),rgba(224,224,224,1),rgba(224,224,224,0.1));
       background: -ms-linear-gradient(to right, rgba(224,224,224,0.1),rgba(224,224,224,1),rgba(224,224,224,0.1));
-      background: -webkit-linear-gradient(to right, rgba(224,224,224,0.1),rgba(224,224,224,1),rgba(224,224,224,0.1));
       background: -o-linear-gradient(to right, rgba(224,224,224,0.1),rgba(224,224,224,1),rgba(224,224,224,0.1));
+      background: linear-gradient(to right, rgba(224,224,224,0.1),rgba(224,224,224,1),rgba(224,224,224,0.1));
       width: 100px;
       z-index: 10;
       margin-top: 70px;
