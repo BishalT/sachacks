@@ -234,22 +234,21 @@ html {
     position: relative;
     transition: all 3000ms ease-in;
     /* Time bar */ }
+    .carousel .items .timebar-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 20px;
+      background: blue; }
     .carousel .items .timebar {
       height: 20px;
-<<<<<<< HEAD
-      background: -webkit-linear-gradient(right, rgba(224, 224, 224, 0.1), #e0e0e0, rgba(224, 224, 224, 0.1));
-      background: -moz-linear-gradient(to right, rgba(224, 224, 224, 0.1), #e0e0e0, rgba(224, 224, 224, 0.1));
-      background: -ms-linear-gradient(to right, rgba(224, 224, 224, 0.1), #e0e0e0, rgba(224, 224, 224, 0.1));
-      background: -o-linear-gradient(to right, rgba(224, 224, 224, 0.1), #e0e0e0, rgba(224, 224, 224, 0.1));
-      background: linear-gradient(to right, rgba(224, 224, 224, 0.1), #e0e0e0, rgba(224, 224, 224, 0.1));
-=======
->>>>>>> master
       width: 100px;
-      z-index: 10;
       margin-top: 70px;
-      position: fixed; }
+      position: absolute;
+      background: rgba(114, 173, 196, 0.4); }
       @media screen and (min-width: 768px) {
         .carousel .items .timebar {
+          position: fixed;
           background: -webkit-linear-gradient(right, rgba(114, 173, 196, 0.1), #72adc4, rgba(114, 173, 196, 0.1));
           background: -moz-linear-gradient(to right, rgba(114, 173, 196, 0.1), #72adc4, rgba(114, 173, 196, 0.1));
           background: -ms-linear-gradient(to right, rgba(114, 173, 196, 0.1), #72adc4, rgba(114, 173, 196, 0.1));
