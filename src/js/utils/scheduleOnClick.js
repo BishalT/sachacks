@@ -13,9 +13,14 @@ function init() {
 
 function activate() {
   // make the line longer
-  let width = carousel.items.offsetWidth;
-  carousel.timebar.style.width = width + 'px';
+  let width;
+  if (window.innerWidth < 767) {
+    width = carousel.items.scrollWidth;
+  } else {
+    width = carousel.items.offsetWidth;
+  }
 
+  carousel.timebar.style.width = width + 'px';
   carousel.leftScroll.addEventListener('click',handleLeftClick)
   carousel.rightScroll.addEventListener('click', handleRightClick);
 }

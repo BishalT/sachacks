@@ -79,13 +79,21 @@ html {
   }
 
   .left {
-    left: 40px;
+    left: 0px;
+    
+    @include tablet-to-desktop {
+      left: 15%;
+    }
   }
-
+  
   .right {
-    right: 40px;
-  }
+    right: 0px;
 
+    @include tablet-to-desktop {
+      right: 15%;
+    }
+  }
+  
   .items {
     display: flex;
     min-width: 100%;
@@ -95,17 +103,29 @@ html {
     transition: all 3000ms ease-in;
 
     /* Time bar */
+    .timebar-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 20px;
+      background: blue;
+    }
     .timebar {
       height: 20px;
-      background: -webkit-linear-gradient(right, rgba(224,224,224,0.1),rgba(224,224,224,1),rgba(224,224,224,0.1));
-      background: -moz-linear-gradient(to right, rgba(224,224,224,0.1),rgba(224,224,224,1),rgba(224,224,224,0.1));
-      background: -ms-linear-gradient(to right, rgba(224,224,224,0.1),rgba(224,224,224,1),rgba(224,224,224,0.1));
-      background: -o-linear-gradient(to right, rgba(224,224,224,0.1),rgba(224,224,224,1),rgba(224,224,224,0.1));
-      background: linear-gradient(to right, rgba(224,224,224,0.1),rgba(224,224,224,1),rgba(224,224,224,0.1));
       width: 100px;
-      z-index: 10;
+      // z-index: 10;
       margin-top: 70px;
-      position: fixed;
+      position: absolute;
+      background: rgba(114, 173, 196,0.4);
+
+      @include tablet-to-desktop {
+        position: fixed;
+        background: -webkit-linear-gradient(right, rgba(114, 173, 196,0.1),rgba(114, 173, 196,1),rgba(114, 173, 196,0.1));
+        background: -moz-linear-gradient(to right, rgba(114, 173, 196,0.1),rgba(114, 173, 196,1),rgba(114, 173, 196,0.1));
+        background: -ms-linear-gradient(to right, rgba(114, 173, 196,0.1),rgba(114, 173, 196,1),rgba(114, 173, 196,0.1));
+        background: -o-linear-gradient(to right, rgba(114, 173, 196,0.1),rgba(114, 173, 196,1),rgba(114, 173, 196,0.1));
+        background: linear-gradient(to right, rgba(114, 173, 196,0.1),rgba(114, 173, 196,1),rgba(114, 173, 196,0.1));
+      }
     }
 
     .star{

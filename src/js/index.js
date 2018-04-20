@@ -35,10 +35,9 @@ changeBgImg.target(wrapper);
 
 if (window.innerWidth > 1023) {
   navbar.init();
-}
-if (window.innerWidth < 1023) {
+} else {
   carousel.activate();
-}  
+}
 
 window.addEventListener('resize', () => {
   if (window.innerWidth < 1023) {

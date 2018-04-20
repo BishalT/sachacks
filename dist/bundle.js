@@ -364,6 +364,9 @@ function activate() {
   // make the line longer
   var width = carousel.items.offsetWidth;
   carousel.timebar.style.width = width + 'px';
+  carousel.timebar.style.background = 'linear-gradient(to right, rgba(114, 173, 196,0.1),rgba(114, 173, 196,1),rgba(114, 173, 196,0.1))';
+
+  console.log(carousel.timebar.style.background);
 
   carousel.leftScroll.addEventListener('click', handleLeftClick);
   carousel.rightScroll.addEventListener('click', handleRightClick);
