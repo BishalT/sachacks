@@ -217,9 +217,15 @@ html {
         font-size: 1.5em;
         top: 65px; } }
   .carousel .left {
-    left: 40px; }
+    left: 0px; }
+    @media screen and (min-width: 768px) {
+      .carousel .left {
+        left: 15%; } }
   .carousel .right {
-    right: 40px; }
+    right: 0px; }
+    @media screen and (min-width: 768px) {
+      .carousel .right {
+        right: 15%; } }
   .carousel .items {
     display: flex;
     min-width: 100%;
@@ -230,11 +236,17 @@ html {
     /* Time bar */ }
     .carousel .items .timebar {
       height: 20px;
-      background: linear-gradient(to right, rgba(224, 224, 224, 0.1), #e0e0e0, rgba(224, 224, 224, 0.1));
       width: 100px;
       z-index: 10;
       margin-top: 70px;
       position: fixed; }
+      @media screen and (min-width: 768px) {
+        .carousel .items .timebar {
+          background: -webkit-linear-gradient(right, rgba(114, 173, 196, 0.1), #72adc4, rgba(114, 173, 196, 0.1));
+          background: -moz-linear-gradient(to right, rgba(114, 173, 196, 0.1), #72adc4, rgba(114, 173, 196, 0.1));
+          background: -ms-linear-gradient(to right, rgba(114, 173, 196, 0.1), #72adc4, rgba(114, 173, 196, 0.1));
+          background: -o-linear-gradient(to right, rgba(114, 173, 196, 0.1), #72adc4, rgba(114, 173, 196, 0.1));
+          background: linear-gradient(to right, rgba(114, 173, 196, 0.1), #72adc4, rgba(114, 173, 196, 0.1)); } }
     .carousel .items .star::after {
       font-size: 45px;
       content: "\2605";
