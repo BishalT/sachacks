@@ -1,7 +1,7 @@
 // javascript helpers
 import changeBgImg from './utils/changeBgImg';
 import NavBar from './utils/navbar';
-// import switchPageOnWheel from './utils/switchPageOnWheel';
+import carousel from './utils/scheduleOnClick';
 
 // scss
 import 'animate.css';
@@ -15,9 +15,11 @@ const rocketParent = document.querySelector('.rocket');
 const navbarDOM = document.querySelector('.navbar');
 const headerTitle = document.querySelector('.header-title');
 
-
 // instantiate navbar
 const navbar = new NavBar(pages,controllBtns,rocketParent,'fadeInUp','fadeInDown');
+
+// schedule 
+carousel.init();
 
 // set current page
 let currPage = 0;
@@ -33,15 +35,23 @@ changeBgImg.target(wrapper);
 
 if (window.innerWidth > 1023) {
   navbar.init();
+} else {
+  carousel.activate();
 }
 
 window.addEventListener('resize', () => {
   if (window.innerWidth < 1023) {
     // initiate homepage
     navbar.deactivate();
+    carousel.activate();
   } else {
     navbar.activate();
   }
+  
+  if (navbar.getCurrentPage()===2) {
+    carousel.activate();
+  }
+
 });
 
 // hide and display the sachack next to logo
@@ -53,4 +63,7 @@ navbarDOM.addEventListener('click', () => {
   else {
     headerTitle.style.display = 'block';
   }
+  if (currPage === 2) {
+    carousel.activate(); // activate schedule box when user click on schedule page
+  } 
 })
