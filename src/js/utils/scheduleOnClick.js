@@ -35,14 +35,14 @@ function handleLeftClick() {
 
 function mouseWheelHandler(distance, element) {
   var delta = 0;
-  
+
   if (typeof distance === 'number') {
     delta = distance;
-  } 
+  }
   else {
     if (distance.deltaX !== 0) {
       delta = distance.deltaX;
-    } 
+    }
     else {
       delta = distance.deltaY;
     }
