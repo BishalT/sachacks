@@ -20,7 +20,7 @@ const headerTitle = document.querySelector('.header-title');
 const navbar = new NavBar(pages,controllBtns,rocketParent,'fadeInUp','fadeInDown');
 
 // scroll wheel
-switchOnWheel.init(controllBtns, navbar);
+switchOnWheel.init(controllBtns);
 
 // schedule
 carousel.init();

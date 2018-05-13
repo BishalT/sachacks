@@ -4,10 +4,11 @@ const switchPageOnWheel = (function() {
   let listBtns;
   let scrollDown = true;
 
-  const init = function(btns, navbar) {
+  const init = function(btns) {
     listBtns = btns;
     scroll = false;
     let scrolled = false;
+    // delay created inbetween scroll inputs
     function debounce(event, method, delay) {
     clearTimeout(method._tId);
     method._tId= setTimeout(function(){
