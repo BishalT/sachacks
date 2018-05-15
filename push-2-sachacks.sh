@@ -15,9 +15,9 @@ do
 done
 
 # if not, then link it to current git repo
-if [ "IS_LINKED=false"] 
+if [ "IS_LINKED=false" ] 
 then 
-  git remote add sachacks git@github-saschacks:sachacks/sachacks.git
+  git remote add sachacks git@github-sachacks:sachacks/sachacks
 fi
 
 #### Switch git account
