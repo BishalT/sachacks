@@ -1,5 +1,29 @@
 #!/bin/bash
 
+#### Create config file for ssh key
+CONFIG_FILE=$(find ~/.ssh -name "config")
+
+function createConfig() {
+  echo ""
+  echo "Host github-sachacks" >> ./config
+  echo "  HostName github" >> ./config
+  echo "  User git" >> ./config
+  echo "  IdentityFile ./id_rsa_sachacks" >> ./config
+}
+
+if [ !"$CONFIG_FILE" ]
+then 
+  touch config
+  createConfig
+else 
+  SACHACKS=$(grep -rn ${CONFIG_FILE} -e "github-sachacks")
+  if [ $SACHACKS ]
+  then
+    createConfig
+  fi
+fi
+
+
 #### Check if remote to sachack exists
 # get a list of git remote
 REMOTE=$(git remote -v)
@@ -19,6 +43,10 @@ if [ "IS_LINKED=false" ]
 then 
   git remote add sachacks git@github-sachacks:sachacks/sachacks.git
 fi
+
+#### Merge gh-pages
+git checkout gh-pages
+git merge master
 
 #### Switch git account
 git fetch sachacks
