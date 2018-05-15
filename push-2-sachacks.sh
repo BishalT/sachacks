@@ -17,10 +17,11 @@ done
 # if not, then link it to current git repo
 if [ "IS_LINKED=false" ] 
 then 
-  git remote add sachacks git@github-sachacks:sachacks/sachacks
+  git remote add sachacks git@github-sachacks:sachacks/sachacks.git
 fi
 
 #### Switch git account
+git fetch sachacks
 git checkout sachacks/gh-pages
 
 #### Merge with the origin
