@@ -20,6 +20,10 @@ then
   git remote add sachacks git@github-sachacks:sachacks/sachacks.git
 fi
 
+#### Merge gh-pages
+git checkout gh-pages
+git merge master
+
 #### Switch git account
 git fetch sachacks
 git checkout sachacks/gh-pages
