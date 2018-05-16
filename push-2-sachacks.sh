@@ -5,15 +5,15 @@ CONFIG_FILE=$(find ~/.ssh -name "config")
 
 function createConfig() {
   echo ""
-  echo "Host github-sachacks" >> ./config
-  echo "  HostName github" >> ./config
-  echo "  User git" >> ./config
-  echo "  IdentityFile ./id_rsa_sachacks" >> ./config
+  echo "Host github-sachacks" >> ~/.ssh/config
+  echo "  HostName github" >> ~/.ssh/config
+  echo "  User git" >> ~/.ssh/config
+  echo "  IdentityFile ./id_rsa_sachacks" >> ~/.ssh/config
 }
 
 if [ !"$CONFIG_FILE" ]
 then 
-  touch config
+  touch ~/.ssh/config
   createConfig
 else 
   SACHACKS=$(grep -rn ${CONFIG_FILE} -e "github-sachacks")
@@ -47,6 +47,7 @@ fi
 #### Merge gh-pages
 git checkout gh-pages
 git merge master
+git push origin 
 
 #### Switch git account
 git fetch sachacks
