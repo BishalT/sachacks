@@ -3,6 +3,7 @@
 #### Create config file for ssh key
 CONFIG_FILE=$(find ~/.ssh -name "config")
 
+## Helper - create config file
 function createConfig() {
   echo ""
   echo "Host github-sachacks" >> ~/.ssh/config
@@ -16,8 +17,8 @@ then
   touch ~/.ssh/config
   createConfig
 else 
-  SACHACKS=$(grep -rn ${CONFIG_FILE} -e "github-sachacks")
-  if [ $SACHACKS ]
+  SACHACKS=$(grep -rnw ${CONFIG_FILE} -e "github-sachacks")
+  if [ !$SACHACKS ]
   then
     createConfig
   fi
@@ -39,7 +40,7 @@ do
 done
 
 # if not, then link it to current git repo
-if [ "IS_LINKED=false" ] 
+if [ !"$IS_LINKED" ] 
 then 
   git remote add sachacks git@github-sachacks:sachacks/sachacks.git
 fi
@@ -47,7 +48,7 @@ fi
 #### Merge gh-pages
 git checkout gh-pages
 git merge master
-git push origin 
+git push origin gh-pages
 
 #### Switch git account
 git fetch sachacks
