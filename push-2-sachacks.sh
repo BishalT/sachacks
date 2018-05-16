@@ -7,18 +7,19 @@ CONFIG_FILE=$(find ~/.ssh -name "config")
 function createConfig() {
   echo ""
   echo "Host github-sachacks" >> ~/.ssh/config
-  echo "  HostName github" >> ~/.ssh/config
+  echo "  HostName github.com" >> ~/.ssh/config
   echo "  User git" >> ~/.ssh/config
   echo "  IdentityFile ./id_rsa_sachacks" >> ~/.ssh/config
 }
 
-if [ !"$CONFIG_FILE" ]
+if [  -z !"$CONFIG_FILE" ]
 then 
+  echo "-----Create Config File----"
   touch ~/.ssh/config
   createConfig
 else 
   SACHACKS=$(grep -rnw ${CONFIG_FILE} -e "github-sachacks")
-  if [ !$SACHACKS ]
+  if [ -z !"$SACHACKS" ]
   then
     createConfig
   fi
@@ -39,8 +40,9 @@ do
   fi
 done
 
+
 # if not, then link it to current git repo
-if [ !"$IS_LINKED" ] 
+if [ "$IS_LINKED" = false ] 
 then 
   git remote add sachacks git@github-sachacks:sachacks/sachacks.git
 fi
