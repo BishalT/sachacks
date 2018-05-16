@@ -12,17 +12,18 @@ function createConfig() {
   echo "  IdentityFile ./id_rsa_sachacks" >> ~/.ssh/config
 }
 
-if [  -z !"$CONFIG_FILE" ]
+if [[ $CONFIG_FILE ]]
 then 
+  SACHACKS=$(grep -rnw ${CONFIG_FILE} -e "github-sachacks")
+  if [ "$SACHACKS" == "" ]
+  then
+    echo "-----Add New Account to Config File----"
+    createConfig
+  fi
+else 
   echo "-----Create Config File----"
   touch ~/.ssh/config
   createConfig
-else 
-  SACHACKS=$(grep -rnw ${CONFIG_FILE} -e "github-sachacks")
-  if [ -z !"$SACHACKS" ]
-  then
-    createConfig
-  fi
 fi
 
 
