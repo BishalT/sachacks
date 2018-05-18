@@ -1,24 +1,29 @@
 // this module will handle touch to switch page
-
 const switchPageOnWheel = (function() {
   let pageIndex = 0;
   let listBtns;
   let scrollDown = true;
 
-  const init = function(btns,cb) {
+  const init = function(btns) {
     listBtns = btns;
     scroll = false;
     let scrolled = false;
-    window.addEventListener('mousewheel', (event) =>{
-      handleWheelMove(event);
-      cb(listBtns[pageIndex]);
-    })
+    // delay created inbetween scroll inputs
+    function debounce(event, method, delay) {
+    clearTimeout(method._tId);
+    method._tId= setTimeout(function(){
+        method(event);
+        }, delay);
+    }
+    window.addEventListener('mousewheel', function(event) {
+        debounce(event,handleScrollDelay, 400);
+    });
   };
 
   return {
     init: init,
   }
-  
+
   // handle switching page index base on direction of wheel moving
   function handleWheelMove(event) {
     if (event.deltaY > 50) {
@@ -33,10 +38,10 @@ const switchPageOnWheel = (function() {
     // increase/decrease page index base on direction
     function checkDirection() {
       switch (scrollDown) {
-        case true: 
+        case true:
           moveDownOnePage();
           break;
-        
+
         case false:
           moveUpOnePage();
           break;
@@ -48,7 +53,7 @@ const switchPageOnWheel = (function() {
       } else {
         pageIndex = 0;
       }
-    }    
+    }
     function moveUpOnePage() {
       if ( pageIndex > 0 ) {
         -- pageIndex;
@@ -58,10 +63,12 @@ const switchPageOnWheel = (function() {
     }
   }
 
-
+  function handleScrollDelay(event){
+      handleWheelMove(event);
+      listBtns[pageIndex].click();
+  }
 
 })();
-
 
 
 export default switchPageOnWheel;
