@@ -82,9 +82,13 @@ var _scheduleOnClick = __webpack_require__(3);
 
 var _scheduleOnClick2 = _interopRequireDefault(_scheduleOnClick);
 
-__webpack_require__(4);
+var _switchPageOnWheel = __webpack_require__(4);
 
-__webpack_require__(9);
+var _switchPageOnWheel2 = _interopRequireDefault(_switchPageOnWheel);
+
+__webpack_require__(5);
+
+__webpack_require__(10);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -92,8 +96,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 
 // scss
-var wrapper = document.querySelector('.wrapper'); // javascript helpers
-
+// javascript helpers
+var wrapper = document.querySelector('.wrapper');
 var pages = document.querySelectorAll('.page');
 var controllBtns = document.querySelectorAll('.control-btn li');
 var rocketParent = document.querySelector('.rocket');
@@ -103,7 +107,10 @@ var headerTitle = document.querySelector('.header-title');
 // instantiate navbar
 var navbar = new _navbar2.default(pages, controllBtns, rocketParent, 'fadeInUp', 'fadeInDown');
 
-// schedule 
+// scroll wheel
+_switchPageOnWheel2.default.init(controllBtns);
+
+// schedule
 _scheduleOnClick2.default.init();
 
 // set current page
@@ -115,7 +122,7 @@ pages.forEach(function (pg) {
 });
 
 // change background of wrapper - need to use JS because github add a '/' to the end point of url -> cant access background image
-// EX: github/sachacks/ 
+// EX: github/sachacks/
 _changeBgImg2.default.target(wrapper);
 
 if (window.innerWidth > 1023) {
@@ -404,8 +411,122 @@ exports.default = carousel;
 /* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
 
-var content = __webpack_require__(5);
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// this module will handle touch to switch page
+var switchPageOnWheel = function () {
+  var pageIndex = 0;
+  var listBtns = void 0;
+  var scrollDown = true;
+
+  var init = function init(btns) {
+    listBtns = btns;
+    scroll = false;
+    var scrolled = false;
+    var fired = 0;
+    var isWheel = void 0;
+
+    // 'wheel' event work for both mousewheel and trackpad
+    window.addEventListener('wheel', function (event) {
+      // This timer is set for trackpad
+      // when user scrolls using trackpad, it will fire wheel event at least 20 times
+      // when user stops scrolling, it will switch page
+      clearTimeout(isWheel);
+
+      fired++; // count how many event fired
+
+      isWheel = setTimeout(function () {
+        callback(event, fired);
+        fired = 0;
+      }, 35);
+    });
+
+    function callback(event, fired) {
+      // when user scrolls using trackpad, 'wheels' event usually fires more than 6 times
+      if (fired > 6) {
+        var direction = event.deltaY;
+        var fakeEvent = {};
+        if (direction > 0) {
+          fakeEvent.deltaY = 100;
+        } else {
+          fakeEvent.deltaY = -100;
+        }
+        debounce(fakeEvent, handleScrollDelay, 200);
+      }
+      // this else statement is used for mousewheel
+      else {
+          debounce(event, handleScrollDelay, 400);
+          fired = 0;
+        }
+    }
+    // delay created inbetween scroll inputs
+    function debounce(event, method, delay) {
+      clearTimeout(method._tId);
+      method._tId = setTimeout(function () {
+        method(event);
+      }, delay);
+    }
+  };
+
+  return {
+    init: init
+
+    // handle switching page index base on direction of wheel moving
+  };function handleWheelMove(event) {
+    if (event.deltaY > 50) {
+      scrollDown = true;
+      checkDirection();
+    } else if (event.deltaY < -50) {
+      scrollDown = false;
+      checkDirection();
+    }
+
+    // increase/decrease page index base on direction
+    function checkDirection() {
+      switch (scrollDown) {
+        case true:
+          moveDownOnePage();
+          break;
+
+        case false:
+          moveUpOnePage();
+          break;
+      }
+    }
+    function moveDownOnePage() {
+      if (pageIndex < listBtns.length - 1) {
+        ++pageIndex;
+      } else {
+        pageIndex = 0;
+      }
+    }
+    function moveUpOnePage() {
+      if (pageIndex > 0) {
+        --pageIndex;
+      } else {
+        pageIndex = listBtns.length - 1;
+      }
+    }
+  }
+
+  function handleScrollDelay(event) {
+    handleWheelMove(event);
+    listBtns[pageIndex].click();
+  }
+}();
+
+exports.default = switchPageOnWheel;
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(6);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -419,7 +540,7 @@ var options = {"hmr":true}
 options.transform = transform
 options.insertInto = undefined;
 
-var update = __webpack_require__(7)(content, options);
+var update = __webpack_require__(8)(content, options);
 
 if(content.locals) module.exports = content.locals;
 
@@ -451,10 +572,10 @@ if(false) {
 }
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(6)(false);
+exports = module.exports = __webpack_require__(7)(false);
 // imports
 
 
@@ -465,7 +586,7 @@ exports.push([module.i, "@charset \"UTF-8\";\n\n/*!\n * animate.css -http://dane
 
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports) {
 
 /*
@@ -547,7 +668,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -613,7 +734,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(8);
+var	fixUrls = __webpack_require__(9);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -929,7 +1050,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports) {
 
 
@@ -1024,7 +1145,7 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
