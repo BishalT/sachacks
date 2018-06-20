@@ -376,8 +376,8 @@ html {
     display: flex;
     justify-content: center; }
     .sponsor .list-sponsor img {
-      width: 100px;
-      height: 100px;
+      /* width: 100px;
+      height: 100px; */
       margin: 20px; }
   .sponsor h3 {
     margin: 20px auto;
