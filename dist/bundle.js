@@ -86,9 +86,13 @@ var _switchPageOnWheel = __webpack_require__(4);
 
 var _switchPageOnWheel2 = _interopRequireDefault(_switchPageOnWheel);
 
-__webpack_require__(5);
+var _scheduleChange = __webpack_require__(5);
 
-__webpack_require__(10);
+var _scheduleChange2 = _interopRequireDefault(_scheduleChange);
+
+__webpack_require__(6);
+
+__webpack_require__(11);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -96,8 +100,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 
 // scss
-// javascript helpers
-var wrapper = document.querySelector('.wrapper');
+var wrapper = document.querySelector('.wrapper'); // javascript helpers
+
 var pages = document.querySelectorAll('.page');
 var controllBtns = document.querySelectorAll('.control-btn li');
 var rocketParent = document.querySelector('.rocket');
@@ -427,42 +431,6 @@ var switchPageOnWheel = function () {
     listBtns = btns;
     scroll = false;
     var scrolled = false;
-    var fired = 0;
-    var isWheel = void 0;
-
-    // 'wheel' event work for both mousewheel and trackpad
-    window.addEventListener('wheel', function (event) {
-      // This timer is set for trackpad
-      // when user scrolls using trackpad, it will fire wheel event at least 20 times
-      // when user stops scrolling, it will switch page
-      clearTimeout(isWheel);
-
-      fired++; // count how many event fired
-
-      isWheel = setTimeout(function () {
-        callback(event, fired);
-        fired = 0;
-      }, 35);
-    });
-
-    function callback(event, fired) {
-      // when user scrolls using trackpad, 'wheels' event usually fires more than 6 times
-      if (fired > 6) {
-        var direction = event.deltaY;
-        var fakeEvent = {};
-        if (direction > 0) {
-          fakeEvent.deltaY = 100;
-        } else {
-          fakeEvent.deltaY = -100;
-        }
-        debounce(fakeEvent, handleScrollDelay, 200);
-      }
-      // this else statement is used for mousewheel
-      else {
-          debounce(event, handleScrollDelay, 400);
-          fired = 0;
-        }
-    }
     // delay created inbetween scroll inputs
     function debounce(event, method, delay) {
       clearTimeout(method._tId);
@@ -470,6 +438,9 @@ var switchPageOnWheel = function () {
         method(event);
       }, delay);
     }
+    window.addEventListener('mousewheel', function (event) {
+      debounce(event, handleScrollDelay, 400);
+    });
   };
 
   return {
@@ -525,8 +496,26 @@ exports.default = switchPageOnWheel;
 /* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
 
-var content = __webpack_require__(6);
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+// This is schedule changer for the days
+
+function scheduleActivate() {
+    console.log(this.class);
+}
+
+exports.default = scheduleChange;
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(7);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -540,7 +529,7 @@ var options = {"hmr":true}
 options.transform = transform
 options.insertInto = undefined;
 
-var update = __webpack_require__(8)(content, options);
+var update = __webpack_require__(9)(content, options);
 
 if(content.locals) module.exports = content.locals;
 
@@ -572,10 +561,10 @@ if(false) {
 }
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(7)(false);
+exports = module.exports = __webpack_require__(8)(false);
 // imports
 
 
@@ -586,7 +575,7 @@ exports.push([module.i, "@charset \"UTF-8\";\n\n/*!\n * animate.css -http://dane
 
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports) {
 
 /*
@@ -668,7 +657,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -734,7 +723,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(9);
+var	fixUrls = __webpack_require__(10);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -1050,7 +1039,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports) {
 
 
@@ -1145,7 +1134,7 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

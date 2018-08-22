@@ -1,18 +1,19 @@
-// navbar 
+// navbar
 .navbar{
-  height: 100%;
-  width: 120px;
-  position: absolute;
-  right: 10px;
-  top: 0;
-  bottom: 0;
-  z-index: 100;
-  display: none;
-  align-items: center;
+    background-color: white;
+    height: 10%;
+    width: 100%;
+  // position: absolute;
+    z-index: 100;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+
   .container{
     display: flex;
-    align-items: center;
+    flex-direction: row;
     position: relative;
+    justify-content: space-between;
     height: 75%;
     width: 100%;
   }
@@ -28,13 +29,12 @@
   text-align: center;
   margin: 0;
   img{
-    width: 60px;
-    height: 60px;
+    transform: rotate(90deg);
+    width: 85px;
+    height: 85px;
     position: absolute;
-    display: block;
     z-index: 1;
     left: 0;
-    top: 10px;
     transition: margin-top 0.5s cubic-bezier(0.12, 0.69, 1, 1.12);
   }
   /** this is for the line underneath the rocket **/
@@ -48,29 +48,35 @@
 }
 
 .control-btn {
-  height: 80%;
-  right: 0;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0;
-  li{
-    text-align: center;
-    padding: 2px;
-    width: 50px;
-    height: 20px;
-    color: white;
-    filter: grayscale(0%);
-    &:hover{
-      cursor: pointer;
-      color: white;
-      font-weight: 600;
+    margin-left: auto;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 30px;
+    li{
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        padding: 0 30px 0 30px;
+        font-size: $header;
+        color: $gray;
+        filter: grayscale(0%);
+        &:hover{
+          cursor: pointer;
+          font-weight: 600;
+        .no-underline:hover {
+            text-decoration: none;
+            }
+        a {color:$gray;}      /* unvisited link */
+        a:visited {color:$gray;}  /* visited link */
+        a:hover {color:$gray;}  /* mouse over link */
+        a:active {color:$gray;}  /* selected link */
+        }
     }
-  }
-  .active{
+    .active{
     color:#72adc4;
     font-weight: 600;
-  }
+    }
 }

@@ -41,16 +41,20 @@
     }
     div{
       width: 100%;
-      @include flex-row;
+      @include flex-col;
       justify-content: center;
     }
     @media screen and (min-width:1023px) {
       h3 {
-        font-size: 1.5em; 
+        font-size: 1.5em;
       }
       div{
         width: 90%;
         justify-content: flex-end;
+        @include flex-row;
+      }
+      .btn{
+          margin-bottom: 0px;
       }
     }
   }

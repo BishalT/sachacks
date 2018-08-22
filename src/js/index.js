@@ -3,6 +3,7 @@ import changeBgImg from './utils/changeBgImg';
 import NavBar from './utils/navbar';
 import carousel from './utils/scheduleOnClick';
 import switchOnWheel from './utils/switchPageOnWheel';
+import scheduleChange from './utils/scheduleChange';
 
 // scss
 import 'animate.css';

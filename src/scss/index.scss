@@ -1,15 +1,19 @@
 // font size
-$title : 2.4em;
-$header: 1.2em;
-$titleMobile: 1.8em;
-$detail: 12pt;
-$detailHeight: 20pt;
+$title : 4.5em;
+$header: 2.0em;
+$titleMobile: 2.6em;
+$detail: 20pt;
+$detailHeight: 25pt;
+$mobileDetail: 16pt;
+$mobileHeader3: 20pt;
 $spacing: 1.2pt;
 $spacingDesktop: 1.5pt;
 
 // color
 $yellow : #fbb03a;
 $blue: #72adc4;
+$navy: #002561;
+$gray: #645A5A;
 
 // layout
 @mixin flex-row {
@@ -34,13 +38,20 @@ $blue: #72adc4;
   }
 }
 
-@mixin tablet-to-desktop {
+@mixin tablet-to-laptop {
   @media screen and (min-width: 768px) {
     @content;
   }
 }
+
+@mixin laptop-to-desktop {
+  @media screen and (max-width: 1679) {
+    @content;
+  }
+}
+
 @mixin desktop-and-up {
-  @media screen and (min-width: 1023px) {
+  @media screen and (min-width: 1680px) {
     @content;
   }
 }
@@ -52,6 +63,8 @@ $blue: #72adc4;
 @import './components/schedule.scss';
 @import './components/FAQ.scss';
 @import './components/sponsor.scss';
+@import './components/values.scss';
+@import './components/footer.scss';
 
 html, body {
   width: 100%;
@@ -59,6 +72,8 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: 'Source Sans Pro', sans-serif;
+  // font-family: "Avenir";
+  // src:url("../../font/Avenir_Next/AvenirNext-Regular.ttc");
 }
 p{
   letter-spacing: $spacing;
@@ -73,7 +88,8 @@ h1{
 
 // main background
 .wrapper {
-  position: absolute;
+  position: relative;
+  background-attachment: fixed;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -84,36 +100,39 @@ h1{
   background-repeat: no-repeat;
   @include desktop-and-up {
     height: 100%;
-    overflow: hidden;
+    // overflow: hidden;
   }
 }
 
-.page {
-  min-height: 100vh;
-  width: 100%;
+// .page {
+//   min-height: 100vh;
+//   width: 100%;
+// }
 
-}
 .smaller-page {
   min-height: 70vh;
 }
 
 .padding-top {
-  padding: 120px 20px 0 20px;
+  padding: 20px 20px 20px 20px;
   @include desktop-and-up {
-    padding: 180px 20px 0 20px;
+    padding: 100px 75px 100px 75px;
   }
 }
 
 .btn {
   color: white;
   background-color: transparent;
-  font-size: 1.2em;
+  font-size: 1.5em;
   padding: 5px 20px;
   text-align: center;
-  border-radius: 20px;  
+  border-radius: 20px;
   margin: 0 20px;
+  margin-bottom: 20px;
   border: 2px solid #72adc4;
   transition: all 0.300s ease-in;
+  width: 250px;
+  height: 85px;
   &:hover{
     background-color: $yellow;
     border: 2px solid $yellow;
@@ -121,7 +140,7 @@ h1{
   }
   &:focus {
     outline: 0;
-  }  
+  }
 }
 
 .btn-home {
