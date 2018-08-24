@@ -1,0 +1,101 @@
+// about page
+.tracks {
+    .lower-tracks{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 25px;
+    }
+
+  h1{
+    color: white;
+    text-align: left;
+    font-size: $titleMobile;
+    margin-bottom: 10px;
+    font-weight: 200;
+  }
+
+  h3{
+      color: $blue;
+      text-align: center;
+      font-size: $mobileDetail;
+      margin-bottom: 10px;
+      font-weight: 200;
+  }
+  .track{
+      background-color: white;
+      border-radius: 20px;
+      width: 85%;
+      height: 45vh;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      margin-bottom: 30px;
+      p{
+          text-align: center;
+      }
+      img {
+        max-height: 90%;
+        max-width: 90%;
+        padding-left: 20px;
+      }
+  }
+
+  @include tablet-to-laptop{
+      .track{
+          width: 65%;
+          height: 65vh;
+          p{
+              text-align: center;
+              font-size: $detail;
+          }
+        }
+  }
+
+  @include laptop-to-desktop{
+      .track{
+          width: 65%;
+          height: 65vh;
+          p{
+              text-align: center;
+              font-size: $detail;
+          }
+        }
+  }
+
+  @include desktop-and-up{
+      h1{
+          font-size: $title;
+      }
+      h3{
+          font-size: $header;
+          margin: 0;
+      }
+      .lower-tracks{
+          flex-direction: row;
+          justify-content: center;
+          padding-top: 25px;
+      }
+      .track{
+          width: 25%;
+          height: 35vw;
+          p{
+              text-align: center;
+              font-size: $detail;
+          }
+        }
+      .collab{
+          float: left;
+          margin-left: 25px;
+      }
+      .innovate{
+          margin-left: 25px;
+          height: 37vw;
+      }
+      .skill-build{
+          float: right;
+          margin-left: 25px;
+      }
+    }
+}

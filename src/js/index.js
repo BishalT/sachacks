@@ -2,6 +2,8 @@
 import changeBgImg from './utils/changeBgImg';
 import NavBar from './utils/navbar';
 import carousel from './utils/scheduleOnClick';
+import switchOnWheel from './utils/switchPageOnWheel';
+import scheduleChange from './utils/scheduleChange';
 
 // scss
 import 'animate.css';
@@ -18,7 +20,10 @@ const headerTitle = document.querySelector('.header-title');
 // instantiate navbar
 const navbar = new NavBar(pages,controllBtns,rocketParent,'fadeInUp','fadeInDown');
 
-// schedule 
+// scroll wheel
+switchOnWheel.init(controllBtns);
+
+// schedule
 carousel.init();
 
 // set current page
@@ -30,7 +35,7 @@ pages.forEach((pg) => {
 })
 
 // change background of wrapper - need to use JS because github add a '/' to the end point of url -> cant access background image
-// EX: github/sachacks/ 
+// EX: github/sachacks/
 changeBgImg.target(wrapper);
 
 if (window.innerWidth > 1023) {
@@ -47,7 +52,7 @@ window.addEventListener('resize', () => {
   } else {
     navbar.activate();
   }
-  
+
   if (navbar.getCurrentPage()===2) {
     carousel.activate();
   }
@@ -59,11 +64,11 @@ navbarDOM.addEventListener('click', () => {
   currPage = navbar.getCurrentPage();
   if (currPage === 0 ) {
     headerTitle.style.display = 'none';
-  } 
+  }
   else {
     headerTitle.style.display = 'block';
   }
   if (currPage === 2) {
     carousel.activate(); // activate schedule box when user click on schedule page
-  } 
+  }
 })

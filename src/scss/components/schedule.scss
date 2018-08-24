@@ -1,214 +1,91 @@
 // schedule page
 .schedule {
-  text-align: center;
-  h1{
-    color: white;
-    font-size: $title;
-    margin-bottom: 60px;
-  }
-  h3{
-    color:white;
-    font-size: 2.0em;
-  }
-  .progress-box{
-    div{
-      margin: 0 auto;
-      height: 30px;
-      border:0.5px solid $yellow;
-      @include flex-center;
-      align-items: flex-start;
-      div{
-        margin: 0 0 0 5px;
-        height: 15px;
-        width: 70%;
-        background-color: $yellow;
+  text-align: left;
+  background-color: white;
+
+  .schedule-header{
+      display: flex;
+      flex-direction: column;
+      h1{
+        color: $navy;
+        font-size: $titleMobile;
+        margin-bottom: 10px;
       }
-      @include tablet-to-desktop {
-        width: 450px;
-      }
-      @include desktop-and-up {
-        width: 500px;
-      }
-    }
-    p{
-      margin: 5px;
-      color: $yellow;
-    }
-  }
-}
-
-html {
-  overflow: scroll;
-  overflow-x: hidden;
-}
-::-webkit-scrollbar {
-  width: 0px;  /* remove scrollbar space */
-  background: transparent;  /* optional: just make scrollbar invisible */
-}
-
-// schedule box
-.carousel {
-  margin: 60px auto;
-  background-color: transparent;
-  width: 100%;
-  user-select: none;
-  position: relative;
-  overflow: hidden;
-
-  @include tablet-to-desktop {
-    width: 80%;
-  }
-
-  @include desktop-and-up {
-    width: 60%;
-  }
-
-  /* Control buttons */
-  .schedule-btn {
-    position: absolute;  
-    cursor: pointer;
-    color: white;
-    z-index: 101;
-    font-size: 2.0em;
-    top: 60px;
-    
-    @include desktop-and-up {
-      font-size: 1.5em;
-      top: 65px;
-    }
-  }
-
-  .left {
-    left: 0px;
-    
-    @include tablet-to-desktop {
-      left: 15%;
-    }
-  }
-  
-  .right {
-    right: 0px;
-
-    @include tablet-to-desktop {
-      right: 15%;
-    }
-  }
-  
-  .items {
-    display: flex;
-    min-width: 100%;
-    min-height: 220px;
-    overflow-x: scroll; 
-    position: relative;
-    transition: all 3000ms ease-in;
-
-    /* Time bar */
-    .timebar-container {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 20px;
-      background: blue;
-    }
-    .timebar {
-      height: 20px;
-      width: 100px;
-      // z-index: 10;
-      margin-top: 70px;
-      position: absolute;
-      background: rgba(114, 173, 196,0.4);
-
-      @include tablet-to-desktop {
-        position: fixed;
-        background: -webkit-linear-gradient(right, rgba(114, 173, 196,0.1),rgba(114, 173, 196,1),rgba(114, 173, 196,0.1));
-        background: -moz-linear-gradient(to right, rgba(114, 173, 196,0.1),rgba(114, 173, 196,1),rgba(114, 173, 196,0.1));
-        background: -ms-linear-gradient(to right, rgba(114, 173, 196,0.1),rgba(114, 173, 196,1),rgba(114, 173, 196,0.1));
-        background: -o-linear-gradient(to right, rgba(114, 173, 196,0.1),rgba(114, 173, 196,1),rgba(114, 173, 196,0.1));
-        background: linear-gradient(to right, rgba(114, 173, 196,0.1),rgba(114, 173, 196,1),rgba(114, 173, 196,0.1));
-      }
-    }
-
-    .star{
-      &::after{
-        font-size: 45px;
-        content:"\2605";
-        display: block;
-        position: absolute;
-        top: 48px;
-        left: 40%;
-        color: #FFFF8D;
-        z-index: 100;
-      }
-    }
-
-    .cookie {
-      &::after{
-        display: block;
-        content: url('../../images/cookie.png') !important;
-        transform: scale(0.15);  
-        top:55px !important;
-        left:35% !important;
-      }
-    }
-
-    .dot {
-      &::after {
-        height: 11px;
-        width: 11px;
-        content:"";
-        box-shadow: 0 0 0 2px $yellow; 
-        border-radius: 50%;
-        display: inline-block;
-        position: absolute;
-        top: 74px;
-        left: 45%;
-        background: $yellow;
-        z-index: 100;
-      }
-    }
-
-    .item {
-      background-color: transparent;
-      min-width: 220px;
-      position: relative;
-      
-      h4 {
-        color: $yellow;
-        font-size: 1.35em;
-        position: absolute;
-        margin: auto;
-        left: 0;
-        right: 0;
-        padding: 0;
-        top: 0px;
-      }
-      
-      .hacking {
-        color: #FFF176;
-      }
-
-      p {
+      h3{
         color: white;
-        top: 130px;
-        position: absolute;
-        text-align: center;
-        width: 100px;
-        margin: auto;
-        left: 0%;
-        right: 0%;
+        font-size: 2.0em;
       }
-
-      &::before {
-        content: attr(data-time);
-        position: absolute;
-        top: 100px;
-        left: 40%;
-        color:rgba(255, 255, 255, 0.4);
-      }
-    }
   }
+
+  .btn-sched {
+    color: white;
+    background-color: $yellow;
+    font-size: 1.5em;
+    padding: 5px 20px;
+    text-align: center;
+    margin: 0 20px;
+    margin-bottom: 20px;
+    transition: all 0.300s ease-in;
+    height: 85px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    &:focus {
+        outline: 0;
+        }
+    }
+  .btn-inactive {
+    color: #fbb03a;
+    background: white;
+    cursor: pointer;
+  }
+
+  .tb-active {
+      tr:nth-child(even) {
+          background-color: #F8F8F8;
+      }
+      td:nth-child(3) {
+          display: none;
+      }
+      td:nth-child(1){
+          width: 35%;
+      }
+      tr {
+          padding: 10px 0 10px 0;
+      }
+      td {
+          border-bottom: 1px solid #ddd;
+          padding: 15px;
+          text-align: left;
+      }
+      height: 100px;
+      font-size: $mobileDetail;
+      width: 95%;
+  }
+
+  .tb-inactive {
+      display: none;
+  }
+
+   @media screen and (min-width:1024px){
+       .tb-active {
+           td:nth-child(3) {
+               display: block;
+           }
+           td:nth-child(1){
+               width: 10%;
+           }
+           font-size: 30px;
+       }
+       .btn-sched {
+         width: 250px;
+         margin-bottom: 0px;
+         }
+       .schedule-header{
+           display: flex;
+           flex-direction: row;
+           h1{
+             font-size: $title;
+             margin-bottom: 30px;
+           }
+       }
+   }
 }
-
-
-
-

@@ -82,9 +82,17 @@ var _scheduleOnClick = __webpack_require__(3);
 
 var _scheduleOnClick2 = _interopRequireDefault(_scheduleOnClick);
 
-__webpack_require__(4);
+var _switchPageOnWheel = __webpack_require__(4);
 
-__webpack_require__(9);
+var _switchPageOnWheel2 = _interopRequireDefault(_switchPageOnWheel);
+
+var _scheduleChange = __webpack_require__(5);
+
+var _scheduleChange2 = _interopRequireDefault(_scheduleChange);
+
+__webpack_require__(6);
+
+__webpack_require__(11);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -103,7 +111,10 @@ var headerTitle = document.querySelector('.header-title');
 // instantiate navbar
 var navbar = new _navbar2.default(pages, controllBtns, rocketParent, 'fadeInUp', 'fadeInDown');
 
-// schedule 
+// scroll wheel
+_switchPageOnWheel2.default.init(controllBtns);
+
+// schedule
 _scheduleOnClick2.default.init();
 
 // set current page
@@ -115,13 +126,12 @@ pages.forEach(function (pg) {
 });
 
 // change background of wrapper - need to use JS because github add a '/' to the end point of url -> cant access background image
-// EX: github/sachacks/ 
+// EX: github/sachacks/
 _changeBgImg2.default.target(wrapper);
 
 if (window.innerWidth > 1023) {
   navbar.init();
-}
-if (window.innerWidth < 1023) {
+} else {
   _scheduleOnClick2.default.activate();
 }
 
@@ -362,12 +372,14 @@ function init() {
 
 function activate() {
   // make the line longer
-  var width = carousel.items.offsetWidth;
+  var width = void 0;
+  if (window.innerWidth < 767) {
+    width = carousel.items.scrollWidth;
+  } else {
+    width = carousel.items.offsetWidth;
+  }
+
   carousel.timebar.style.width = width + 'px';
-  carousel.timebar.style.background = 'linear-gradient(to right, rgba(114, 173, 196,0.1),rgba(114, 173, 196,1),rgba(114, 173, 196,0.1))';
-
-  console.log(carousel.timebar.style.background);
-
   carousel.leftScroll.addEventListener('click', handleLeftClick);
   carousel.rightScroll.addEventListener('click', handleRightClick);
 }
@@ -403,8 +415,107 @@ exports.default = carousel;
 /* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
 
-var content = __webpack_require__(5);
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// this module will handle touch to switch page
+var switchPageOnWheel = function () {
+  var pageIndex = 0;
+  var listBtns = void 0;
+  var scrollDown = true;
+
+  var init = function init(btns) {
+    listBtns = btns;
+    scroll = false;
+    var scrolled = false;
+    // delay created inbetween scroll inputs
+    function debounce(event, method, delay) {
+      clearTimeout(method._tId);
+      method._tId = setTimeout(function () {
+        method(event);
+      }, delay);
+    }
+    window.addEventListener('mousewheel', function (event) {
+      debounce(event, handleScrollDelay, 400);
+    });
+  };
+
+  return {
+    init: init
+
+    // handle switching page index base on direction of wheel moving
+  };function handleWheelMove(event) {
+    if (event.deltaY > 50) {
+      scrollDown = true;
+      checkDirection();
+    } else if (event.deltaY < -50) {
+      scrollDown = false;
+      checkDirection();
+    }
+
+    // increase/decrease page index base on direction
+    function checkDirection() {
+      switch (scrollDown) {
+        case true:
+          moveDownOnePage();
+          break;
+
+        case false:
+          moveUpOnePage();
+          break;
+      }
+    }
+    function moveDownOnePage() {
+      if (pageIndex < listBtns.length - 1) {
+        ++pageIndex;
+      } else {
+        pageIndex = 0;
+      }
+    }
+    function moveUpOnePage() {
+      if (pageIndex > 0) {
+        --pageIndex;
+      } else {
+        pageIndex = listBtns.length - 1;
+      }
+    }
+  }
+
+  function handleScrollDelay(event) {
+    handleWheelMove(event);
+    listBtns[pageIndex].click();
+  }
+}();
+
+exports.default = switchPageOnWheel;
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+// This is schedule changer for the days
+
+function scheduleActivate() {
+    console.log(this.class);
+}
+
+exports.default = scheduleChange;
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(7);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -418,7 +529,7 @@ var options = {"hmr":true}
 options.transform = transform
 options.insertInto = undefined;
 
-var update = __webpack_require__(7)(content, options);
+var update = __webpack_require__(9)(content, options);
 
 if(content.locals) module.exports = content.locals;
 
@@ -450,10 +561,10 @@ if(false) {
 }
 
 /***/ }),
-/* 5 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(6)(false);
+exports = module.exports = __webpack_require__(8)(false);
 // imports
 
 
@@ -464,7 +575,7 @@ exports.push([module.i, "@charset \"UTF-8\";\n\n/*!\n * animate.css -http://dane
 
 
 /***/ }),
-/* 6 */
+/* 8 */
 /***/ (function(module, exports) {
 
 /*
@@ -546,7 +657,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 7 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -612,7 +723,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(8);
+var	fixUrls = __webpack_require__(10);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -928,7 +1039,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 8 */
+/* 10 */
 /***/ (function(module, exports) {
 
 
@@ -1023,7 +1134,7 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 9 */
+/* 11 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

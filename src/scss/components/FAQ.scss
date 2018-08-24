@@ -1,65 +1,69 @@
 .FAQ {
-  text-align: center;
-  @include desktop-and-up{
-    padding: 100px 20px 0 20px !important;
-  }
+  text-align: left;
   h1{
     color: white;
-    font-size: $title;
+    font-size: $titleMobile;
     margin-bottom: 10px;
   }
   .Q-and-A{
-    width: 100%;    
-    margin: 0 auto;
-    display:grid;
-    grid-template-columns: 1fr;
-    grid-gap: 40px;
+    width: 100%;
+    display: block;
     li{
       list-style: none;
+      width: 100%;
       h3{
         color: $yellow;
-        font-size: $header;
+        font-size: $mobileHeader3;
         margin: 20px 0 5px 0;
         text-align: left;
       }
       p{
         color:white;
-        font-size: 10pt;
-        line-height: 18pt;
+        font-size: $mobileDetail;
+        line-height: 20px;
         text-align: left;
-        margin: 0;
-        a{
+        a {
           // text-decoration: underline;
           text-underline-position: under;
           color: white;
-          display: block;
         }
       }
     }
-
-    @include tablet-to-desktop {
-      grid-gap: 10px 10px;
-      grid-template-columns: 1fr 1fr;
-      width: 600px;
-    }
-
-    @include desktop-and-up {
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-gap: 10px 10px;
-      width: 700px;
-    }
   }
+
   h3{
-    margin-top: 100px;
+    margin-top: 10px;
     color: white;
-    font-size: $header;
+    font-size: $mobileHeader3;
     a{
       color: $yellow;
       text-decoration: none;
     }
-    
-    @include tablet-to-desktop {
+
+    @include tablet-to-laptop {
       margin-top: 20px;
     }
+  }
+
+  @media screen and (min-width:1024px){
+      h1{
+        color: white;
+        font-size: $title;
+        margin-bottom: 10px;
+      }
+      .Q-and-A {
+          li {
+              h3{
+                font-size: $header;
+              }
+              p{
+                font-size: $detail;
+            }
+          }
+      }
+      h3{
+          margin-top: 100px;
+          font-size: $header;
+      }
   }
 }
