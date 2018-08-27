@@ -42,18 +42,7 @@
       }
   }
 
-  @include tablet-to-laptop{
-      .track{
-          width: 65%;
-          height: 65vh;
-          p{
-              text-align: center;
-              font-size: $detail;
-          }
-        }
-  }
-
-  @include laptop-to-desktop{
+  @include tablet-to-desktop{
       .track{
           width: 65%;
           height: 65vh;

@@ -40,9 +40,9 @@
       text-decoration: none;
     }
 
-    @include tablet-to-laptop {
-      margin-top: 20px;
-    }
+    // @include tablet-to-desktop {
+    //   margin-top: 20px;
+    // }
   }
 
   @media screen and (min-width:1024px){

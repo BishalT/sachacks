@@ -156,7 +156,7 @@
     font-weight: 200; }
   .about .detail p {
     color: #645A5A;
-    font-size: 16pt;
+    font-size: 1.4em;
     line-height: 25pt;
     text-align: left; }
   @media screen and (min-width: 1023px) {
@@ -170,7 +170,7 @@
       .about p {
         margin: 10px 0px 30px 100px;
         max-width: 1000px;
-        font-size: 20pt; } }
+        font-size: 1.6em; } }
 
 .schedule {
   text-align: left;
@@ -204,7 +204,7 @@
     cursor: pointer; }
   .schedule .tb-active {
     height: 100px;
-    font-size: 16pt;
+    font-size: 1.4em;
     width: 95%; }
     .schedule .tb-active tr:nth-child(even) {
       background-color: #F8F8F8; }
@@ -256,7 +256,7 @@
         text-align: left; }
       .FAQ .Q-and-A li p {
         color: white;
-        font-size: 16pt;
+        font-size: 1.4em;
         line-height: 20px;
         text-align: left; }
         .FAQ .Q-and-A li p a {
@@ -269,9 +269,6 @@
     .FAQ h3 a {
       color: #fbb03a;
       text-decoration: none; }
-    @media screen and (min-width: 768px) {
-      .FAQ h3 {
-        margin-top: 20px; } }
   @media screen and (min-width: 1024px) {
     .FAQ h1 {
       color: white;
@@ -280,7 +277,7 @@
     .FAQ .Q-and-A li h3 {
       font-size: 2em; }
     .FAQ .Q-and-A li p {
-      font-size: 20pt; }
+      font-size: 1.6em; }
     .FAQ h3 {
       margin-top: 100px;
       font-size: 2em; } }
@@ -345,7 +342,7 @@
 .tracks h3 {
   color: #72adc4;
   text-align: center;
-  font-size: 16pt;
+  font-size: 1.4em;
   margin-bottom: 10px;
   font-weight: 200; }
 
@@ -371,17 +368,9 @@
     height: 65vh; }
     .tracks .track p {
       text-align: center;
-      font-size: 20pt; } }
+      font-size: 1.6em; } }
 
-@media screen and (max-width: 1679) {
-  .tracks .track {
-    width: 65%;
-    height: 65vh; }
-    .tracks .track p {
-      text-align: center;
-      font-size: 20pt; } }
-
-@media screen and (min-width: 1680px) {
+@media screen and (min-width: 1023px) {
   .tracks h1 {
     font-size: 4.5em; }
   .tracks h3 {
@@ -396,7 +385,7 @@
     height: 35vw; }
     .tracks .track p {
       text-align: center;
-      font-size: 20pt; }
+      font-size: 1.6em; }
   .tracks .collab {
     float: left;
     margin-left: 25px; }
@@ -429,7 +418,7 @@
     .footer-bar {
       flex-direction: row; }
       .footer-bar p {
-        font-size: 20pt; }
+        font-size: 1.6em; }
       .footer-bar .icon-bar {
         width: 50%; } }
 
@@ -442,7 +431,7 @@ html, body {
 
 p {
   letter-spacing: 1.2pt; }
-  @media screen and (min-width: 1680px) {
+  @media screen and (min-width: 1023px) {
     p {
       letter-spacing: 1.5pt; } }
 
@@ -460,7 +449,7 @@ h1 {
   overflow: scroll;
   background-size: cover;
   background-repeat: no-repeat; }
-  @media screen and (min-width: 1680px) {
+  @media screen and (min-width: 1023px) {
     .wrapper {
       height: 100%; } }
 
@@ -469,7 +458,7 @@ h1 {
 
 .padding-top {
   padding: 20px 20px 20px 20px; }
-  @media screen and (min-width: 1680px) {
+  @media screen and (min-width: 1023px) {
     .padding-top {
       padding: 100px 75px 100px 75px; } }
 
