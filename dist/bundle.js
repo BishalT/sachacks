@@ -70,452 +70,119 @@
 "use strict";
 
 
-var _changeBgImg = __webpack_require__(1);
-
-var _changeBgImg2 = _interopRequireDefault(_changeBgImg);
-
-var _navbar = __webpack_require__(2);
-
-var _navbar2 = _interopRequireDefault(_navbar);
-
-var _scheduleOnClick = __webpack_require__(3);
-
-var _scheduleOnClick2 = _interopRequireDefault(_scheduleOnClick);
-
-var _switchPageOnWheel = __webpack_require__(4);
-
-var _switchPageOnWheel2 = _interopRequireDefault(_switchPageOnWheel);
-
-var _scheduleChange = __webpack_require__(5);
-
-var _scheduleChange2 = _interopRequireDefault(_scheduleChange);
+__webpack_require__(1);
 
 __webpack_require__(6);
 
-__webpack_require__(11);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 // search the DOM
-
+// const wrapper = document.querySelector('.wrapper');
+// const pages = document.querySelectorAll('.page');
+// const controllBtns = document.querySelectorAll('.control-btn li');
+// const rocketParent = document.querySelector('.rocket');
+// const navbarDOM = document.querySelector('.navbar');
+// const headerTitle = document.querySelector('.header-title');
+// javascript helpers
+// import changeBgImg from './utils/changeBgImg';
+// import NavBar from './utils/navbar';
+// import carousel from './utils/scheduleOnClick';
+// import switchOnWheel from './utils/switchPageOnWheel';
 
 // scss
-var wrapper = document.querySelector('.wrapper'); // javascript helpers
+var btn1 = document.querySelector('.btn-1');
+var btn2 = document.querySelector('.btn-2');
+var table1 = document.querySelector('.tb-1');
+var table2 = document.querySelector('.tb-2');
 
-var pages = document.querySelectorAll('.page');
-var controllBtns = document.querySelectorAll('.control-btn li');
-var rocketParent = document.querySelector('.rocket');
-var navbarDOM = document.querySelector('.navbar');
-var headerTitle = document.querySelector('.header-title');
-
-// instantiate navbar
-var navbar = new _navbar2.default(pages, controllBtns, rocketParent, 'fadeInUp', 'fadeInDown');
-
-// scroll wheel
-_switchPageOnWheel2.default.init(controllBtns);
-
-// schedule
-_scheduleOnClick2.default.init();
-
-// set current page
-var currPage = 0;
-
-// add animation
-pages.forEach(function (pg) {
-  pg.classList.add('animated');
+btn1.addEventListener('click', function () {
+    if (table1.classList.contains("tb-inactive")) {
+        tb_switch_active(btn1, table1);
+        tb_switch_inactive(btn2, table2);
+    }
 });
 
-// change background of wrapper - need to use JS because github add a '/' to the end point of url -> cant access background image
-// EX: github/sachacks/
-_changeBgImg2.default.target(wrapper);
+btn2.addEventListener('click', function () {
+    if (table2.classList.contains("tb-inactive")) {
+        tb_switch_active(btn2, table2);
+        tb_switch_inactive(btn1, table1);
+    }
+});
 
-if (window.innerWidth > 1023) {
-  navbar.init();
-} else {
-  _scheduleOnClick2.default.activate();
+function tb_switch_active(btn, table) {
+    table.classList.add("tb-active");
+    table.classList.remove("tb-inactive");
+    btn.classList.add("btn-active");
+    btn.classList.remove("btn-inactive");
+}
+function tb_switch_inactive(btn, table) {
+    table.classList.add("tb-inactive");
+    table.classList.remove("tb-active");
+    btn.classList.add("btn-inactive");
+    btn.classList.remove("btn-active");
 }
 
-window.addEventListener('resize', function () {
-  if (window.innerWidth < 1023) {
-    // initiate homepage
-    navbar.deactivate();
-    _scheduleOnClick2.default.activate();
-  } else {
-    navbar.activate();
-  }
-
-  if (navbar.getCurrentPage() === 2) {
-    _scheduleOnClick2.default.activate();
-  }
-});
-
-// hide and display the sachack next to logo
-navbarDOM.addEventListener('click', function () {
-  currPage = navbar.getCurrentPage();
-  if (currPage === 0) {
-    headerTitle.style.display = 'none';
-  } else {
-    headerTitle.style.display = 'block';
-  }
-  if (currPage === 2) {
-    _scheduleOnClick2.default.activate(); // activate schedule box when user click on schedule page
-  }
-});
+//
+// // instantiate navbar
+// const navbar = new NavBar(pages,controllBtns,rocketParent,'fadeInUp','fadeInDown');
+//
+// // scroll wheel
+// switchOnWheel.init(controllBtns);
+//
+// // schedule
+// carousel.init();
+//
+// // set current page
+// let currPage = 0;
+//
+// // add animation
+// pages.forEach((pg) => {
+//   pg.classList.add('animated');
+// })
+//
+// // change background of wrapper - need to use JS because github add a '/' to the end point of url -> cant access background image
+// // EX: github/sachacks/
+// changeBgImg.target(wrapper);
+//
+// if (window.innerWidth > 1023) {
+//   navbar.init();
+// } else {
+//   carousel.activate();
+// }
+//
+// window.addEventListener('resize', () => {
+//   if (window.innerWidth < 1023) {
+//     // initiate homepage
+//     navbar.deactivate();
+//     carousel.activate();
+//   } else {
+//     navbar.activate();
+//   }
+//
+//   if (navbar.getCurrentPage()===2) {
+//     carousel.activate();
+//   }
+//
+// });
+//
+// // hide and display the sachack next to logo
+// navbarDOM.addEventListener('click', () => {
+//   currPage = navbar.getCurrentPage();
+//   if (currPage === 0 ) {
+//     headerTitle.style.display = 'none';
+//   }
+//   else {
+//     headerTitle.style.display = 'block';
+//   }
+//   if (currPage === 2) {
+//     carousel.activate(); // activate schedule box when user click on schedule page
+//   }
+// })
 
 /***/ }),
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
 
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var path2Img = 'images/bg_star_3.jpg';
-var changeBgImg = {
-  target: function target(_target) {
-    if (!_target) {
-      return console.error('There is not target to change background');
-    } else {
-      _target.style.backgroundImage = 'url(' + path2Img + ')';
-    }
-  }
-};
-
-exports.default = changeBgImg;
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-// This is navbar helper
-// It will set all pages, but homepage, to display none
-
-var NavBar = function () {
-  function NavBar(pages, controllBtns, rocketParent, animatedUp, animatedDown) {
-    _classCallCheck(this, NavBar);
-
-    this.pages = pages;
-    this.controllBtns = controllBtns;
-    this.rocketParent = rocketParent;
-    this.animatedUp = animatedUp;
-    this.animatedDown = animatedDown;
-    this.mobile = false;
-    this.currPage = 0;
-  }
-
-  // initiating first page
-
-
-  _createClass(NavBar, [{
-    key: 'init',
-    value: function init() {
-      resetAllPages.apply(this.pages);
-      switchPage.apply(this.pages[this.currPage]); // switch to first page
-      addActiveBtn.apply(this.controllBtns[this.currPage]); // add active class to first page
-      initControllBtn.apply(this);
-      moveRocket.call(this, this.controllBtns[this.currPage]); // move rocket to first button
-    }
-
-    // switching page when navbar btn is clicked
-
-  }, {
-    key: 'handleBtnClick',
-    value: function handleBtnClick(btn) {
-      var target = btn.getAttribute('name'); // get the index of btn
-      resetAllPages.apply(this.pages); // reset pages
-      removeActiveBtn.apply(this.controllBtns); // remove style on btn
-      removeAnimation.apply(this); // remove all animation effect
-      moveRocket.call(this, btn); // move rocket to btn
-      changeAnimation.call(this, target); // animate the target page
-      switchPage.apply(this.pages[target]); // switch to page clicked
-      addActiveBtn.apply(btn); // add style to btn
-    }
-  }, {
-    key: 'getCurrentPage',
-    value: function getCurrentPage() {
-      return this.currPage;
-    }
-  }, {
-    key: 'deactivate',
-    value: function deactivate() {
-      this.pages.forEach(function (page) {
-        page.style.display = "block";
-      });
-      if (this.mobile === false) {
-        var curPagePos = this.pages[this.currPage].getBoundingClientRect().top;
-        window.scrollTo(0, curPagePos);
-        this.mobile = true;
-      }
-    }
-  }, {
-    key: 'activate',
-    value: function activate() {
-      if (this.mobile === false) {
-        return;
-      }
-      this.mobile = false;
-      this.init();
-    }
-  }]);
-
-  return NavBar;
-}();
-
-function removeAnimation() {
-  var _this = this;
-
-  this.pages.forEach(function (pg) {
-    pg.classList.remove('' + _this.animatedDown);
-    pg.classList.remove('' + _this.animatedUp);
-  });
-}
-
-function changeAnimation(target) {
-  var targetPage = Number(target);
-  if (targetPage > this.currPage) {
-    this.pages[targetPage].classList.add('' + this.animatedUp);
-  } else {
-    this.pages[targetPage].classList.add('' + this.animatedDown);
-  }
-  this.currPage = targetPage;
-}
-
-function moveRocket(btn) {
-  var dist = getPosBtn.call(this, btn) - 30; // minus 1/2 of rocket height
-  var elements = this.rocketParent.children;
-  for (var i = 0; i < elements.length; ++i) {
-    if (elements[i].tagName === 'IMG') {
-      var rocket = elements[i];
-      // if it goes down, change direction of 
-      if (btn.getAttribute('name') >= this.currPage) {
-        rocket.style.transform = 'rotate(180deg)';
-      } else {
-        rocket.style.transform = 'rotate(0deg)';
-      }
-      rocket.style.marginTop = dist + 'px';
-    }
-  }
-  function getPosBtn(btn) {
-    var posBtn = btn.getBoundingClientRect().top;
-    var rocketParent = this.rocketParent.getBoundingClientRect().top;
-    return posBtn - rocketParent;
-  }
-}
-
-function initControllBtn() {
-  var _this2 = this;
-
-  this.controllBtns.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      _this2.handleBtnClick(btn);
-    });
-  });
-}
-
-function switchPage() {
-  this.style.display = 'block';
-}
-
-function resetAllPages() {
-  this.forEach(function (slide) {
-    slide.style.display = 'none';
-  });
-}
-
-function addActiveBtn() {
-  this.classList.add('active');
-}
-
-function removeActiveBtn() {
-  this.forEach(function (btn) {
-    btn.classList.remove('active');
-  });
-}
-
-exports.default = NavBar;
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var carousel = {};
-
-carousel.init = init;
-carousel.activate = activate;
-
-function init() {
-  carousel.element = document.querySelector('.carousel');
-  carousel.items = document.querySelector('.carousel .items');
-  carousel.leftScroll = document.querySelector('.carousel .left');
-  carousel.rightScroll = document.querySelector('.carousel .right');
-  carousel.timebar = document.querySelector('.carousel .timebar');
-}
-
-function activate() {
-  // make the line longer
-  var width = void 0;
-  if (window.innerWidth < 767) {
-    width = carousel.items.scrollWidth;
-  } else {
-    width = carousel.items.offsetWidth;
-  }
-
-  carousel.timebar.style.width = width + 'px';
-  carousel.leftScroll.addEventListener('click', handleLeftClick);
-  carousel.rightScroll.addEventListener('click', handleRightClick);
-}
-
-function handleRightClick() {
-  mouseWheelHandler(-100, carousel.items);
-}
-
-function handleLeftClick() {
-  mouseWheelHandler(100, carousel.items);
-}
-
-function mouseWheelHandler(distance, element) {
-  var delta = 0;
-
-  if (typeof distance === 'number') {
-    delta = distance;
-  } else {
-    if (distance.deltaX !== 0) {
-      delta = distance.deltaX;
-    } else {
-      delta = distance.deltaY;
-    }
-    distance.prevenDefault();
-  }
-
-  element.scrollLeft -= delta;
-}
-
-exports.default = carousel;
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-// this module will handle touch to switch page
-var switchPageOnWheel = function () {
-  var pageIndex = 0;
-  var listBtns = void 0;
-  var scrollDown = true;
-
-  var init = function init(btns) {
-    listBtns = btns;
-    scroll = false;
-    var scrolled = false;
-    // delay created inbetween scroll inputs
-    function debounce(event, method, delay) {
-      clearTimeout(method._tId);
-      method._tId = setTimeout(function () {
-        method(event);
-      }, delay);
-    }
-    window.addEventListener('mousewheel', function (event) {
-      debounce(event, handleScrollDelay, 400);
-    });
-  };
-
-  return {
-    init: init
-
-    // handle switching page index base on direction of wheel moving
-  };function handleWheelMove(event) {
-    if (event.deltaY > 50) {
-      scrollDown = true;
-      checkDirection();
-    } else if (event.deltaY < -50) {
-      scrollDown = false;
-      checkDirection();
-    }
-
-    // increase/decrease page index base on direction
-    function checkDirection() {
-      switch (scrollDown) {
-        case true:
-          moveDownOnePage();
-          break;
-
-        case false:
-          moveUpOnePage();
-          break;
-      }
-    }
-    function moveDownOnePage() {
-      if (pageIndex < listBtns.length - 1) {
-        ++pageIndex;
-      } else {
-        pageIndex = 0;
-      }
-    }
-    function moveUpOnePage() {
-      if (pageIndex > 0) {
-        --pageIndex;
-      } else {
-        pageIndex = listBtns.length - 1;
-      }
-    }
-  }
-
-  function handleScrollDelay(event) {
-    handleWheelMove(event);
-    listBtns[pageIndex].click();
-  }
-}();
-
-exports.default = switchPageOnWheel;
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-// This is schedule changer for the days
-
-function scheduleActivate() {
-    console.log(this.class);
-}
-
-exports.default = scheduleChange;
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(7);
+var content = __webpack_require__(2);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -529,7 +196,7 @@ var options = {"hmr":true}
 options.transform = transform
 options.insertInto = undefined;
 
-var update = __webpack_require__(9)(content, options);
+var update = __webpack_require__(4)(content, options);
 
 if(content.locals) module.exports = content.locals;
 
@@ -561,10 +228,10 @@ if(false) {
 }
 
 /***/ }),
-/* 7 */
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(8)(false);
+exports = module.exports = __webpack_require__(3)(false);
 // imports
 
 
@@ -575,7 +242,7 @@ exports.push([module.i, "@charset \"UTF-8\";\n\n/*!\n * animate.css -http://dane
 
 
 /***/ }),
-/* 8 */
+/* 3 */
 /***/ (function(module, exports) {
 
 /*
@@ -657,7 +324,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 9 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -723,7 +390,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(10);
+var	fixUrls = __webpack_require__(5);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -1039,7 +706,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 10 */
+/* 5 */
 /***/ (function(module, exports) {
 
 
@@ -1134,7 +801,7 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 11 */
+/* 6 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

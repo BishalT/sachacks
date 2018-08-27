@@ -2,9 +2,9 @@
 $title : 4.5em;
 $header: 2.0em;
 $titleMobile: 2.6em;
-$detail: 20pt;
+$detail: 1.6em;
 $detailHeight: 25pt;
-$mobileDetail: 16pt;
+$mobileDetail: 1.4em;
 $mobileHeader3: 20pt;
 $spacing: 1.2pt;
 $spacingDesktop: 1.5pt;
@@ -31,6 +31,31 @@ $gray: #645A5A;
   align-items: center;
 }
 
+// // break points
+// @mixin phone-to-tablet {
+//   @media screen and (max-width: 767px) {
+//     @content;
+//   }
+// }
+//
+// @mixin tablet-to-laptop {
+//   @media screen and (min-width: 768px) {
+//     @content;
+//   }
+// }
+//
+// @mixin laptop-to-desktop {
+//   @media screen and (max-width: 1679) {
+//     @content;
+//   }
+// }
+//
+// @mixin desktop-and-up {
+//   @media screen and (min-width: 1680px) {
+//     @content;
+//   }
+// }
+
 // break points
 @mixin phone-to-tablet {
   @media screen and (max-width: 767px) {
@@ -38,20 +63,13 @@ $gray: #645A5A;
   }
 }
 
-@mixin tablet-to-laptop {
+@mixin tablet-to-desktop {
   @media screen and (min-width: 768px) {
     @content;
   }
 }
-
-@mixin laptop-to-desktop {
-  @media screen and (max-width: 1679) {
-    @content;
-  }
-}
-
 @mixin desktop-and-up {
-  @media screen and (min-width: 1680px) {
+  @media screen and (min-width: 1023px) {
     @content;
   }
 }
