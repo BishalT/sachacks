@@ -112,7 +112,7 @@
     .homepage .detail h3 {
       white-space: pre-wrap;
       color: white;
-      font-size: 2.6em;
+      font-size: 2.2em;
       -webkit-margin-before: 0; }
     .homepage .detail h4 {
       color: #72aec4;
@@ -151,7 +151,7 @@
   .about h1 {
     color: #002561;
     text-align: left;
-    font-size: 2.6em;
+    font-size: 2.2em;
     margin-bottom: 10px;
     font-weight: 200; }
   .about .detail p {
@@ -180,7 +180,7 @@
     flex-direction: column; }
     .schedule .schedule-header h1 {
       color: #002561;
-      font-size: 2.6em;
+      font-size: 2.2em;
       margin-bottom: 10px; }
     .schedule .schedule-header h3 {
       color: white;
@@ -241,7 +241,7 @@
   text-align: left; }
   .FAQ h1 {
     color: white;
-    font-size: 2.6em;
+    font-size: 2.2em;
     margin-bottom: 10px; }
   .FAQ .Q-and-A {
     width: 100%;
@@ -290,7 +290,7 @@
   flex-direction: column; }
   .sponsor h1 {
     color: #002561;
-    font-size: 2.6em;
+    font-size: 2.2em;
     margin-bottom: 10px; }
   .sponsor .list-sponsor {
     display: flex;
@@ -336,7 +336,7 @@
 .tracks h1 {
   color: white;
   text-align: left;
-  font-size: 2.6em;
+  font-size: 2.2em;
   margin-bottom: 10px;
   font-weight: 200; }
 
