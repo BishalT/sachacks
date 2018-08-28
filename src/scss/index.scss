@@ -1,12 +1,12 @@
 // font size
 $title : 4.5em;
 $header: 2.0em;
-$titleMobile: 2.6em;
+$titleMobile: 2.2em; 
 $detail: 1.6em;
 $detailHeight: 25pt;
 $mobileDetail: 1.4em;
 $mobileHeader3: 20pt;
-$spacing: 1.2pt;
+$spacing: normal;
 $spacingDesktop: 1.5pt;
 
 // color
@@ -144,7 +144,7 @@ h1{
   font-size: 1.5em;
   padding: 5px 20px;
   text-align: center;
-  border-radius: 20px;
+  border-radius: 7px;
   margin: 0 20px;
   margin-bottom: 20px;
   border: 2px solid #72adc4;

@@ -14,7 +14,7 @@
       h3{
         color: $yellow;
         font-size: $mobileHeader3;
-        margin: 20px 0 5px 0;
+        margin: 20px 0 5px 35px;
         text-align: left;
       }
       p{
@@ -22,6 +22,7 @@
         font-size: $mobileDetail;
         line-height: 20px;
         text-align: left;
+        margin-left: 35px;
         a {
           // text-decoration: underline;
           text-underline-position: under;
