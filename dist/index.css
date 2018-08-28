@@ -150,7 +150,7 @@
   flex-direction: column; }
   .about h1 {
     color: #002561;
-    text-align: center;
+    text-align: left;
     font-size: 2.6em;
     margin-bottom: 10px;
     font-weight: 200; }
@@ -252,13 +252,14 @@
       .FAQ .Q-and-A li h3 {
         color: #fbb03a;
         font-size: 20pt;
-        margin: 20px 0 5px 0;
+        margin: 20px 0 5px 35px;
         text-align: left; }
       .FAQ .Q-and-A li p {
         color: white;
         font-size: 1.4em;
         line-height: 20px;
-        text-align: left; }
+        text-align: left;
+        margin-left: 35px; }
         .FAQ .Q-and-A li p a {
           text-underline-position: under;
           color: white; }
