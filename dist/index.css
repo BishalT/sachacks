@@ -117,7 +117,7 @@
     .homepage .detail h4 {
       color: #72aec4;
       line-height: 25pt;
-      letter-spacing: 1.2pt; }
+      letter-spacing: normal; }
       .homepage .detail h4 img {
         width: 120px;
         height: 100%;
@@ -431,7 +431,7 @@ html, body {
   font-family: 'Source Sans Pro', sans-serif; }
 
 p {
-  letter-spacing: 1.2pt; }
+  letter-spacing: normal; }
   @media screen and (min-width: 1023px) {
     p {
       letter-spacing: 1.5pt; } }
