@@ -351,13 +351,14 @@
   background-color: white;
   border-radius: 20px;
   width: 85%;
-  height: 45vh;
+  height: 45%;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   margin-bottom: 30px; }
   .tracks .track p {
-    text-align: center; }
+    text-align: center;
+    padding-bottom: 25px; }
   .tracks .track img {
     max-height: 90%;
     max-width: 90%;
@@ -366,10 +367,11 @@
 @media screen and (min-width: 768px) {
   .tracks .track {
     width: 65%;
-    height: 65vh; }
+    height: 65%; }
     .tracks .track p {
       text-align: center;
-      font-size: 1.6em; } }
+      font-size: 1.6em;
+      padding: 0px 10px 0px 10px; } }
 
 @media screen and (min-width: 1023px) {
   .tracks h1 {
@@ -383,7 +385,7 @@
     padding-top: 25px; }
   .tracks .track {
     width: 25%;
-    height: 35vw; }
+    height: 33rem; }
     .tracks .track p {
       text-align: center;
       font-size: 1.6em; }
@@ -392,7 +394,7 @@
     margin-left: 25px; }
   .tracks .innovate {
     margin-left: 25px;
-    height: 37vw; }
+    height: 37rem; }
   .tracks .skill-build {
     float: right;
     margin-left: 25px; } }
