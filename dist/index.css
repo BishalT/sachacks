@@ -113,7 +113,8 @@
       white-space: pre-wrap;
       color: white;
       font-size: 2.2em;
-      -webkit-margin-before: 0; }
+      -webkit-margin-before: 0;
+      padding: 10px 0 25px 0; }
     .homepage .detail h4 {
       color: #72aec4;
       line-height: 25pt;
@@ -195,7 +196,8 @@
     margin-bottom: 20px;
     transition: all 0.300s ease-in;
     height: 85px;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 7px; }
     .schedule .btn-sched:focus {
       outline: 0; }
   .schedule .btn-inactive {
