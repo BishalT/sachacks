@@ -34,6 +34,9 @@
       margin-bottom: 30px;
       p{
           text-align: center;
+          //padding-bottom: 100px;
+          padding-bottom: 25px;
+          
       }
       img {
         max-height: 90%;
@@ -68,7 +71,7 @@
       }
       .track{
           width: 25%;
-          height: 35vw;
+          height: 33rem;//35vw;
           p{
               text-align: center;
               font-size: $detail;
@@ -80,7 +83,7 @@
       }
       .innovate{
           margin-left: 25px;
-          height: 37vw;
+          height: 37rem; //37vw;
       }
       .skill-build{
           float: right;
