@@ -417,6 +417,9 @@
       .footer-bar .icon-bar li .svg-inline--fa {
         width: 30px;
         height: 30px; }
+  .footer-bar a {
+    color: white;
+    text-decoration: none; }
   @media screen and (min-width: 1024px) {
     .footer-bar {
       flex-direction: row; }
