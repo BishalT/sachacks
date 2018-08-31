@@ -13,13 +13,27 @@ import '../scss/index.scss';
 // const pages = document.querySelectorAll('.page');
 // const controllBtns = document.querySelectorAll('.control-btn li');
 // const rocketParent = document.querySelector('.rocket');
-// const navbarDOM = document.querySelector('.navbar');
 // const headerTitle = document.querySelector('.header-title');
+
+const navbarDOM = document.querySelector('.navbar');
+const homepageDOM = document.querySelector('.homepage');
 const btn1 = document.querySelector('.btn-1');
 const btn2 = document.querySelector('.btn-2');
 const table1 = document.querySelector('.tb-1');
 const table2 = document.querySelector('.tb-2');
 
+// smooth scrolling
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// schedule changing
 btn1.addEventListener('click', () => {
     if(table1.classList.contains("tb-inactive")) {
         tb_switch_active(btn1, table1);

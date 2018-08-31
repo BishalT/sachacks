@@ -79,8 +79,8 @@ __webpack_require__(6);
 // const pages = document.querySelectorAll('.page');
 // const controllBtns = document.querySelectorAll('.control-btn li');
 // const rocketParent = document.querySelector('.rocket');
-// const navbarDOM = document.querySelector('.navbar');
 // const headerTitle = document.querySelector('.header-title');
+
 // javascript helpers
 // import changeBgImg from './utils/changeBgImg';
 // import NavBar from './utils/navbar';
@@ -88,11 +88,25 @@ __webpack_require__(6);
 // import switchOnWheel from './utils/switchPageOnWheel';
 
 // scss
+var navbarDOM = document.querySelector('.navbar');
+var homepageDOM = document.querySelector('.homepage');
 var btn1 = document.querySelector('.btn-1');
 var btn2 = document.querySelector('.btn-2');
 var table1 = document.querySelector('.tb-1');
 var table2 = document.querySelector('.tb-2');
 
+// smooth scrolling
+document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// schedule changing
 btn1.addEventListener('click', function () {
     if (table1.classList.contains("tb-inactive")) {
         tb_switch_active(btn1, table1);

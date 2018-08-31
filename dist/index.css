@@ -13,6 +13,7 @@
 .navbar {
   background-color: white;
   width: 100%;
+  height: 8%;
   z-index: 100;
   display: none;
   align-items: center;
@@ -23,7 +24,6 @@
     position: relative;
     justify-content: space-between;
     align-items: center;
-    height: 75%;
     width: 100%; }
   @media screen and (min-width: 1024px) {
     .navbar {
@@ -40,7 +40,6 @@
     transform: rotate(90deg);
     width: 85px;
     height: 85px;
-    z-index: 1;
     transition: margin-top 0.5s cubic-bezier(0.12, 0.69, 1, 1.12); }
 
 .control-btn {
@@ -80,6 +79,11 @@
   .control-btn .active {
     color: #72adc4;
     font-weight: 600; }
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%; }
 
 .header {
   margin: 0px 2%;
@@ -181,7 +185,8 @@
       .about p {
         margin: 10px 0px 30px 100px;
         max-width: 1000px;
-        font-size: 1.4em; } }
+        font-size: 1.4em;
+        letter-spacing: 1.2pt; } }
 
 .schedule {
   text-align: left;
@@ -453,7 +458,7 @@ p {
   letter-spacing: normal; }
   @media screen and (min-width: 1023px) {
     p {
-      letter-spacing: 1.5pt; } }
+      letter-spacing: 1.2pt; } }
 
 h1 {
   margin: 0;
