@@ -1,6 +1,17 @@
+@font-face {
+  font-family: "My-Avenir-Next";
+  src: url(/fonts/avenir-next-regular.woff) format(woff), url(/fonts/avenir-next-regular.eot) format(embedded-opentype), url(/fonts/avenir-next-regular.svg) format(svg);
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "My-Avenir";
+  src: url(/fonts/regular.woff) format(woff), url(/fonts/regular.eot) format(embedded-opentype), url(/fonts/regular.ttf) format(truetype);
+  font-weight: normal;
+  font-style: normal; }
+
 .navbar {
   background-color: white;
-  height: 10%;
   width: 100%;
   z-index: 100;
   display: none;
@@ -11,6 +22,7 @@
     flex-direction: row;
     position: relative;
     justify-content: space-between;
+    align-items: center;
     height: 75%;
     width: 100%; }
   @media screen and (min-width: 1024px) {
@@ -20,18 +32,15 @@
 .rocket {
   height: 100%;
   width: 60px;
-  position: absolute;
+  position: relative;
   left: 0;
   text-align: center;
-  margin: 0;
   /** this is for the line underneath the rocket **/ }
   .rocket img {
     transform: rotate(90deg);
     width: 85px;
     height: 85px;
-    position: absolute;
     z-index: 1;
-    left: 0;
     transition: margin-top 0.5s cubic-bezier(0.12, 0.69, 1, 1.12); }
 
 .control-btn {
@@ -49,24 +58,25 @@
     padding: 0 30px 0 30px;
     font-size: 2em;
     color: #645A5A;
-    filter: grayscale(0%); }
+    filter: grayscale(0%);
+    /* unvisited link */
+    /* visited link */
+    /* mouse over link */
+    /* selected link */ }
     .control-btn li:hover {
       cursor: pointer;
-      font-weight: 600;
-      /* unvisited link */
-      /* visited link */
-      /* mouse over link */
-      /* selected link */ }
-      .control-btn li:hover .no-underline:hover {
-        text-decoration: none; }
-      .control-btn li:hover a {
-        color: #645A5A; }
-      .control-btn li:hover a:visited {
-        color: #645A5A; }
-      .control-btn li:hover a:hover {
-        color: #645A5A; }
-      .control-btn li:hover a:active {
-        color: #645A5A; }
+      font-weight: 300; }
+    .control-btn li a {
+      color: #645A5A;
+      text-decoration: none; }
+    .control-btn li a:visited {
+      color: #645A5A;
+      text-decoration: none; }
+    .control-btn li a:hover {
+      color: #645A5A;
+      text-decoration: none; }
+    .control-btn li a:active {
+      color: #645A5A; }
   .control-btn .active {
     color: #72adc4;
     font-weight: 600; }
@@ -157,7 +167,7 @@
     font-weight: 200; }
   .about .detail p {
     color: #645A5A;
-    font-size: 1.4em;
+    font-size: 1.3em;
     line-height: 25pt;
     text-align: left; }
   @media screen and (min-width: 1023px) {
@@ -167,11 +177,11 @@
       .about h1 {
         text-align: left;
         max-width: 300px;
-        font-size: 4.5em; }
+        font-size: 4em; }
       .about p {
         margin: 10px 0px 30px 100px;
         max-width: 1000px;
-        font-size: 1.6em; } }
+        font-size: 1.4em; } }
 
 .schedule {
   text-align: left;
@@ -206,7 +216,7 @@
     cursor: pointer; }
   .schedule .tb-active {
     height: 100px;
-    font-size: 1.4em;
+    font-size: 1.3em;
     width: 95%; }
     .schedule .tb-active tr:nth-child(even) {
       background-color: #F8F8F8; }
@@ -224,7 +234,7 @@
     display: none; }
   @media screen and (min-width: 1024px) {
     .schedule .tb-active {
-      font-size: 30px; }
+      font-size: 1.4em; }
       .schedule .tb-active td:nth-child(3) {
         display: block; }
       .schedule .tb-active td:nth-child(1) {
@@ -236,7 +246,7 @@
       display: flex;
       flex-direction: row; }
       .schedule .schedule-header h1 {
-        font-size: 4.5em;
+        font-size: 4em;
         margin-bottom: 30px; } }
 
 .FAQ {
@@ -258,7 +268,7 @@
         text-align: left; }
       .FAQ .Q-and-A li p {
         color: white;
-        font-size: 1.4em;
+        font-size: 1.3em;
         line-height: 20px;
         text-align: left;
         margin-left: 35px; }
@@ -275,12 +285,12 @@
   @media screen and (min-width: 1024px) {
     .FAQ h1 {
       color: white;
-      font-size: 4.5em;
+      font-size: 4em;
       margin-bottom: 10px; }
     .FAQ .Q-and-A li h3 {
       font-size: 2em; }
     .FAQ .Q-and-A li p {
-      font-size: 1.6em; }
+      font-size: 1.4em; }
     .FAQ h3 {
       margin-top: 100px;
       font-size: 2em; } }
@@ -315,7 +325,7 @@
       text-decoration: none; }
   @media screen and (min-width: 1024px) {
     .sponsor h1 {
-      font-size: 4.5em;
+      font-size: 4em;
       margin-bottom: 15px; }
     .sponsor h3 {
       font-size: 2em;
@@ -345,7 +355,7 @@
 .tracks h3 {
   color: #72adc4;
   text-align: center;
-  font-size: 1.4em;
+  font-size: 1.3em;
   margin-bottom: 10px;
   font-weight: 200; }
 
@@ -372,12 +382,12 @@
     height: 65%; }
     .tracks .track p {
       text-align: center;
-      font-size: 1.6em;
+      font-size: 1.4em;
       padding: 0px 10px 0px 10px; } }
 
 @media screen and (min-width: 1023px) {
   .tracks h1 {
-    font-size: 4.5em; }
+    font-size: 4em; }
   .tracks h3 {
     font-size: 2em;
     margin: 0; }
@@ -387,16 +397,18 @@
     padding-top: 25px; }
   .tracks .track {
     width: 25%;
-    height: 33rem; }
+    height: 33rem;
+    transition: transform .2s; }
     .tracks .track p {
       text-align: center;
-      font-size: 1.6em; }
+      font-size: 1.4em; }
+  .tracks .track:hover {
+    transform: scale(1.1); }
   .tracks .collab {
     float: left;
     margin-left: 25px; }
   .tracks .innovate {
-    margin-left: 25px;
-    height: 37rem; }
+    margin-left: 25px; }
   .tracks .skill-build {
     float: right;
     margin-left: 25px; } }
@@ -426,7 +438,7 @@
     .footer-bar {
       flex-direction: row; }
       .footer-bar p {
-        font-size: 1.6em; }
+        font-size: 1.4em; }
       .footer-bar .icon-bar {
         width: 50%; } }
 
@@ -435,7 +447,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'Source Sans Pro', sans-serif; }
+  font-family: 'My-Avenir', 'My-Avenir-Next', sans-serif; }
 
 p {
   letter-spacing: normal; }

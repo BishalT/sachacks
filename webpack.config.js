@@ -20,13 +20,13 @@ module.exports = {
       {
         test: /\.css$/,
         use: [ 'style-loader', 'css-loader' ]
-      },      
+      },
       {
         test: /\.(png|jpg|gif)$/,
         use: [
           {
             loader: 'file-loader',
-            options: {}  
+            options: {}
           }
         ]
       },
@@ -39,6 +39,10 @@ module.exports = {
             presets: ['env']
           }
         }
+      },
+      {
+          test: /\.(eot|svg|ttf|woff|woff2)$/,
+          loader: 'file-loader?name=/fonts/[name].[ext]'
       },
     ]
   },
