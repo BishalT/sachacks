@@ -1,13 +1,13 @@
 // font size
-$title : 4.5em;
+$title : 4.0em;
 $header: 2.0em;
-$titleMobile: 2.2em; 
-$detail: 1.6em;
+$titleMobile: 2.2em;
+$detail: 1.4em;
 $detailHeight: 25pt;
-$mobileDetail: 1.4em;
+$mobileDetail: 1.3em;
 $mobileHeader3: 20pt;
 $spacing: normal;
-$spacingDesktop: 1.5pt;
+$spacingDesktop: 1.2pt;
 
 // color
 $yellow : #fbb03a;
@@ -74,6 +74,7 @@ $gray: #645A5A;
   }
 }
 
+@import './components/font.scss';
 @import './components/navbar.scss';
 @import './components/header.scss';
 @import './components/homepage.scss';
@@ -89,9 +90,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'Source Sans Pro', sans-serif;
-  // font-family: "Avenir";
-  // src:url("../../font/Avenir_Next/AvenirNext-Regular.ttc");
+  font-family: 'My-Avenir', 'My-Avenir-Next', sans-serif;
 }
 p{
   letter-spacing: $spacing;

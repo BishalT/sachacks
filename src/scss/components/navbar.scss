@@ -1,9 +1,9 @@
 // navbar
 .navbar{
     background-color: white;
-    height: 10%;
     width: 100%;
   // position: absolute;
+  height: 8%;
     z-index: 100;
     display: none;
     align-items: center;
@@ -14,7 +14,7 @@
     flex-direction: row;
     position: relative;
     justify-content: space-between;
-    height: 75%;
+    align-items: center;
     width: 100%;
   }
   @media screen and (min-width:1024px){
@@ -24,17 +24,13 @@
 .rocket{
   height: 100%;
   width: 60px;
-  position: absolute;
+  position: relative;
   left: 0;
   text-align: center;
-  margin: 0;
   img{
     transform: rotate(90deg);
     width: 85px;
     height: 85px;
-    position: absolute;
-    z-index: 1;
-    left: 0;
     transition: margin-top 0.5s cubic-bezier(0.12, 0.69, 1, 1.12);
   }
   /** this is for the line underneath the rocket **/
@@ -65,18 +61,21 @@
         filter: grayscale(0%);
         &:hover{
           cursor: pointer;
-          font-weight: 600;
-        .no-underline:hover {
-            text-decoration: none;
-            }
-        a {color:$gray;}      /* unvisited link */
-        a:visited {color:$gray;}  /* visited link */
-        a:hover {color:$gray;}  /* mouse over link */
-        a:active {color:$gray;}  /* selected link */
+          font-weight: 300;
         }
+        a {color:$gray; text-decoration: none; }      /* unvisited link */
+        a:visited {color:$gray; text-decoration: none;}  /* visited link */
+        a:hover {color:$gray; text-decoration: none;}  /* mouse over link */
+        a:active {color:$gray;}  /* selected link */
     }
     .active{
     color:#72adc4;
     font-weight: 600;
     }
+}
+
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
 }

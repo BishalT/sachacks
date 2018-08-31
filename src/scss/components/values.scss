@@ -71,10 +71,14 @@
       .track{
           width: 25%;
           height: 33rem;//35vw;
+          transition: transform .2s;
           p{
               text-align: center;
               font-size: $detail;
           }
+        }
+        .track:hover {
+            transform: scale(1.10);
         }
       .collab{
           float: left;
@@ -82,7 +86,6 @@
       }
       .innovate{
           margin-left: 25px;
-          height: 37rem; //37vw;
       }
       .skill-build{
           float: right;
