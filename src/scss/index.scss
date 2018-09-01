@@ -14,7 +14,7 @@ $spacingDesktop: 1.2pt;
 $yellow : #fbb03a;
 $blue: #72adc4;
 $navy: #002561;
-$gray: #645A5A;
+$gray: #5A5A5A;
 
 // layout
 @mixin flex-row {
@@ -170,7 +170,7 @@ h1{
 .btn-home {
   &:hover {
     background-color: $blue;
-    border: 2px solid $blue;
+    border: 2px solid white;
     cursor: pointer;
   }
 }

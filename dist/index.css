@@ -38,9 +38,9 @@
   /** this is for the line underneath the rocket **/ }
   .rocket img {
     transform: rotate(90deg);
-    width: 85px;
-    height: 85px;
-    transition: margin-top 0.5s cubic-bezier(0.12, 0.69, 1, 1.12); }
+    width: 75px;
+    height: 75px;
+    margin-left: 10px; }
 
 .control-btn {
   margin-left: auto;
@@ -52,11 +52,12 @@
   padding-right: 30px; }
   .control-btn li {
     text-align: center;
+    font-size: 1.2em;
     width: 100%;
     height: 100%;
     padding: 0 30px 0 30px;
-    font-size: 2em;
-    color: #645A5A;
+    font-size: 1.4em;
+    color: #5A5A5A;
     filter: grayscale(0%);
     font-weight: 200;
     /* unvisited link */
@@ -66,16 +67,16 @@
     .control-btn li:hover {
       cursor: pointer; }
     .control-btn li a {
-      color: #645A5A;
+      color: #5A5A5A;
       text-decoration: none; }
     .control-btn li a:visited {
-      color: #645A5A;
+      color: #5A5A5A;
       text-decoration: none; }
     .control-btn li a:hover {
-      color: #645A5A;
+      color: #5A5A5A;
       text-decoration: none; }
     .control-btn li a:active {
-      color: #645A5A; }
+      color: #5A5A5A; }
   .control-btn .active {
     color: #72adc4;
     font-weight: 600; }
@@ -129,6 +130,7 @@
       white-space: pre-wrap;
       color: white;
       font-size: 2.2em;
+      font-weight: 200;
       -webkit-margin-before: 0;
       padding: 10px 0 25px 0; }
     .homepage .detail h4 {
@@ -173,7 +175,7 @@
     margin-bottom: 10px;
     font-weight: 200; }
   .about .detail p {
-    color: #645A5A;
+    color: #5A5A5A;
     font-size: 1.2em;
     line-height: 25pt;
     text-align: left; }
@@ -237,8 +239,10 @@
       display: none; }
     .schedule .tb-active td:nth-child(1) {
       width: 35%; }
+    .schedule .tb-active td:nth-child(2) {
+      font-weight: bold; }
     .schedule .tb-active tr {
-      padding: 10px 0 10px 0; }
+      padding: 20px 20px 20px 20px; }
     .schedule .tb-active td {
       border-bottom: 1px solid #ddd;
       padding: 15px;
@@ -260,7 +264,7 @@
       flex-direction: row; }
       .schedule .schedule-header h1 {
         font-size: 4em;
-        margin-bottom: 30px; } }
+        margin-bottom: 25px; } }
 
 .FAQ {
   text-align: left; }
@@ -284,7 +288,7 @@
       .FAQ .Q-and-A li p {
         color: white;
         font-size: 1.2em;
-        line-height: 20px;
+        line-height: 30px;
         text-align: left;
         margin-left: 35px; }
         .FAQ .Q-and-A li p a {
@@ -300,7 +304,7 @@
     .FAQ h1 {
       color: white;
       font-size: 4em;
-      margin-bottom: 10px; }
+      margin-bottom: 25px; }
     .FAQ .Q-and-A li h3 {
       font-size: 2em; }
     .FAQ .Q-and-A li p {
@@ -316,7 +320,7 @@
   .sponsor h1 {
     color: #002561;
     font-size: 2.2em;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
     font-weight: 200; }
   .sponsor .list-sponsor {
     display: flex;
@@ -329,7 +333,7 @@
       margin-bottom: 10px;
       margin-top: 10px; }
   .sponsor h3 {
-    color: #645A5A;
+    color: #5A5A5A;
     width: 100%;
     font-size: 20pt; }
     .sponsor h3 span {
@@ -340,7 +344,7 @@
   @media screen and (min-width: 1024px) {
     .sponsor h1 {
       font-size: 4em;
-      margin-bottom: 15px; }
+      margin-bottom: 25px; }
     .sponsor h3 {
       font-size: 2em;
       line-height: 25pt; }
@@ -363,7 +367,7 @@
   color: white;
   text-align: left;
   font-size: 2.2em;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
   font-weight: 200; }
 
 .tracks h3 {
@@ -411,7 +415,7 @@
     padding-top: 25px; }
   .tracks .track {
     width: 25%;
-    height: 35%;
+    height: 33rem;
     transition: transform .2s; }
     .tracks .track p {
       text-align: center; }
@@ -523,7 +527,7 @@ h1 {
 
 .btn-home:hover {
   background-color: #72adc4;
-  border: 2px solid #72adc4;
+  border: 2px solid white;
   cursor: pointer; }
 
 .btn-active {

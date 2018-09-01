@@ -56,8 +56,11 @@
       td:nth-child(1){
           width: 35%;
       }
+      td:nth-child(2){
+          font-weight: bold;
+      }
       tr {
-          padding: 10px 0 10px 0;
+          padding: 20px 20px 20px 20px;
       }
       td {
           border-bottom: 1px solid #ddd;
@@ -92,7 +95,7 @@
            flex-direction: row;
            h1{
              font-size: $title;
-             margin-bottom: 30px;
+             margin-bottom: 25px;
            }
        }
    }
