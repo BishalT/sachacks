@@ -411,7 +411,7 @@
     padding-top: 25px; }
   .tracks .track {
     width: 25%;
-    height: 33rem;
+    height: 35%;
     transition: transform .2s; }
     .tracks .track p {
       text-align: center; }
