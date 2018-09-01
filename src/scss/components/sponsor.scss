@@ -27,12 +27,14 @@
     color: $gray;
     width: 100%;
     font-size: $mobileHeader3;
+    font-weight: normal;
     span{
       color: $yellow;
     }
     a{
       color: $yellow;
       text-decoration: none;
+      font-weight: bold;
     }
   }
 
