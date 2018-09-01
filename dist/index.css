@@ -525,10 +525,12 @@ h1 {
   .btn:focus {
     outline: 0; }
 
-.btn-home:hover {
-  background-color: #72adc4;
-  border: 2px solid white;
-  cursor: pointer; }
+.btn-home {
+  border: 2px solid white; }
+  .btn-home:hover {
+    background-color: #72adc4;
+    border: 2px solid white;
+    cursor: pointer; }
 
 .btn-active {
   background-color: #fbb03a;
