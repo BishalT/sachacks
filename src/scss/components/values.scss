@@ -13,7 +13,7 @@
     text-align: left;
     font-size: $titleMobile;
     margin-bottom: 10px;
-    font-weight: 200;
+    font-weight: $titleWeight;
   }
 
   h3{
@@ -35,6 +35,7 @@
       p{
           text-align: center;
           padding-bottom: 25px;
+          font-size: $mobileDetail;
       }
       img {
         max-height: 90%;
@@ -49,7 +50,6 @@
           height: 65%; //65vh;
           p{
               text-align: center;
-              font-size: $detail;
               padding: 0px 10px 0px 10px;
           }
         }
@@ -74,7 +74,6 @@
           transition: transform .2s;
           p{
               text-align: center;
-              font-size: $detail;
           }
         }
         .track:hover {

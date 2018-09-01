@@ -3,7 +3,7 @@
     background-color: white;
     width: 100%;
   // position: absolute;
-  height: 8%;
+    height: 8%;
     z-index: 100;
     display: none;
     align-items: center;
@@ -61,8 +61,8 @@
         filter: grayscale(0%);
         &:hover{
           cursor: pointer;
-          font-weight: 300;
         }
+        font-weight: 200;
         a {color:$gray; text-decoration: none; }      /* unvisited link */
         a:visited {color:$gray; text-decoration: none;}  /* visited link */
         a:hover {color:$gray; text-decoration: none;}  /* mouse over link */

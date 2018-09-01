@@ -6,15 +6,22 @@
   .schedule-header{
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
       h1{
         color: $navy;
         font-size: $titleMobile;
+        font-weight: $titleWeight;
         margin-bottom: 10px;
       }
       h3{
         color: white;
         font-size: 2.0em;
       }
+  }
+
+  .schedule-buttons{
+      display: flex;
+      flex-direction: row;
   }
 
   .btn-sched {
@@ -59,7 +66,7 @@
       }
       height: 100px;
       font-size: $mobileDetail;
-      width: 95%;
+      width: 100%;
   }
 
   .tb-inactive {

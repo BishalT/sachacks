@@ -4,6 +4,7 @@
     color: white;
     font-size: $titleMobile;
     margin-bottom: 10px;
+    font-weight: $titleWeight;
   }
   .Q-and-A{
     width: 100%;
@@ -11,6 +12,7 @@
     li{
       list-style: none;
       width: 100%;
+      padding-bottom: 10px;
       h3{
         color: $yellow;
         font-size: $mobileHeader3;
@@ -33,7 +35,6 @@
   }
 
   h3{
-    margin-top: 10px;
     color: white;
     font-size: $mobileHeader3;
     a{
@@ -63,7 +64,6 @@
           }
       }
       h3{
-          margin-top: 100px;
           font-size: $header;
       }
   }
