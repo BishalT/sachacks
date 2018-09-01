@@ -4,7 +4,8 @@
   h1 {
     color: $navy;
     font-size: $titleMobile;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
+    font-weight: $titleWeight;
   }
   display: flex;
   flex-direction: column;
@@ -38,7 +39,7 @@
   @media screen and (min-width:1024px){
       h1 {
         font-size: $title;
-        margin-bottom: 15px;
+        margin-bottom: 25px;
       }
       h3 {
         font-size: $header;

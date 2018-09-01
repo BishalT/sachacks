@@ -6,15 +6,22 @@
   .schedule-header{
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
       h1{
         color: $navy;
         font-size: $titleMobile;
+        font-weight: $titleWeight;
         margin-bottom: 10px;
       }
       h3{
         color: white;
         font-size: 2.0em;
       }
+  }
+
+  .schedule-buttons{
+      display: flex;
+      flex-direction: row;
   }
 
   .btn-sched {
@@ -49,8 +56,11 @@
       td:nth-child(1){
           width: 35%;
       }
+      td:nth-child(2){
+          font-weight: bold;
+      }
       tr {
-          padding: 10px 0 10px 0;
+          padding: 20px 20px 20px 20px;
       }
       td {
           border-bottom: 1px solid #ddd;
@@ -59,7 +69,7 @@
       }
       height: 100px;
       font-size: $mobileDetail;
-      width: 95%;
+      width: 100%;
   }
 
   .tb-inactive {
@@ -85,7 +95,7 @@
            flex-direction: row;
            h1{
              font-size: $title;
-             margin-bottom: 30px;
+             margin-bottom: 25px;
            }
        }
    }

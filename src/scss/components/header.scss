@@ -2,8 +2,9 @@
 .header {
   margin: 0px 2%;
   max-width: 800px;
-  position: absolute; 
+  position: absolute;
   display: flex;
+  font-weight: $titleWeight;
   .logo {
     // width: 80%;
     display: inline-block;
@@ -27,4 +28,3 @@
     }
   }
 }
-

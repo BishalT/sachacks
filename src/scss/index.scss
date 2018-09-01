@@ -1,10 +1,11 @@
 // font size
 $title : 4.0em;
+$titleWeight: 200;
 $header: 2.0em;
 $titleMobile: 2.2em;
 $detail: 1.4em;
 $detailHeight: 25pt;
-$mobileDetail: 1.3em;
+$mobileDetail: 1.2em;
 $mobileHeader3: 20pt;
 $spacing: normal;
 $spacingDesktop: 1.2pt;
@@ -13,7 +14,7 @@ $spacingDesktop: 1.2pt;
 $yellow : #fbb03a;
 $blue: #72adc4;
 $navy: #002561;
-$gray: #645A5A;
+$gray: #5A5A5A;
 
 // layout
 @mixin flex-row {
@@ -85,11 +86,16 @@ $gray: #645A5A;
 @import './components/values.scss';
 @import './components/footer.scss';
 
+html {
+    background-image: url('/images/galaxy_rawtexture.jpeg');
+}
 html, body {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
+  background-size: cover;
+  overflow-x: hidden;
   font-family: 'My-Avenir', 'My-Avenir-Next', sans-serif;
 }
 p{
@@ -105,6 +111,7 @@ h1{
 
 // main background
 .wrapper {
+    background-image: url('../../images/galaxy_rawtexture.jpeg');
   position: relative;
   background-attachment: fixed;
   margin: 0;
@@ -133,7 +140,7 @@ h1{
 .padding-top {
   padding: 20px 20px 20px 20px;
   @include desktop-and-up {
-    padding: 100px 75px 100px 75px;
+    padding: 75px 50px 75px 50px;
   }
 }
 
@@ -163,7 +170,7 @@ h1{
 .btn-home {
   &:hover {
     background-color: $blue;
-    border: 2px solid $blue;
+    border: 2px solid white;
     cursor: pointer;
   }
 }

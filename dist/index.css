@@ -38,9 +38,9 @@
   /** this is for the line underneath the rocket **/ }
   .rocket img {
     transform: rotate(90deg);
-    width: 85px;
-    height: 85px;
-    transition: margin-top 0.5s cubic-bezier(0.12, 0.69, 1, 1.12); }
+    width: 75px;
+    height: 75px;
+    margin-left: 10px; }
 
 .control-btn {
   margin-left: auto;
@@ -52,30 +52,31 @@
   padding-right: 30px; }
   .control-btn li {
     text-align: center;
+    font-size: 1.2em;
     width: 100%;
     height: 100%;
     padding: 0 30px 0 30px;
-    font-size: 2em;
-    color: #645A5A;
+    font-size: 1.4em;
+    color: #5A5A5A;
     filter: grayscale(0%);
+    font-weight: 200;
     /* unvisited link */
     /* visited link */
     /* mouse over link */
     /* selected link */ }
     .control-btn li:hover {
-      cursor: pointer;
-      font-weight: 300; }
+      cursor: pointer; }
     .control-btn li a {
-      color: #645A5A;
+      color: #5A5A5A;
       text-decoration: none; }
     .control-btn li a:visited {
-      color: #645A5A;
+      color: #5A5A5A;
       text-decoration: none; }
     .control-btn li a:hover {
-      color: #645A5A;
+      color: #5A5A5A;
       text-decoration: none; }
     .control-btn li a:active {
-      color: #645A5A; }
+      color: #5A5A5A; }
   .control-btn .active {
     color: #72adc4;
     font-weight: 600; }
@@ -89,7 +90,8 @@
   margin: 0px 2%;
   max-width: 800px;
   position: absolute;
-  display: flex; }
+  display: flex;
+  font-weight: 200; }
   .header .logo {
     display: inline-block; }
     .header .logo img {
@@ -122,11 +124,13 @@
     .homepage .detail h2 {
       margin: 20px 0 10px 0;
       font-size: 2.6em;
-      color: #fbb03a; }
+      color: #fbb03a;
+      font-weight: 200; }
     .homepage .detail h3 {
       white-space: pre-wrap;
       color: white;
       font-size: 2.2em;
+      font-weight: 200;
       -webkit-margin-before: 0;
       padding: 10px 0 25px 0; }
     .homepage .detail h4 {
@@ -147,13 +151,14 @@
       width: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: center; }
+      justify-content: space-between;
+      text-align: center; }
     @media screen and (min-width: 1023px) {
       .homepage .detail h3 {
         font-size: 1.5em; }
       .homepage .detail div {
-        width: 90%;
-        justify-content: flex-end;
+        width: 100%;
+        justify-content: center;
         display: flex;
         flex-direction: row; }
       .homepage .detail .btn {
@@ -170,8 +175,8 @@
     margin-bottom: 10px;
     font-weight: 200; }
   .about .detail p {
-    color: #645A5A;
-    font-size: 1.3em;
+    color: #5A5A5A;
+    font-size: 1.2em;
     line-height: 25pt;
     text-align: left; }
   @media screen and (min-width: 1023px) {
@@ -193,14 +198,19 @@
   background-color: white; }
   .schedule .schedule-header {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    justify-content: space-between; }
     .schedule .schedule-header h1 {
       color: #002561;
       font-size: 2.2em;
+      font-weight: 200;
       margin-bottom: 10px; }
     .schedule .schedule-header h3 {
       color: white;
       font-size: 2.0em; }
+  .schedule .schedule-buttons {
+    display: flex;
+    flex-direction: row; }
   .schedule .btn-sched {
     color: white;
     background-color: #fbb03a;
@@ -221,16 +231,18 @@
     cursor: pointer; }
   .schedule .tb-active {
     height: 100px;
-    font-size: 1.3em;
-    width: 95%; }
+    font-size: 1.2em;
+    width: 100%; }
     .schedule .tb-active tr:nth-child(even) {
       background-color: #F8F8F8; }
     .schedule .tb-active td:nth-child(3) {
       display: none; }
     .schedule .tb-active td:nth-child(1) {
       width: 35%; }
+    .schedule .tb-active td:nth-child(2) {
+      font-weight: bold; }
     .schedule .tb-active tr {
-      padding: 10px 0 10px 0; }
+      padding: 20px 20px 20px 20px; }
     .schedule .tb-active td {
       border-bottom: 1px solid #ddd;
       padding: 15px;
@@ -252,20 +264,22 @@
       flex-direction: row; }
       .schedule .schedule-header h1 {
         font-size: 4em;
-        margin-bottom: 30px; } }
+        margin-bottom: 25px; } }
 
 .FAQ {
   text-align: left; }
   .FAQ h1 {
     color: white;
     font-size: 2.2em;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    font-weight: 200; }
   .FAQ .Q-and-A {
     width: 100%;
     display: block; }
     .FAQ .Q-and-A li {
       list-style: none;
-      width: 100%; }
+      width: 100%;
+      padding-bottom: 10px; }
       .FAQ .Q-and-A li h3 {
         color: #fbb03a;
         font-size: 20pt;
@@ -273,15 +287,14 @@
         text-align: left; }
       .FAQ .Q-and-A li p {
         color: white;
-        font-size: 1.3em;
-        line-height: 20px;
+        font-size: 1.2em;
+        line-height: 30px;
         text-align: left;
         margin-left: 35px; }
         .FAQ .Q-and-A li p a {
           text-underline-position: under;
           color: white; }
   .FAQ h3 {
-    margin-top: 10px;
     color: white;
     font-size: 20pt; }
     .FAQ h3 a {
@@ -291,13 +304,12 @@
     .FAQ h1 {
       color: white;
       font-size: 4em;
-      margin-bottom: 10px; }
+      margin-bottom: 25px; }
     .FAQ .Q-and-A li h3 {
       font-size: 2em; }
     .FAQ .Q-and-A li p {
       font-size: 1.4em; }
     .FAQ h3 {
-      margin-top: 100px;
       font-size: 2em; } }
 
 .sponsor {
@@ -308,7 +320,8 @@
   .sponsor h1 {
     color: #002561;
     font-size: 2.2em;
-    margin-bottom: 10px; }
+    margin-bottom: 25px;
+    font-weight: 200; }
   .sponsor .list-sponsor {
     display: flex;
     flex-direction: column;
@@ -320,7 +333,7 @@
       margin-bottom: 10px;
       margin-top: 10px; }
   .sponsor h3 {
-    color: #645A5A;
+    color: #5A5A5A;
     width: 100%;
     font-size: 20pt; }
     .sponsor h3 span {
@@ -331,7 +344,7 @@
   @media screen and (min-width: 1024px) {
     .sponsor h1 {
       font-size: 4em;
-      margin-bottom: 15px; }
+      margin-bottom: 25px; }
     .sponsor h3 {
       font-size: 2em;
       line-height: 25pt; }
@@ -354,13 +367,13 @@
   color: white;
   text-align: left;
   font-size: 2.2em;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
   font-weight: 200; }
 
 .tracks h3 {
   color: #72adc4;
   text-align: center;
-  font-size: 1.3em;
+  font-size: 1.2em;
   margin-bottom: 10px;
   font-weight: 200; }
 
@@ -375,7 +388,8 @@
   margin-bottom: 30px; }
   .tracks .track p {
     text-align: center;
-    padding-bottom: 25px; }
+    padding-bottom: 25px;
+    font-size: 1.2em; }
   .tracks .track img {
     max-height: 90%;
     max-width: 90%;
@@ -387,7 +401,6 @@
     height: 65%; }
     .tracks .track p {
       text-align: center;
-      font-size: 1.4em;
       padding: 0px 10px 0px 10px; } }
 
 @media screen and (min-width: 1023px) {
@@ -402,11 +415,10 @@
     padding-top: 25px; }
   .tracks .track {
     width: 25%;
-    height: 35%;
+    height: 33rem;
     transition: transform .2s; }
     .tracks .track p {
-      text-align: center;
-      font-size: 1.4em; }
+      text-align: center; }
   .tracks .track:hover {
     transform: scale(1.1); }
   .tracks .collab {
@@ -447,11 +459,16 @@
       .footer-bar .icon-bar {
         width: 50%; } }
 
+html {
+  background-image: url("/images/galaxy_rawtexture.jpeg"); }
+
 html, body {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
+  background-size: cover;
+  overflow-x: hidden;
   font-family: 'My-Avenir', 'My-Avenir-Next', sans-serif; }
 
 p {
@@ -465,6 +482,7 @@ h1 {
   padding: 0; }
 
 .wrapper {
+  background-image: url(98ee80e2e8f43d3c6d65d39aaac97e4a.jpeg);
   position: relative;
   background-attachment: fixed;
   margin: 0;
@@ -485,7 +503,7 @@ h1 {
   padding: 20px 20px 20px 20px; }
   @media screen and (min-width: 1023px) {
     .padding-top {
-      padding: 100px 75px 100px 75px; } }
+      padding: 75px 50px 75px 50px; } }
 
 .btn {
   color: white;
@@ -509,7 +527,7 @@ h1 {
 
 .btn-home:hover {
   background-color: #72adc4;
-  border: 2px solid #72adc4;
+  border: 2px solid white;
   cursor: pointer; }
 
 .btn-active {

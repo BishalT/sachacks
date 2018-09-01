@@ -12,8 +12,8 @@
     color: white;
     text-align: left;
     font-size: $titleMobile;
-    margin-bottom: 10px;
-    font-weight: 200;
+    margin-bottom: 25px;
+    font-weight: $titleWeight;
   }
 
   h3{
@@ -35,6 +35,7 @@
       p{
           text-align: center;
           padding-bottom: 25px;
+          font-size: $mobileDetail;
       }
       img {
         max-height: 90%;
@@ -49,7 +50,6 @@
           height: 65%; //65vh;
           p{
               text-align: center;
-              font-size: $detail;
               padding: 0px 10px 0px 10px;
           }
         }
@@ -70,11 +70,10 @@
       }
       .track{
           width: 25%;
-          height: 35%; //3rem;//35vw;
+          height: 33rem;//35vw;
           transition: transform .2s;
           p{
               text-align: center;
-              font-size: $detail;
           }
         }
         .track:hover {

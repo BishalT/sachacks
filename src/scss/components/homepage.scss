@@ -15,11 +15,13 @@
       margin: 20px 0 10px 0;
       font-size: 2.6em;
       color: $yellow;
+      font-weight: 200;
     }
     h3{
       white-space: pre-wrap;
       color:white;
       font-size: $titleMobile;
+      font-weight: $titleWeight;
       -webkit-margin-before: 0;
       padding: 10px 0 25px 0;
     }
@@ -43,15 +45,16 @@
     div{
       width: 100%;
       @include flex-col;
-      justify-content: center;
+      justify-content: space-between;
+      text-align: center;
     }
     @media screen and (min-width:1023px) {
       h3 {
         font-size: 1.5em;
       }
       div{
-        width: 90%;
-        justify-content: flex-end;
+        width: 100%;
+        justify-content: center;
         @include flex-row;
       }
       .btn{
