@@ -335,12 +335,14 @@
   .sponsor h3 {
     color: #5A5A5A;
     width: 100%;
-    font-size: 20pt; }
+    font-size: 20pt;
+    font-weight: normal; }
     .sponsor h3 span {
       color: #fbb03a; }
     .sponsor h3 a {
       color: #fbb03a;
-      text-decoration: none; }
+      text-decoration: none;
+      font-weight: bold; }
   @media screen and (min-width: 1024px) {
     .sponsor h1 {
       font-size: 4em;
