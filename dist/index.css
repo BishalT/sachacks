@@ -14,7 +14,7 @@
   background-color: white;
   width: 100%;
   position: fixed;
-  height: 8%;
+  height: 5%;
   z-index: 100;
   display: none;
   align-items: center;
@@ -39,8 +39,8 @@
   /** this is for the line underneath the rocket **/ }
   .rocket img {
     transform: rotate(90deg);
-    width: 75px;
-    height: 75px;
+    width: 70px;
+    height: 70px;
     margin-left: 10px; }
 
 .control-btn {
@@ -329,7 +329,8 @@
     justify-content: center;
     width: 100%; }
   .sponsor .list-sponsor-row {
-    text-align: center; }
+    text-align: center;
+    width: 100%; }
     .sponsor .list-sponsor-row img {
       margin-bottom: 10px;
       margin-top: 10px; }
@@ -354,6 +355,7 @@
     .sponsor .list-sponsor-row {
       display: flex;
       flex-direction: row;
+      flex-wrap: wrap;
       align-items: center;
       text-align: left; }
       .sponsor .list-sponsor-row img {
@@ -520,7 +522,8 @@ h1 {
   border: 2px solid #72adc4;
   transition: all 0.300s ease-in;
   width: 250px;
-  height: 85px; }
+  height: 85px;
+  letter-spacing: 1.3pt; }
   .btn:hover {
     background-color: #fbb03a;
     border: 2px solid #fbb03a;

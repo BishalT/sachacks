@@ -157,6 +157,7 @@ h1{
   transition: all 0.300s ease-in;
   width: 250px;
   height: 85px;
+  letter-spacing: 1.3pt;
   &:hover{
     background-color: $yellow;
     border: 2px solid $yellow;
