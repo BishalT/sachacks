@@ -89,6 +89,7 @@ __webpack_require__(6);
 
 // scss
 var navbarDOM = document.querySelector('.navbar');
+var hiddenMenu = document.querySelector('.icon');
 var homepageDOM = document.querySelector('.homepage');
 var btn1 = document.querySelector('.btn-1');
 var btn2 = document.querySelector('.btn-2');
@@ -135,6 +136,14 @@ function tb_switch_inactive(btn, table) {
     btn.classList.remove("btn-active");
 }
 
+// hiddenMenu.addEventListener('click', () => {
+//     var x = document.getElementById("control-btns");
+//     if (x.style.display === "block") {
+//       x.style.display = "none";
+//     } else {
+//       x.style.display = "block";
+//     }
+// });
 //
 // // instantiate navbar
 // const navbar = new NavBar(pages,controllBtns,rocketParent,'fadeInUp','fadeInDown');
