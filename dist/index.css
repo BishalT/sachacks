@@ -10,7 +10,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0; }
+  padding: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px; }
   .navbar .container-fluid {
     align-items: center; }
   .navbar .navbar-header {
