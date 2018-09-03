@@ -34,6 +34,7 @@
   },
   "homepage": "https://github.com/LambertTran/sachacks#readme",
   "dependencies": {
-    "animate.css": "^3.6.1"
+    "animate.css": "^3.6.1",
+    "fontface-loader": "0.0.8"
   }
 }

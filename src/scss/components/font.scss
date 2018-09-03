@@ -1,17 +1,9 @@
 @font-face {
-    font-family: "My-Avenir-Next";
-    src: url(./font/avenir-next/avenir-next-regular.woff) format(woff),
-         url(./font/avenir-next/avenir-next-regular.eot) format(embedded-opentype),
-         url(./font/avenir-next/avenir-next-regular.svg) format(svg);
+    font-family: "My-Avenir";
+    src: url('./font/avenir/thin.woff2') format('woff2'),
+            url('./font/avenir/thin.woff') format('woff'),
+            url('./font/avenir/thin.eot') format('embedded-opentype'),
+            url('./font/avenir/thin.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
  }
-
- @font-face {
-     font-family: "My-Avenir";
-     src: url(./font/avenir/regular.woff) format(woff),
-          url(./font/avenir/regular.eot) format(embedded-opentype),
-          url(./font/avenir/regular.ttf) format(truetype);
-    font-weight: normal;
-    font-style: normal;
-  }

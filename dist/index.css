@@ -1,34 +1,20 @@
 @font-face {
-  font-family: "My-Avenir-Next";
-  src: url(/fonts/avenir-next-regular.woff) format(woff), url(/fonts/avenir-next-regular.eot) format(embedded-opentype), url(/fonts/avenir-next-regular.svg) format(svg);
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
   font-family: "My-Avenir";
-  src: url(/fonts/regular.woff) format(woff), url(/fonts/regular.eot) format(embedded-opentype), url(/fonts/regular.ttf) format(truetype);
+  src: url(fonts/thin.woff2) format("woff2"), url(fonts/thin.woff) format("woff"), url(fonts/thin.eot) format("embedded-opentype"), url(fonts/thin.ttf) format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 .navbar {
   background-color: white;
-  width: 100%;
-  position: fixed;
-  height: 8%;
-  z-index: 100;
-  display: none;
+  z-index: 5;
+  display: flex;
   align-items: center;
-  justify-content: space-between; }
-  .navbar .container {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%; }
-  @media screen and (min-width: 1024px) {
-    .navbar {
-      display: flex; } }
+  justify-content: space-between;
+  padding: 0; }
+  .navbar .container-fluid {
+    align-items: center; }
+  .navbar .navbar-header {
+    align-items: center; }
 
 .rocket {
   height: 100%;
@@ -39,53 +25,46 @@
   /** this is for the line underneath the rocket **/ }
   .rocket img {
     transform: rotate(90deg);
-    width: 75px;
-    height: 75px;
+    width: 60px;
+    height: 60px;
     margin-left: 10px; }
 
-.control-btn {
-  margin-left: auto;
-  height: 100%;
-  list-style: none;
+.control-btn li {
+  text-align: center;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-right: 30px; }
-  .control-btn li {
-    text-align: center;
-    font-size: 1.2em;
-    width: 100%;
-    height: 100%;
-    padding: 0 30px 0 30px;
-    font-size: 1.4em;
+  flex-direction: column;
+  font-size: 1.2em;
+  padding: 0 30px 0 30px;
+  font-size: 1.4em;
+  color: #5A5A5A;
+  filter: grayscale(0%);
+  font-weight: 200;
+  /* unvisited link */
+  /* visited link */
+  /* mouse over link */
+  /* selected link */ }
+  .control-btn li:hover {
+    cursor: pointer; }
+  .control-btn li a {
     color: #5A5A5A;
-    filter: grayscale(0%);
-    font-weight: 200;
-    /* unvisited link */
-    /* visited link */
-    /* mouse over link */
-    /* selected link */ }
-    .control-btn li:hover {
-      cursor: pointer; }
-    .control-btn li a {
-      color: #5A5A5A;
-      text-decoration: none; }
-    .control-btn li a:visited {
-      color: #5A5A5A;
-      text-decoration: none; }
-    .control-btn li a:hover {
-      color: #5A5A5A;
-      text-decoration: none; }
-    .control-btn li a:active {
-      color: #5A5A5A; }
-  .control-btn .active {
-    color: #72adc4;
-    font-weight: 600; }
+    text-decoration: none; }
+  .control-btn li a:visited {
+    color: #5A5A5A;
+    text-decoration: none; }
+  .control-btn li a:hover {
+    color: #5A5A5A;
+    text-decoration: none; }
+  .control-btn li a:active {
+    color: #5A5A5A; }
 
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%; }
+@media screen and (min-width: 768px) {
+  .control-btn {
+    margin-left: auto;
+    height: 100%;
+    list-style: none;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 30px; } }
 
 .header {
   margin: 0px 2%;
@@ -329,7 +308,8 @@
     justify-content: center;
     width: 100%; }
   .sponsor .list-sponsor-row {
-    text-align: center; }
+    text-align: center;
+    width: 100%; }
     .sponsor .list-sponsor-row img {
       margin-bottom: 10px;
       margin-top: 10px; }
@@ -354,6 +334,7 @@
     .sponsor .list-sponsor-row {
       display: flex;
       flex-direction: row;
+      flex-wrap: wrap;
       align-items: center;
       text-align: left; }
       .sponsor .list-sponsor-row img {
@@ -418,7 +399,7 @@
     padding-top: 25px; }
   .tracks .track {
     width: 25%;
-    height: 33rem;
+    height: 80%;
     transition: transform .2s; }
     .tracks .track p {
       text-align: center; }
@@ -472,7 +453,7 @@ html, body {
   padding: 0;
   background-size: cover;
   overflow-x: hidden;
-  font-family: 'My-Avenir', 'My-Avenir-Next', sans-serif; }
+  font-family: 'My-Avenir-Next','My-Avenir', 'My-Maven'; }
 
 p {
   letter-spacing: normal; }
@@ -520,7 +501,8 @@ h1 {
   border: 2px solid #72adc4;
   transition: all 0.300s ease-in;
   width: 250px;
-  height: 85px; }
+  height: 85px;
+  letter-spacing: 1.3pt; }
   .btn:hover {
     background-color: #fbb03a;
     border: 2px solid #fbb03a;

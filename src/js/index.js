@@ -16,6 +16,7 @@ import '../scss/index.scss';
 // const headerTitle = document.querySelector('.header-title');
 
 const navbarDOM = document.querySelector('.navbar');
+const hiddenMenu = document.querySelector('.icon');
 const homepageDOM = document.querySelector('.homepage');
 const btn1 = document.querySelector('.btn-1');
 const btn2 = document.querySelector('.btn-2');
@@ -62,6 +63,14 @@ function tb_switch_inactive(btn, table){
     btn.classList.remove("btn-active");
 }
 
+// hiddenMenu.addEventListener('click', () => {
+//     var x = document.getElementById("control-btns");
+//     if (x.style.display === "block") {
+//       x.style.display = "none";
+//     } else {
+//       x.style.display = "block";
+//     }
+// });
 //
 // // instantiate navbar
 // const navbar = new NavBar(pages,controllBtns,rocketParent,'fadeInUp','fadeInDown');
