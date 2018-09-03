@@ -30,14 +30,14 @@
     margin-left: 10px; }
 
 .control-btn li {
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 1.1pt;
   text-align: center;
   display: flex;
   flex-direction: column;
   font-size: 1.2em;
   padding: 0 30px 0 30px;
-  font-size: 1.4em;
+  font-size: 1em;
   color: #5A5A5A;
   filter: grayscale(0%);
   /* unvisited link */
@@ -47,13 +47,13 @@
   .control-btn li:hover {
     cursor: pointer; }
   .control-btn li a {
-    color: #5A5A5A;
+    color: #0c6298;
     text-decoration: none; }
   .control-btn li a:visited {
     color: #5A5A5A;
     text-decoration: none; }
   .control-btn li a:hover {
-    color: #5A5A5A;
+    color: #0c6298;
     text-decoration: none; }
   .control-btn li a:active {
     color: #5A5A5A; }
@@ -72,7 +72,7 @@
   max-width: 800px;
   position: absolute;
   display: flex;
-  font-weight: 300; }
+  font-weight: 600; }
   .header .logo {
     display: inline-block; }
     .header .logo img {
@@ -94,24 +94,27 @@
 .homepage {
   text-align: center; }
   .homepage img {
+    margin-top: 3%;
     max-width: 100%;
     width: 100%; }
     @media screen and (min-width: 1023px) {
       .homepage img {
         width: 50vw; } }
+  .homepage .mainButtons {
+    margin-bottom: 70px; }
   .homepage .detail {
     max-width: 800px;
     margin: 0 auto; }
     .homepage .detail h2 {
       margin: 20px 0 10px 0;
-      font-size: 2.3em;
+      font-size: 2.0em;
       color: #fbb03a;
-      font-weight: 300; }
+      font-weight: 600; }
     .homepage .detail h3 {
       white-space: pre-wrap;
       color: white;
-      font-size: 2.2em;
-      font-weight: 300;
+      font-size: 1em;
+      font-weight: 600;
       letter-spacing: 1.1pt;
       word-spacing: 1.05pt;
       -webkit-margin-before: 0;
@@ -154,9 +157,9 @@
   .about h1 {
     color: #002561;
     text-align: left;
-    font-size: 2.2em;
+    font-size: 1em;
     margin-bottom: 10px;
-    font-weight: 300; }
+    font-weight: 600; }
   .about .detail p {
     color: #5A5A5A;
     font-size: 1.2em;
@@ -170,11 +173,11 @@
       .about h1 {
         text-align: left;
         max-width: 300px;
-        font-size: 4em; }
+        font-size: 3.5em; }
       .about p {
         margin: 10px 0px 30px 100px;
         max-width: 1000px;
-        font-size: 1.4em;
+        font-size: 1em;
         letter-spacing: 1.2pt; } }
 
 .schedule {
@@ -187,8 +190,8 @@
     padding-bottom: 30px; }
     .schedule .schedule-header h1 {
       color: #002561;
-      font-size: 2.2em;
-      font-weight: 300;
+      font-size: 1em;
+      font-weight: 600;
       margin-bottom: 10px; }
     .schedule .schedule-header h3 {
       color: white;
@@ -206,7 +209,7 @@
     margin: 0 20px;
     margin-bottom: 20px;
     transition: all 0.300s ease-in;
-    height: 85px;
+    height: 75px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.13), 0 6px 20px 0 rgba(0, 0, 0, 0.13);
     border-radius: 7px; }
     .schedule .btn-sched:focus {
@@ -237,7 +240,7 @@
     display: none; }
   @media screen and (min-width: 1024px) {
     .schedule .tb-active {
-      font-size: 1.4em; }
+      font-size: 1em; }
       .schedule .tb-active td:nth-child(3) {
         display: block; }
       .schedule .tb-active td:nth-child(1) {
@@ -250,16 +253,16 @@
       display: flex;
       flex-direction: row; }
       .schedule .schedule-header h1 {
-        font-size: 4em;
+        font-size: 3.5em;
         margin-bottom: 25px; } }
 
 .FAQ {
   text-align: left; }
   .FAQ h1 {
     color: white;
-    font-size: 2.2em;
+    font-size: 1em;
     margin-bottom: 10px;
-    font-weight: 300; }
+    font-weight: 600; }
   .FAQ .Q-and-A {
     width: 100%;
     display: block; }
@@ -269,7 +272,7 @@
       padding-bottom: 10px; }
       .FAQ .Q-and-A li h3 {
         color: #fbb03a;
-        font-size: 20pt;
+        font-size: 1em;
         margin: 20px 0 5px 35px;
         text-align: left;
         text-transform: uppercase;
@@ -287,7 +290,7 @@
           color: white; }
   .FAQ h3 {
     color: white;
-    font-size: 20pt; }
+    font-size: 1em; }
     .FAQ h3 a {
       color: #fbb03a;
       text-decoration: underline; }
@@ -297,12 +300,12 @@
   @media screen and (min-width: 1024px) {
     .FAQ h1 {
       color: white;
-      font-size: 4em;
+      font-size: 3.5em;
       margin-bottom: 25px; }
     .FAQ .Q-and-A li h3 {
       font-size: 2em; }
     .FAQ .Q-and-A li p {
-      font-size: 1.4em; }
+      font-size: 1em; }
     .FAQ h3 {
       font-size: 2em; } }
 
@@ -313,9 +316,9 @@
   flex-direction: column; }
   .sponsor h1 {
     color: #002561;
-    font-size: 2.2em;
+    font-size: 1em;
     margin-bottom: 25px;
-    font-weight: 300; }
+    font-weight: 600; }
   .sponsor .list-sponsor {
     display: flex;
     flex-direction: column;
@@ -330,7 +333,7 @@
   .sponsor h3 {
     color: #5A5A5A;
     width: 100%;
-    font-size: 20pt;
+    font-size: 1em;
     font-weight: normal; }
     .sponsor h3 span {
       color: #fbb03a; }
@@ -340,7 +343,7 @@
       font-weight: bold; }
   @media screen and (min-width: 1024px) {
     .sponsor h1 {
-      font-size: 4em;
+      font-size: 3.5em;
       margin-bottom: 25px; }
     .sponsor h3 {
       font-size: 2em;
@@ -364,9 +367,9 @@
 .tracks h1 {
   color: white;
   text-align: left;
-  font-size: 2.2em;
+  font-size: 1em;
   margin-bottom: 25px;
-  font-weight: 300; }
+  font-weight: 600; }
 
 .tracks h3 {
   color: #002561;
@@ -380,10 +383,11 @@
   border-radius: 20px;
   width: 85%;
   height: 45%;
+  margin: 35px;
   display: flex;
+  padding: 15px;
   justify-content: space-between;
-  flex-direction: column;
-  margin-bottom: 30px; }
+  flex-direction: column; }
   .tracks .track p {
     text-align: center;
     padding-bottom: 25px;
@@ -403,7 +407,7 @@
 
 @media screen and (min-width: 1023px) {
   .tracks h1 {
-    font-size: 4em; }
+    font-size: 3.5em; }
   .tracks h3 {
     font-size: 2em;
     margin: 0; }
@@ -429,7 +433,7 @@
     margin-left: 25px; } }
 
 .footer-bar {
-  padding-top: 20px;
+  padding-top: 30px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -454,7 +458,7 @@
     .footer-bar {
       flex-direction: row; }
       .footer-bar p {
-        font-size: 1.4em; }
+        font-size: 1em; }
       .footer-bar .icon-bar {
         width: 50%; } }
 
@@ -507,7 +511,9 @@ h1 {
 .btn {
   color: white;
   background-color: transparent;
-  font-size: 1.5em;
+  font-size: 1.1em;
+  font-weight: 900;
+  font-weight: heavy;
   padding: 5px 20px;
   text-align: center;
   border-radius: 7px;
@@ -515,8 +521,9 @@ h1 {
   margin-bottom: 20px;
   border: 2px solid #72adc4;
   transition: all 0.300s ease-in;
-  width: 250px;
-  height: 85px;
+  width: 200px;
+  height: 60px;
+  margin-bottom: 20px;
   letter-spacing: 1.3pt; }
   .btn:hover {
     background-color: #fbb03a;
@@ -526,7 +533,7 @@ h1 {
     outline: 0; }
 
 .btn-home {
-  border: 2px solid white; }
+  border: 1px solid white; }
   .btn-home:hover {
     background-color: #72adc4;
     border: 2px solid white;

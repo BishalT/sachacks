@@ -1,13 +1,13 @@
 // font size
-$title : 4.0em;
-$titleWeight: 300;
+$title : 3.5em;
+$titleWeight: 600;
 $header: 2.0em;
-$titleMobile: 2.2em;
-$detail: 1.4em;
+$titleMobile: 1.0em;
+$detail: 1.0em;
 $detailHeight: 25pt;
 $detailWeight: 400;
 $mobileDetail: 1.2em;
-$mobileHeader3: 20pt;
+$mobileHeader3: 1.0em; //20pt
 $spacing: normal;
 $spacingDesktop: 1.2pt;
 
@@ -16,6 +16,7 @@ $yellow : #fbb03a;
 $blue: #72adc4;
 $navy: #002561;
 $gray: #5A5A5A;
+$hoverblue: #0c6298;
 
 // layout
 @mixin flex-row {
@@ -148,7 +149,9 @@ h1{
 .btn {
   color: white;
   background-color: transparent;
-  font-size: 1.5em;
+  font-size: 1.1em;
+  font-weight: 900;
+  font-weight: heavy;
   padding: 5px 20px;
   text-align: center;
   border-radius: 7px;
@@ -156,8 +159,9 @@ h1{
   margin-bottom: 20px;
   border: 2px solid #72adc4;
   transition: all 0.300s ease-in;
-  width: 250px;
-  height: 85px;
+  width: 200px; //initially 250
+  height: 60px;
+  margin-bottom: 20px;
   letter-spacing: 1.3pt;
   &:hover{
     background-color: $yellow;
@@ -170,7 +174,7 @@ h1{
 }
 
 .btn-home {
-  border: 2px solid white;
+  border: 1px solid white;
   &:hover {
     background-color: $blue;
     border: 2px solid white;
