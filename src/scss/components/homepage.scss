@@ -13,15 +13,17 @@
     margin: 0 auto;
     h2{
       margin: 20px 0 10px 0;
-      font-size: 2.6em;
+      font-size: 2.3em;
       color: $yellow;
-      font-weight: 200;
+      font-weight: $titleWeight;
     }
     h3{
       white-space: pre-wrap;
       color:white;
       font-size: $titleMobile;
       font-weight: $titleWeight;
+      letter-spacing: 1.1pt;
+      word-spacing: 1.05pt;
       -webkit-margin-before: 0;
       padding: 10px 0 25px 0;
     }

@@ -7,6 +7,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      padding-bottom: 30px;
       h1{
         color: $navy;
         font-size: $titleMobile;
@@ -25,16 +26,17 @@
   }
 
   .btn-sched {
+      font-weight: 500;
     color: white;
     background-color: $yellow;
-    font-size: 1.5em;
+    font-size: 1.3em;
     padding: 5px 20px;
     text-align: center;
     margin: 0 20px;
     margin-bottom: 20px;
     transition: all 0.300s ease-in;
     height: 85px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.13), 0 6px 20px 0 rgba(0,0,0,0.13);
     border-radius: 7px;
     &:focus {
         outline: 0;
@@ -64,7 +66,7 @@
       }
       td {
           border-bottom: 1px solid #ddd;
-          padding: 15px;
+          padding: 20px;
           text-align: left;
       }
       height: 100px;
@@ -89,6 +91,7 @@
        .btn-sched {
          width: 250px;
          margin-bottom: 0px;
+         font-size: 1.3em;
          }
        .schedule-header{
            display: flex;
