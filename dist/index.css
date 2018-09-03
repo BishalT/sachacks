@@ -355,7 +355,7 @@
       flex-direction: row;
       flex-wrap: wrap;
       align-items: center;
-      text-align: left; }
+      justify-content: center; }
       .sponsor .list-sponsor-row img {
         margin: 40px; } }
 
