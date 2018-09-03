@@ -49,11 +49,11 @@
         line-height: 25pt;
       }
       .list-sponsor-row {
-        display: flex;
+        display: flex; 
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
-        text-align: left;
+        justify-content: center;
         img {
           margin: 40px;
         }
