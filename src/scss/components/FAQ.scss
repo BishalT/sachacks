@@ -18,6 +18,8 @@
         font-size: $mobileHeader3;
         margin: 20px 0 5px 35px;
         text-align: left;
+        text-transform: uppercase;
+        font-weight: 500;
       }
       p{
         color:white;
@@ -26,7 +28,8 @@
         text-align: left;
         margin-left: 35px;
         a {
-          // text-decoration: underline;
+          text-decoration: underline;
+          font-weight: bold;
           text-underline-position: under;
           color: white;
         }
@@ -39,7 +42,11 @@
     font-size: $mobileHeader3;
     a{
       color: $yellow;
-      text-decoration: none;
+      text-decoration: underline;
+      &:hover {
+          color: $blue;
+          opacity: 50%;
+      }
     }
 
     // @include tablet-to-desktop {

@@ -56,6 +56,8 @@
 
 .control-btn {
     li{
+        font-weight: 600;
+        letter-spacing: 1.1pt;
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -67,10 +69,9 @@
         &:hover{
           cursor: pointer;
         }
-        font-weight: 200;
-        a {color:$gray; text-decoration: none; }      /* unvisited link */
+        a {color:$hoverblue; text-decoration: none; }      /* unvisited link */
         a:visited {color:$gray; text-decoration: none;}  /* visited link */
-        a:hover {color:$gray; text-decoration: none;}  /* mouse over link */
+        a:hover {color:$hoverblue; text-decoration: none;}  /* mouse over link */
         a:active {color:$gray;}  /* selected link */
     }
 
