@@ -1,6 +1,24 @@
 @font-face {
-  font-family: "My-Avenir";
+  font-family: "Avenir-Thin";
   src: url(fonts/thin.woff2) format("woff2"), url(fonts/thin.woff) format("woff"), url(fonts/thin.eot) format("embedded-opentype"), url(fonts/thin.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Avenir-Bold";
+  src: url(fonts/bold.woff2) format("woff2"), url(fonts/bold.woff) format("woff"), url(fonts/bold.eot) format("embedded-opentype"), url(fonts/bold.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Avenir-Demi";
+  src: url(fonts/demi.woff2) format("woff2"), url(fonts/demi.woff) format("woff"), url(fonts/demi.eot) format("embedded-opentype"), url(fonts/demi.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Avenir-Regular";
+  src: url(fonts/regular.woff) format("woff"), url(fonts/regular.eot) format("embedded-opentype"), url(fonts/regular.ttf) format("truetype");
   font-weight: normal;
   font-style: normal; }
 
@@ -74,7 +92,7 @@
   max-width: 800px;
   position: absolute;
   display: flex;
-  font-weight: 600; }
+  font-weight: 500; }
   .header .logo {
     display: inline-block; }
     .header .logo img {
@@ -111,12 +129,12 @@
       margin: 20px 0 10px 0;
       font-size: 2.0em;
       color: #fbb03a;
-      font-weight: 600; }
+      font-weight: 500; }
     .homepage .detail h3 {
       white-space: pre-wrap;
       color: white;
-      font-size: 1em;
-      font-weight: 600;
+      font-size: 2em;
+      font-weight: 500;
       letter-spacing: 1.1pt;
       word-spacing: 1.05pt;
       -webkit-margin-before: 0;
@@ -159,9 +177,9 @@
   .about h1 {
     color: #002561;
     text-align: left;
-    font-size: 1em;
+    font-size: 2em;
     margin-bottom: 10px;
-    font-weight: 600; }
+    font-weight: 500; }
   .about .detail p {
     color: #5A5A5A;
     font-size: 1.2em;
@@ -192,8 +210,8 @@
     padding-bottom: 30px; }
     .schedule .schedule-header h1 {
       color: #002561;
-      font-size: 1em;
-      font-weight: 600;
+      font-size: 2em;
+      font-weight: 500;
       margin-bottom: 10px; }
     .schedule .schedule-header h3 {
       color: white;
@@ -202,16 +220,17 @@
     display: flex;
     flex-direction: row; }
   .schedule .btn-sched {
-    font-weight: 500;
+    font-weight: 900;
     color: white;
     background-color: #fbb03a;
-    font-size: 1.3em;
+    font-size: 1.0em;
+    width: 200px;
     padding: 5px 20px;
     text-align: center;
     margin: 0 20px;
     margin-bottom: 20px;
     transition: all 0.300s ease-in;
-    height: 75px;
+    height: 60px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.13), 0 6px 20px 0 rgba(0, 0, 0, 0.13);
     border-radius: 7px; }
     .schedule .btn-sched:focus {
@@ -262,9 +281,9 @@
   text-align: left; }
   .FAQ h1 {
     color: white;
-    font-size: 1em;
+    font-size: 2em;
     margin-bottom: 10px;
-    font-weight: 600; }
+    font-weight: 500; }
   .FAQ .Q-and-A {
     width: 100%;
     display: block; }
@@ -273,12 +292,12 @@
       width: 100%;
       padding-bottom: 10px; }
       .FAQ .Q-and-A li h3 {
+        font-family: 'Avenir-Bold';
         color: #fbb03a;
         font-size: 1em;
         margin: 20px 0 5px 35px;
         text-align: left;
-        text-transform: uppercase;
-        font-weight: 500; }
+        text-transform: uppercase; }
       .FAQ .Q-and-A li p {
         color: white;
         font-size: 1.2em;
@@ -318,9 +337,9 @@
   flex-direction: column; }
   .sponsor h1 {
     color: #002561;
-    font-size: 1em;
+    font-size: 2em;
     margin-bottom: 25px;
-    font-weight: 600; }
+    font-weight: 500; }
   .sponsor .list-sponsor {
     display: flex;
     flex-direction: column;
@@ -339,6 +358,8 @@
     font-weight: normal; }
     .sponsor h3 span {
       color: #fbb03a; }
+    .sponsor h3 h4 {
+      font-size: 20px; }
     .sponsor h3 a {
       color: #fbb03a;
       text-decoration: none;
@@ -369,9 +390,9 @@
 .tracks h1 {
   color: white;
   text-align: left;
-  font-size: 1em;
+  font-size: 2em;
   margin-bottom: 25px;
-  font-weight: 600; }
+  font-weight: 500; }
 
 .tracks h3 {
   color: #002561;
@@ -474,7 +495,7 @@ html, body {
   padding: 0;
   background-size: cover;
   overflow-x: hidden;
-  font-family: 'My-Avenir-Next','My-Avenir', 'My-Maven'; }
+  font-family: 'Avenir-Regular', 'Avenir-Thin'; }
 
 p {
   letter-spacing: normal; }

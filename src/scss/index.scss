@@ -1,13 +1,14 @@
 // font size
 $title : 3.5em;
-$titleWeight: 600;
+$titleWeight: 500;
 $header: 2.0em;
-$titleMobile: 1.0em;
+$titleMobile: 2.0em;
 $detail: 1.0em;
 $detailHeight: 25pt;
 $detailWeight: 400;
 $mobileDetail: 1.2em;
 $mobileHeader3: 1.0em; //20pt
+$sponsorshipSub: 20px;
 $spacing: normal;
 $spacingDesktop: 1.2pt;
 
@@ -98,7 +99,7 @@ html, body {
   padding: 0;
   background-size: cover;
   overflow-x: hidden;
-  font-family: 'My-Avenir-Next','My-Avenir', 'My-Maven';
+  font-family: 'Avenir-Regular', 'Avenir-Thin';
 }
 p{
   letter-spacing: $spacing;
