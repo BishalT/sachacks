@@ -116,17 +116,19 @@
 .homepage {
   text-align: center; }
   .homepage img {
-    margin-top: 3%;
+    margin-top: 7%;
     max-width: 100%;
     width: 100%; }
     @media screen and (min-width: 1023px) {
       .homepage img {
         width: 50vw; } }
   .homepage .mainButtons {
-    margin-bottom: 70px; }
+    margin-bottom: 10vh; }
   .homepage #space {
     margin-top: 4vh !important;
     margin-bottom: -2vh; }
+  .homepage .homepagespace {
+    height: 11vh; }
   .homepage h5 {
     color: #fbb03a;
     padding-bottom: 5vh;
