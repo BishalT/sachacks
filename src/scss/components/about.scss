@@ -10,7 +10,15 @@
     font-size: $titleMobile;
     margin-bottom: 10px;
     font-weight: $titleWeight;
+    letter-spacing: -1.7px;
   }
+  .yellow {
+   color: $yellow;
+   font-weight: 900;
+  }
+
+
+
   .detail {
     p{
       color: $gray;

@@ -13,6 +13,19 @@
      margin-bottom: 70px;
   }
 
+ #space {
+   margin-top: 4vh!important;
+   margin-bottom: -2vh;
+ }
+
+  h5 {
+    color: $yellow;
+    padding-bottom: 5vh;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 100!important;
+  }
+
 
   .detail {
     max-width: 800px;

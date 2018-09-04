@@ -3,6 +3,11 @@
   text-align: left;
   background-color: white;
 
+  td {
+    color: $gray;
+  }
+
+
   .schedule-header{
       display: flex;
       flex-direction: column;
@@ -37,7 +42,7 @@
     margin-bottom: 20px;
     transition: all 0.300s ease-in;
     height: 60px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.13), 0 6px 20px 0 rgba(0,0,0,0.13);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.08), 0 6px 20px 0 rgba(0,0,0,0.08);
     border-radius: 7px;
     &:focus {
         outline: 0;
@@ -60,6 +65,7 @@
           width: 35%;
       }
       td:nth-child(2){
+          font-family: Avenir-Bold;
           font-weight: bold;
       }
       tr {

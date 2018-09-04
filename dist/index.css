@@ -93,6 +93,8 @@
   position: absolute;
   display: flex;
   font-weight: 500; }
+  .header h5 {
+    color: #fbb03a !important; }
   .header .logo {
     display: inline-block; }
     .header .logo img {
@@ -122,6 +124,15 @@
         width: 50vw; } }
   .homepage .mainButtons {
     margin-bottom: 70px; }
+  .homepage #space {
+    margin-top: 4vh !important;
+    margin-bottom: -2vh; }
+  .homepage h5 {
+    color: #fbb03a;
+    padding-bottom: 5vh;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 100 !important; }
   .homepage .detail {
     max-width: 800px;
     margin: 0 auto; }
@@ -179,7 +190,11 @@
     text-align: left;
     font-size: 2em;
     margin-bottom: 10px;
-    font-weight: 500; }
+    font-weight: 500;
+    letter-spacing: -1.7px; }
+  .about .yellow {
+    color: #fbb03a;
+    font-weight: 900; }
   .about .detail p {
     color: #5A5A5A;
     font-size: 1.2em;
@@ -203,6 +218,8 @@
 .schedule {
   text-align: left;
   background-color: white; }
+  .schedule td {
+    color: #5A5A5A; }
   .schedule .schedule-header {
     display: flex;
     flex-direction: column;
@@ -231,7 +248,7 @@
     margin-bottom: 20px;
     transition: all 0.300s ease-in;
     height: 60px;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.13), 0 6px 20px 0 rgba(0, 0, 0, 0.13);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.08), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
     border-radius: 7px; }
     .schedule .btn-sched:focus {
       outline: 0; }
@@ -250,6 +267,7 @@
     .schedule .tb-active td:nth-child(1) {
       width: 35%; }
     .schedule .tb-active td:nth-child(2) {
+      font-family: Avenir-Bold;
       font-weight: bold; }
     .schedule .tb-active tr {
       padding: 20px 20px 20px 20px; }
@@ -297,7 +315,8 @@
         font-size: 1em;
         margin: 20px 0 5px 35px;
         text-align: left;
-        text-transform: uppercase; }
+        text-transform: uppercase;
+        font-size: 23px !important; }
       .FAQ .Q-and-A li p {
         color: white;
         font-size: 1.2em;
@@ -359,7 +378,8 @@
     .sponsor h3 span {
       color: #fbb03a; }
     .sponsor h3 h4 {
-      font-size: 20px; }
+      font-size: 20px;
+      color: #5A5A5A; }
     .sponsor h3 a {
       color: #fbb03a;
       text-decoration: none;
@@ -414,7 +434,8 @@
   .tracks .track p {
     text-align: center;
     padding-bottom: 25px;
-    font-size: 1.2em; }
+    font-size: 1.2em;
+    color: #5A5A5A; }
   .tracks .track img {
     max-height: 90%;
     max-width: 90%;
@@ -456,7 +477,7 @@
     margin-left: 25px; } }
 
 .footer-bar {
-  padding-top: 30px;
+  padding-top: 20px;
   width: 100%;
   display: flex;
   flex-direction: column;
