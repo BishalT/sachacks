@@ -5,6 +5,9 @@
   position: absolute;
   display: flex;
   font-weight: $titleWeight;
+  h5 {
+    color: $yellow!important;
+  }
   .logo {
     // width: 80%;
     display: inline-block;

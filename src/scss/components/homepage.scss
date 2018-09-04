@@ -2,7 +2,7 @@
 .homepage{
   text-align: center;
   img{
-    margin-top: 3%;
+    margin-top: 7%;
     max-width: 100%;
     width: 100%;
     @media screen and (min-width: 1023px) {
@@ -10,7 +10,24 @@
     }
   }
   .mainButtons {
-     margin-bottom: 70px;
+     margin-bottom: 10vh;
+  }
+
+ #space {
+   margin-top: 4vh!important;
+   margin-bottom: -2vh;
+ }
+
+ .homepagespace {
+  height: 11vh;
+ }
+
+  h5 {
+    color: $yellow;
+    padding-bottom: 5vh;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 100!important;
   }
 
 
