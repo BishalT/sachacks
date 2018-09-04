@@ -73,7 +73,7 @@
     color: #5A5A5A;
     text-decoration: none; }
   .control-btn li a:hover {
-    color: #0c6298 !important;
+    color: #0c6298;
     text-decoration: none; }
   .control-btn li a:active {
     color: #5A5A5A; }
@@ -86,9 +86,6 @@
     flex-direction: row;
     justify-content: space-between;
     padding-right: 30px; } }
-
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-  color: #0c6298; }
 
 .header {
   margin: 0px 2%;
@@ -223,16 +220,17 @@
     display: flex;
     flex-direction: row; }
   .schedule .btn-sched {
-    font-weight: 500;
+    font-weight: 900;
     color: white;
     background-color: #fbb03a;
-    font-size: 1.3em;
+    font-size: 1.0em;
+    width: 200px;
     padding: 5px 20px;
     text-align: center;
     margin: 0 20px;
     margin-bottom: 20px;
     transition: all 0.300s ease-in;
-    height: 75px;
+    height: 60px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.13), 0 6px 20px 0 rgba(0, 0, 0, 0.13);
     border-radius: 7px; }
     .schedule .btn-sched:focus {
@@ -360,6 +358,8 @@
     font-weight: normal; }
     .sponsor h3 span {
       color: #fbb03a; }
+    .sponsor h3 h4 {
+      font-size: 20px; }
     .sponsor h3 a {
       color: #fbb03a;
       text-decoration: none;

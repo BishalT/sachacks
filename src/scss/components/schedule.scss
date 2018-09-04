@@ -26,16 +26,17 @@
   }
 
   .btn-sched {
-      font-weight: 500;
+      font-weight: 900;
     color: white;
     background-color: $yellow;
-    font-size: 1.3em;
+    font-size: 1.0em;
+    width: 200px;
     padding: 5px 20px;
     text-align: center;
     margin: 0 20px;
     margin-bottom: 20px;
     transition: all 0.300s ease-in;
-    height: 75px;
+    height: 60px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.13), 0 6px 20px 0 rgba(0,0,0,0.13);
     border-radius: 7px;
     &:focus {
