@@ -147,6 +147,13 @@ h1{
   }
 }
 
+.homepage {
+    @include desktop-and-up {
+        padding-top: 50px;
+        padding-bottom: 25px;
+    }
+}
+
 .btn {
   color: white;
   background-color: transparent;
