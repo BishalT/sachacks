@@ -116,7 +116,6 @@
 .homepage {
   text-align: center; }
   .homepage img {
-    margin-top: 7%;
     max-width: 100%;
     width: 100%; }
     @media screen and (min-width: 1023px) {
@@ -249,7 +248,7 @@
     margin: 0 20px;
     margin-bottom: 20px;
     transition: all 0.300s ease-in;
-    height: 60px;
+    height: 75px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.08), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
     border-radius: 7px; }
     .schedule .btn-sched:focus {
@@ -289,7 +288,7 @@
     .schedule .btn-sched {
       width: 250px;
       margin-bottom: 0px;
-      font-size: 1.3em; }
+      font-size: 1.5em; }
     .schedule .schedule-header {
       display: flex;
       flex-direction: row; }
@@ -309,8 +308,7 @@
     display: block; }
     .FAQ .Q-and-A li {
       list-style: none;
-      width: 100%;
-      padding-bottom: 10px; }
+      width: 100%; }
       .FAQ .Q-and-A li h3 {
         font-family: 'Avenir-Bold';
         color: #fbb03a;
@@ -553,6 +551,11 @@ h1 {
   @media screen and (min-width: 1023px) {
     .padding-top {
       padding: 75px 50px 75px 50px; } }
+
+@media screen and (min-width: 1023px) {
+  .homepage {
+    padding-top: 50px;
+    padding-bottom: 25px; } }
 
 .btn {
   color: white;
