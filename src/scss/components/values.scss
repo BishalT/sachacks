@@ -1,0 +1,97 @@
+// about page
+.tracks {
+    .lower-tracks{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 25px;
+    }
+
+  h1{
+    color: white;
+    text-align: left;
+    font-size: $titleMobile;
+    margin-bottom: 25px;
+    font-weight: $titleWeight;
+  }
+
+  h3{
+      color: $navy;
+      text-align: center;
+      font-size: $mobileDetail;
+      margin-bottom: 10px;
+      font-weight: 200;
+  }
+  .track{
+      background-color: white;
+      border-radius: 20px;
+      width: 85%;
+      height: 45%; //45vh;
+      margin: 35px;
+      display: flex;
+      padding: 15px;
+      justify-content: space-between;
+      flex-direction: column;
+      //margin-bottom: 30px;
+      p{
+          text-align: center;
+          padding-bottom: 25px;
+          font-size: $mobileDetail;
+          color: $gray;
+      }
+      img {
+        max-height: 90%;
+        max-width: 90%;
+        padding-left: 20px;
+      }
+  }
+
+  @include tablet-to-desktop{
+      .track{
+          width: 65%;
+          height: 65%; //65vh;
+          p{
+              text-align: center;
+              padding: 0px 10px 0px 10px;
+          }
+        }
+  }
+
+  @include desktop-and-up{
+      h1{
+          font-size: $title;
+      }
+      h3{
+          font-size: $header;
+          margin: 0;
+      }
+      .lower-tracks{
+          flex-direction: row;
+          justify-content: center;
+          padding-top: 25px;
+      }
+      .track{
+          width: 25%;
+          height: 80%; //33rem;//35vw;
+          transition: transform .2s;
+          p{
+              text-align: center;
+          }
+        }
+        .track:hover {
+            transform: scale(1.10);
+        }
+      .collab{
+          float: left;
+          margin-left: 25px;
+      }
+      .innovate{
+          margin-left: 25px;
+      }
+      .skill-build{
+          float: right;
+          margin-left: 25px;
+      }
+    }
+}
