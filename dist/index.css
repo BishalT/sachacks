@@ -370,6 +370,13 @@
     .sponsor .list-sponsor-row img {
       margin-bottom: 10px;
       margin-top: 10px; }
+    @media screen and (max-width: 767px) {
+      .sponsor .list-sponsor-row .VMware {
+        height: 121px;
+        width: 300px; }
+      .sponsor .list-sponsor-row .hackerEarth {
+        height: 60px;
+        width: 285px; } }
   .sponsor h3 {
     color: #5A5A5A;
     width: 100%;
