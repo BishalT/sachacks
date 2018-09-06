@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="background-image:url('./images/galaxy_rawtexture.jpeg')">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +19,15 @@
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
   <link rel="shortcut icon" href="images/rocket-color.png" type="image/x-icon">
   <link rel="icon" href="images/rocket-color.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
   <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="dist/index.css">
   <title>SacHacks</title>
 </head>
@@ -37,128 +45,186 @@
         </a>
       </div>
     </div>
-    <div class="navbar">
-      <div class="container">
-        <div class="rocket">
-          <img class="animated" src="images/rocket-white-2.png" alt="">
-          <!-- <div></div> -->
-        </div>
-        <ul class="control-btn">
-          <li name="0">Home</li>
-          <li name="1">About</li>
-          <li name="2">Schedule</li>
-          <li name="3">FAQ</li>
-          <li name="4">Sponsors</li>
+
+    <nav class="navbar navbar-default navbar-expand-lg navbar-light bg-light sticky-top">
+      <div class="rocket"><img class="animated" src="images/rocket-color.png" alt=""></div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <ul class="nav navbar-nav control-btn">
+          <li class="nav-item" name="1"><a href="https://sachacks.typeform.com/to/kXASw6" class="nav-link"> APPLY </a></li>
+          <li class="nav-item" name="0"><a href="#about" class="nav-link"> ABOUT <span class="sr-only">(current)</span></a></li>
+          <li class="nav-item" name="1"><a href="#schedule" class="nav-link"> SCHEDULE </a></li>
+          <!--<li class="nav-item" name="2"><a href="#faq" class="nav-link"> FAQ </a></li>-->
+          <li class="nav-item" name="3"><a href="#sponsors" class="nav-link"> SPONSORS </a></li>
         </ul>
       </div>
-    </div>
-    <div class="page">
-      <div class="homepage padding-top">
+    </nav>
+    <div class="homepage padding-top">
         <img src="images/sachack_3.png" alt="">
         <div class="detail">
-          <h2>
-            <span>Design.</span>
-            <span>Code.</span>
-            <span>Launch.</span>
-          </h2>
-          <h3>November 17 - 18, 2018 | McClellan Park, CA</h3>
-          <div>
+          <h3 id="space">McClellan Conference Center @ Sacramento, CA</h3>
+          <h5 class="yellow">November 17-18, 2018</h5>
+          <div class="mainButtons">
             <a href="https://sachacks.typeform.com/to/kXASw6" target="_blank"><button class="btn btn-active">
               APPLY</button>
             </a>
             <a href="https://sachacks.typeform.com/to/HzyoCY" target="_blank">
-              <button class="btn btn-home">MENTOR</button>
+              <button class="btn btn-home">BE A MENTOR</button>
             </a>
           </div>
         </div>
       </div>
-    </div>
-    <div class="page">
-      <div class="about padding-top">
-        <h1>A BIT ABOUT US</h1>
+    <div class="about padding-top" id="about">
+        <h1>What is SacHacks?</h1>
         <div class="detail">
           <p>
-              SacHacks is the first major intercollegiate hackathon in the Sacramento, California area. Our passion is to cultivate the untapped potential of those in Sac by providing them with the opportunity to launch their ideas in a public venue. We provide the place, you bring your ideas, and we have a friendly competition between all creative coders to launch their ideas into action during a 24-hour hackathon.
-          </p>
-          <p>
-              Food and refreshments will be provided by our team. Just bring yourself and your laptop, and maybe your sleeping bag.
+              <span class="yellow">Design. Code. Launch.</span>
+              SacHacks is the first major intercollegiate hackathon in the Sacramento, California area. Our passion is to cultivate the untapped potential of those in Sac by
+              providing them with the opportunity to launch their ideas in a public venue. We provide the place, you bring your ideas, and we have a friendly competition
+              between all creative coders to launch their ideas into action during a 24-hour hackathon.
           </p>
         </div>
       </div>
-    </div>
 
+
+    <div class="tracks padding-top">
+        <h1>Core Values</h1>
+        <div class="lower-tracks">
+            <div class="track collab">
+                <img src="images/collaboration.png"></img>
+                <h3>Collaboration</h3>
+                <p> Hack a project from scratch, and make some new friends in the process! </p>
+            </div>
+            <div class="track innovate">
+                <img src="images/innovation.png"></img>
+                <h3>Innovation</h3>
+                <p> Develop, design, and create incredible ideas to solve real-world issues! </p>
+            </div>
+            <div class="track skill-build">
+                <img src="images/skill-building.png"></img>
+                <h3>Skill Building</h3>
+                <p> Learn some new programs and skills! Hackathons serve as great crash-courses. </p>
+            </div>
+        </div>
+    </div>
     <!-- Schedule page -->
-    <div class="page smaller-page">
-      <div class="schedule padding-top">
-        <h1>SCHEDULE</h1>
-        <h3>November 17-18, 2018 | Sacramento, CA</h3>
-
-        <!-- Schedule box -->
-        <div class="carousel">
-
-          <!-- buttons -->
-          <div class="schedule-btn left">
-            <i class="fas fa-chevron-circle-left"></i>
-          </div>
-          <div class="schedule-btn right">
-            <i class="fas fa-chevron-circle-right"></i>
-          </div>
-
-          <!-- Schedule items -->
-          <div class="items">
-            <div class="timebar"></div>
-            <div class="item dot" data-time="9 am">
-              <h4>Saturday, <br /> November 17</h4>
-              <p>Check-in</p>
+    <div class="schedule padding-top" id="schedule">
+        <div class="schedule-header">
+            <h1>Schedule</h1>
+            <div class="schedule-buttons">
+                <button class="btn-sched btn-active btn-1">Sat, Nov 17th </button>
+                <button class="btn-sched btn-inactive btn-2">Sun, Nov 18th</button>
             </div>
-            <div class="item dot" data-time="10 am">
-              <p>Opening Ceremony</p>
-            </div>
-            <div class="item star" data-time="11 am">
-              <h4 class="hacking">Hacking <br/> Begins!</h4>
-              <p>Team Mixer</p>
-            </div>
-            <div class="item dot cookie" data-time="12 am">
-              <p>Lunch/Check-in closes</p>
-            </div>
-            <div class="item dot cookie" data-time="6 pm">
-              <p>Dinner</p>
-            </div>
-            <div class="item dot" data-time="10 pm">
-              <p>Fun Competition Event</p>
-            </div>
-            <div class="item dot cookie" data-time="12 am">
-              <h4>Sunday, <br/> November 18</h4>
-              <p>Midnight Snack</p>
-            </div>
-            <div class="item dot cookie" data-time="2 am">
-              <p>Boba Break</p>
-            </div>
-            <div class="item dot" data-time="4 am">
-              <p>Cup Stacking</p>
-            </div>
-            <div class="item dot cookie" data-time="8 am">
-              <p>Breakfast</p>
-            </div>
-            <div class="item dot" data-time="10 am">
-              <p>Workshop</p>
-            </div>
-            <div class="item dot cookie" data-time="12 pm">
-              <p>Lunch</p>
-            </div>
-            <div class="item dot" data-time="2 pm">
-              <p>Workshop</p>
-            </div>
-          </div>
         </div>
-      </div>
+
+        <table class="tb-active tb-1">
+          <tr>
+            <td class="t-time"> 9 AM </td>
+            <td class="t-event"> Check In </td>
+            <td class="t-desc"> Sign in! Check in at the main entrance of the McClellan Conference Center. </td>
+          </tr>
+          <tr>
+            <td class="t-time"> 10 AM </td>
+            <td class="t-event"> Opening Ceremony </td>
+            <td class="t-desc"> Hear from a VIP of the Sac Kings! </td>
+          </tr>
+          <tr>
+            <td class="t-time"> 10:30 AM </td>
+            <td class="t-event"> Hacking Begins! + Team Mixer </td>
+            <td class="t-desc"> Start building! If you don't yet have a team, attend the mixer to find teammates! </td>
+          </tr>
+          <tr>
+            <td class="t-time"> 12 PM </td>
+            <td class="t-event"> Lunch </td>
+            <td class="t-desc"> Amazing food from local Sac businesses! All details of the meals at the hackathon TBA!</td>
+          </tr>
+          <tr>
+            <td class="t-time"> 2 PM </td>
+            <td class="t-event"> Google Cloud Platform Workshop </td>
+            <td class="t-desc"> Learn how to use the GCP API! </td>
+          </tr>
+          <tr>
+            <td class="t-time"> 4 PM </td>
+            <td class="t-event"> Workshop TBA</td>
+            <td class="t-desc"> Workshop content TBA! </td>
+          </tr>
+          <tr>
+            <td class="t-time"> 6 PM </td>
+            <td class="t-event"> Dinner </td>
+            <td class="t-desc"> Time to eat! </td>
+          </tr>
+          <tr>
+            <td class="t-time"> 10 PM </td>
+            <td class="t-event"> Leonid Meteor Shower Break! </td>
+            <td class="t-desc"> Let's watch this once-a-year meteor shower together while we break! </td>
+          </tr>
+        </table>
+
+        <table class="tb-inactive tb-2">
+          <tr>
+            <td class="t-time"> 12 AM </td>
+            <td class="t-event"> Midnight Snack </td>
+            <td class="t-desc"> You've probably had too much Red Bull. We'll have more Red Bull for you :) . Also snacks are stocked! </td>
+          </tr>
+          <tr>
+            <td class="t-time"> 2 AM </td>
+            <td class="t-event"> Boba Break </td>
+            <td class="t-desc"> Need we say more?  </td>
+          </tr>
+          <tr>
+            <td class="t-time"> 4 AM </td>
+            <td class="t-event"> Cup Stacking </td>
+            <td class="t-desc"> Still alive? Let's do some classic cup stacking!</td>
+          </tr>
+          <tr>
+            <td class="t-time"> 8 PM </td>
+            <td class="t-event"> Breakfast </td>
+            <td class="t-desc"> Donuts and coffee. Yay. </td>
+          </tr>
+          <tr>
+            <td class="t-time"> 10 PM </td>
+            <td class="t-event"> Workshop </td>
+            <td class="t-desc"> More details TBA! </td>
+          </tr>
+          <tr>
+            <td class="t-time"> 12 PM </td>
+            <td class="t-event"> Lunch </td>
+            <td class="t-desc"> TBA Again :) </td>
+          </tr>
+          <tr>
+            <td class="t-time"> 2 PM </td>
+            <td class="t-event"> Workshop </td>
+            <td class="t-desc"> TBA :) </td>
+          </tr>
+          <tr>
+            <td class="t-time"> 3 PM </td>
+            <td class="t-event"> Workshop </td>
+            <td class="t-desc"> :) </td>
+          </tr>
+           <tr>
+            <td class="t-time"> 4 PM </td>
+            <td class="t-event"> Hacking Finished! </td>
+            <td class="t-desc"> Congratulations!! You've survived!! </td>
+          </tr>
+           <tr>
+            <td class="t-time"> 4:30 PM </td>
+            <td class="t-event"> Demos and Judging </td>
+            <td class="t-desc"> Show off the cool projects you've hacked!! </td>
+          </tr>
+           <tr>
+            <td class="t-time"> 5:00 (to 5:45) PM </td>
+            <td class="t-event"> Closing Ceremony </td>
+            <td class="t-desc"> Let's close and conquer!</td>
+          </tr>
+        </table>
     </div>
-    <div class="page">
-      <div class="FAQ padding-top">
-        <h1>FAQ</h1>
+    <div class="FAQ padding-top" id="faq">
+        <h1>Frequently Asked Questions</h1>
         <div class="Q-and-A">
           <li>
-            <h3>What is a hackathon</h3>
+            <h3>What is a hackathon?</h3>
             <p>
               A hackathon occurs when passionate people gather together to create, build, and launch their ideas with tech.
             </p>
@@ -185,7 +251,7 @@
           <li>
             <h3>I’m not the best coder. Can I still attend?</h3>
             <p>
-              Yes, we embrace diversity. It will be a great opporunity to pick up new skills from other coders at the event. Applications are not filtered based on experience.
+              Yes, we embrace diversity. It will be a great opportunity to pick up new skills from other coders at the event. Applications are not filtered based on experience.
             </p>
           </li>
           <li>
@@ -194,39 +260,80 @@
               Yes! We will have a team mixer for hackers to form teams.
             </p>
           </li>
+            <li>
+            <h3>Have more questions?</h3>
+            <p>
+               Feel free to email us at <a href="mailto:team@sachacks.io">team@sachacks.io</a>.
+            </p>
+          </li>
         </div>
-        <h3>
-            Have more questions? Feel free to email us at <a href="mailto:team@sachacks.io">team@sachacks.io.</a>
-        </h3>
+
       </div>
-    </div>
-    <div class="page">
-      <div class="sponsor padding-top">
-        <h1>SPONSORS</h1>
-        <div class="list-sponsor">
-            <div class="list-sponsor-1" text-align: "center" line-height="50px">
-                <img src="images/wolfram_logo.png" height="157px" width="200px">
-                <img src="images/VMware_logo.png" height="133px" width="287px">
-                <img src="images/soylent_logo.png" height="100px" width="200px">
-                <img src="images/hacker-earth-logo.png" height="75px" width="354px">
-                <img src="images/Yerba_Mate.png" height="130px" width="108px">
-            </div>
-            <div class="list-sponsor-2" text-align: "center" line-height="50px">
-                <img src="images/nvidia_logo.png" height="50px" width="217px">
-                <img src="images/gcp-logo.png" height="100px" width="167px">
-                <img src="images/techdomains_logo.png" height="75px" width="155px">
-                <img src="images/hs_logo.png" height="100px" width="100px">
-                <img src="images/ascend_logo.png" height="125px" width="125px">
-            </div>
-        </div>
-        <h3>Interested in sponsoring? Download our
+    <div class="sponsor padding-top" id="sponsors">
+        <h1>Sponsors</h1>
+        <h4>Want to sponsor SacHacks? Download our
             <span>
               <a href="/assets/pdf/sachacks-sponsorship-deck.pdf" target="_blank">
                 Sponsorship Deck PDF
               </a>
-            </span>for more information. If you're interested in sponsoring please contact us email us at <a href="mailto:team@sachacks.io">team@sachacks.io.</a>
-        </h3>
+          </span>for more information. Contact us at our email <a href="mailto:team@sachacks.io">team@sachacks.io</a>.
+        </h4>
+        <div class="list-sponsor">
+            <div class="list-sponsor-row">
+                <a href="https://www.nba.com/kings/" target="_blank">
+                    <img src="images/sac_kings_logo.png" height="350px" width="289px">
+                </a>
+            </div>
+            <div class="list-sponsor-row">
+                <a href="http://www.wolfram.com/" target="_blank">
+                    <img src="images/wolfram_logo.png" height="200px" width="254px">
+                </a>
+                 <a href="https://www.vmware.com/" target="_blank">
+                    <img src="images/VMware_logo.png" height="162px" width="400px">
+                </a>
+            </div>
+            <div class="list-sponsor-row">
+                <a href="https://soylent.com/" target="_blank">
+                    <img src="images/soylent_logo.png" height="100px" width="200px">
+                </a>
+                <a href="https://www.hackerearth.com/" target="_blank">
+                    <img src="images/hacker-earth-logo.png" height="75px" width="354px">
+                </a>
+                 <a href="https://guayaki.com/" target="_blank">
+                    <img src="images/Yerba_Mate.png" height="200px" width="166px">
+                </a>
+                 <a href="https://cloud.google.com/" target="_blank">
+                    <img src="images/gcp-logo.png" height="150px" width="250px">
+                </a>
+            </div>
+            <div class="list-sponsor-row">
+                  <a href="https://www.nvidia.com/en-us/" target="_blank">
+                    <img src="images/nvidia_logo.png" height="50px" width="217px">
+                </a>
+                 <a href="https://get.tech/" target="_blank" >
+                    <img src="images/techdomains_logo.png" height="75px" width="155px">
+                </a>
+                 <a href="http://athena.ecs.csus.edu/~hackstate/index.html" target="_blank">
+                    <img src="images/hs_logo.png" height="100px" width="100px">
+                </a>
+                 <a href="https://www.ascenducd.org/" target="_blank">
+                    <img src="images/ascend_logo.png" height="125px" width="125px">
+                </a>
+                  <a href="http://www.gogosqueez.com/" target="_blank">
+                    <img src="images/gogo_squeez_logo.png" height="100px" width="135px">
+                </a>
+            </div>
+        </div>
       </div>
+    <div class="footer-bar">
+        <p> SacHacks 2018 </p>
+        <ul class="icon-bar">
+            <li><a href="https://www.facebook.com/sachacks/"/><i style="color:white" class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.linkedin.com/company/sachacks/"/><i style="color:white" class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.instagram.com/sachacks/?hl=en"/><i style="color:white" class="fab fa-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="https://twitter.com/SacHacks18"/><i style="color:white" class="fab fa-twitter" aria-hidden="true"></i></a></li>
+    	</ul>
+        <p> <a href="mailto:team@sachacks.io">team@sachacks.io </a></p>
     </div>
   </div>
   <script src="./dist/bundle.js"></script>

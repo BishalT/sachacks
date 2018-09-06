@@ -62,7 +62,7 @@ git checkout sachacks/gh-pages
 
 #### Merge with the origin
 echo "----Merge gh-pages in origin to remote account ----"
-git pull https://github.com/BishalT/sachacks.git gh-pages
+git pull https://github.com/LambertTran/sachacks.git gh-pages
 
 #### Push
 git push sachacks gh-pages
