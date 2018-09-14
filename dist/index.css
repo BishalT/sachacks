@@ -130,7 +130,6 @@
     height: 11vh; }
   .homepage h5 {
     color: #fbb03a;
-    padding-bottom: 5vh;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 100 !important; }
@@ -181,6 +180,24 @@
         flex-direction: row; }
       .homepage .detail .btn {
         margin-bottom: 0px; } }
+    .homepage .detail .host {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 5vh; }
+      .homepage .detail .host h3 {
+        white-space: pre-wrap;
+        color: white;
+        font-size: 2em;
+        font-weight: 500;
+        letter-spacing: 1.1pt;
+        word-spacing: 1.05pt;
+        -webkit-margin-before: 0;
+        padding: 10px 0 25px 0; }
+      .homepage .detail .host img {
+        height: 95px;
+        width: 80px; }
 
 .about {
   background-color: white;
