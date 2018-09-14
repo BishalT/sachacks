@@ -8,6 +8,7 @@
       width: 50vw;
     }
   }
+
   .mainButtons {
      margin-bottom: 10vh;
   }
@@ -23,7 +24,6 @@
 
   h5 {
     color: $yellow;
-    padding-bottom: 5vh;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 100!important;
@@ -87,7 +87,26 @@
           margin-bottom: 0px;
       }
     }
+    .host {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        h3 {
+            white-space: pre-wrap;
+            color:white;
+            font-size: $titleMobile;
+            font-weight: $titleWeight;
+            letter-spacing: 1.1pt;
+            word-spacing: 1.05pt;
+            -webkit-margin-before: 0;
+            padding: 10px 0 25px 0;
+        }
+        img {
+            height: 95px;
+            width: 80px;
+        }
+        padding-bottom: 5vh;
+    }
   }
-
-
 }
