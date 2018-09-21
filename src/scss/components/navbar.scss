@@ -32,11 +32,15 @@
   }
 }
 
+.navbar-toggler{
+    margin-right: 20px;
+}
+
 .rocket{
   height: 100%;
   width: 60px;
   position: relative;
-  left: 0;
+  left: 0px;
   text-align: center;
   img{
     transform: rotate(90deg);
@@ -80,6 +84,5 @@
         list-style: none;
         flex-direction: row;
         justify-content: space-between;
-        padding-right: 30px;
     }
 }

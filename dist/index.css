@@ -36,11 +36,14 @@
   .navbar .navbar-header {
     align-items: center; }
 
+.navbar-toggler {
+  margin-right: 20px; }
+
 .rocket {
   height: 100%;
   width: 60px;
   position: relative;
-  left: 0;
+  left: 0px;
   text-align: center;
   /** this is for the line underneath the rocket **/ }
   .rocket img {
@@ -84,8 +87,7 @@
     height: 100%;
     list-style: none;
     flex-direction: row;
-    justify-content: space-between;
-    padding-right: 30px; } }
+    justify-content: space-between; } }
 
 .header {
   margin: 0px 2%;
@@ -566,6 +568,23 @@ h1 {
   @media screen and (min-width: 1023px) {
     .wrapper {
       height: 100%; } }
+  .wrapper .logo {
+    display: block;
+    max-width: 100px;
+    min-width: 60px;
+    position: fixed;
+    top: 0;
+    margin-top: 50px;
+    width: 10%;
+    z-index: 10000; }
+    .wrapper .logo img {
+      padding: 0;
+      left: 50px; }
+    @media screen and (min-width: 992px) {
+      .wrapper .logo {
+        right: 50px; }
+        .wrapper .logo img {
+          padding-left: 30px; } }
 
 .smaller-page {
   min-height: 70vh; }
@@ -576,10 +595,11 @@ h1 {
     .padding-top {
       padding: 75px 50px 75px 50px; } }
 
-@media screen and (min-width: 1023px) {
-  .homepage {
-    padding-top: 50px;
-    padding-bottom: 25px; } }
+.homepage {
+  padding-top: 75px; }
+  @media screen and (min-width: 1023px) {
+    .homepage {
+      padding-bottom: 25px; } }
 
 .btn {
   color: white;
