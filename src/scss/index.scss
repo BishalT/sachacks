@@ -129,24 +129,6 @@ h1{
     height: 100%;
     // overflow: hidden;
   }
-  .logo {
-        display:block;
-        max-width:100px;
-        min-width:60px;
-        position:fixed;
-        top:0;
-        width:10%;
-        z-index:10000;
-        img {
-            padding: 0;
-        }
-        @media screen and (min-width: 992px){
-            img {
-                padding-left: 30px;
-            }
-            right: 50px;
-        }
-    }
 }
 
 // .page {
@@ -166,8 +148,8 @@ h1{
 }
 
 .homepage {
-    padding-top: 75px;
     @include desktop-and-up {
+        padding-top: 50px;
         padding-bottom: 25px;
     }
 }
