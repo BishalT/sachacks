@@ -40,16 +40,13 @@
   height: 100%;
   width: 60px;
   position: relative;
-  left: 100px;
+  left: 0px;
   text-align: center;
   img{
     transform: rotate(90deg);
     width: 60px;
     height: 60px;
     margin-left: 10px;
-  }
-  @media screen and (min-width: 992px){
-        left: 0px;
   }
   /** this is for the line underneath the rocket **/
   // div{
@@ -87,6 +84,5 @@
         list-style: none;
         flex-direction: row;
         justify-content: space-between;
-        padding-right: 100px;
     }
 }

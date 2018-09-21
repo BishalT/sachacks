@@ -129,16 +129,18 @@ h1{
     height: 100%;
     // overflow: hidden;
   }
-  .logo {
+  .logo {           // MLH logo
         display:block;
         max-width:100px;
         min-width:60px;
         position:fixed;
         top:0;
+        margin-top: 50px;
         width:10%;
         z-index:10000;
         img {
             padding: 0;
+            left: 50px;
         }
         @media screen and (min-width: 992px){
             img {

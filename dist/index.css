@@ -43,7 +43,7 @@
   height: 100%;
   width: 60px;
   position: relative;
-  left: 100px;
+  left: 0px;
   text-align: center;
   /** this is for the line underneath the rocket **/ }
   .rocket img {
@@ -51,9 +51,6 @@
     width: 60px;
     height: 60px;
     margin-left: 10px; }
-  @media screen and (min-width: 992px) {
-    .rocket {
-      left: 0px; } }
 
 .control-btn li {
   font-weight: 600;
@@ -90,8 +87,7 @@
     height: 100%;
     list-style: none;
     flex-direction: row;
-    justify-content: space-between;
-    padding-right: 100px; } }
+    justify-content: space-between; } }
 
 .header {
   margin: 0px 2%;
@@ -578,10 +574,12 @@ h1 {
     min-width: 60px;
     position: fixed;
     top: 0;
+    margin-top: 50px;
     width: 10%;
     z-index: 10000; }
     .wrapper .logo img {
-      padding: 0; }
+      padding: 0;
+      left: 50px; }
     @media screen and (min-width: 992px) {
       .wrapper .logo {
         right: 50px; }
