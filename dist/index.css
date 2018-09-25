@@ -256,6 +256,8 @@
   .schedule .schedule-buttons {
     display: flex;
     flex-direction: row; }
+  .schedule table {
+    border: none; }
   .schedule .btn-sched {
     font-weight: 900;
     color: white;
@@ -292,7 +294,6 @@
     .schedule .tb-active tr {
       padding: 20px 20px 20px 20px; }
     .schedule .tb-active td {
-      border-bottom: 1px solid #ddd;
       padding: 20px;
       text-align: left; }
   .schedule .tb-inactive {
@@ -459,7 +460,7 @@
   flex-direction: column; }
   .tracks .track p {
     text-align: center;
-    padding-bottom: 25px;
+    padding-bottom: 15px;
     font-size: 1.2em;
     color: #5A5A5A; }
   .tracks .track img {
@@ -480,6 +481,7 @@
     font-size: 3.5em; }
   .tracks h3 {
     font-size: 2em;
+    padding: 20px 0 20px 0;
     margin: 0; }
   .tracks .lower-tracks {
     flex-direction: row;
@@ -487,18 +489,18 @@
     padding-top: 25px; }
   .tracks .track {
     width: 25%;
-    height: 80%;
+    height: 90%;
     transition: transform .2s; }
     .tracks .track p {
       text-align: center; }
   .tracks .track:hover {
     transform: scale(1.1); }
-  .tracks .collab {
+  .tracks .e-sports {
     float: left;
     margin-left: 25px; }
-  .tracks .innovate {
+  .tracks .blockchain {
     margin-left: 25px; }
-  .tracks .skill-build {
+  .tracks .social-media {
     float: right;
     margin-left: 25px; } }
 
@@ -575,7 +577,7 @@ h1 {
     position: fixed;
     top: 0;
     margin-top: 50px;
-    width: 10%;
+    width: 8%;
     z-index: 10000; }
     .wrapper .logo img {
       padding: 0;
