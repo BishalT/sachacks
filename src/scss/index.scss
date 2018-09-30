@@ -1,15 +1,23 @@
 // font size
-$title : 2.4em;
-$header: 1.2em;
-$titleMobile: 1.8em;
-$detail: 12pt;
-$detailHeight: 20pt;
-$spacing: 1.2pt;
-$spacingDesktop: 1.5pt;
+$title : 3.5em;
+$titleWeight: 500;
+$header: 2.0em;
+$titleMobile: 2.0em;
+$detail: 1.0em;
+$detailHeight: 25pt;
+$detailWeight: 400;
+$mobileDetail: 1.2em;
+$mobileHeader3: 1.0em; //20pt
+$sponsorshipSub: 20px;
+$spacing: normal;
+$spacingDesktop: 1.2pt;
 
 // color
 $yellow : #fbb03a;
 $blue: #72adc4;
+$navy: #002561;
+$gray: #5A5A5A;
+$hoverblue: #0c6298;
 
 // layout
 @mixin flex-row {
@@ -26,6 +34,31 @@ $blue: #72adc4;
   justify-content: center;
   align-items: center;
 }
+
+// // break points
+// @mixin phone-to-tablet {
+//   @media screen and (max-width: 767px) {
+//     @content;
+//   }
+// }
+//
+// @mixin tablet-to-laptop {
+//   @media screen and (min-width: 768px) {
+//     @content;
+//   }
+// }
+//
+// @mixin laptop-to-desktop {
+//   @media screen and (max-width: 1679) {
+//     @content;
+//   }
+// }
+//
+// @mixin desktop-and-up {
+//   @media screen and (min-width: 1680px) {
+//     @content;
+//   }
+// }
 
 // break points
 @mixin phone-to-tablet {
@@ -45,6 +78,7 @@ $blue: #72adc4;
   }
 }
 
+@import './components/font.scss';
 @import './components/navbar.scss';
 @import './components/header.scss';
 @import './components/homepage.scss';
@@ -52,13 +86,20 @@ $blue: #72adc4;
 @import './components/schedule.scss';
 @import './components/FAQ.scss';
 @import './components/sponsor.scss';
+@import './components/values.scss';
+@import './components/footer.scss';
 
+html {
+    background-image: url('/images/galaxy_rawtexture.jpeg');
+}
 html, body {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'Source Sans Pro', sans-serif;
+  background-size: cover;
+  overflow-x: hidden;
+  font-family: 'Avenir-Regular', 'Avenir-Thin';
 }
 p{
   letter-spacing: $spacing;
@@ -73,7 +114,9 @@ h1{
 
 // main background
 .wrapper {
-  position: absolute;
+    background-image: url('../../images/galaxy_rawtexture.jpeg');
+  position: relative;
+  background-attachment: fixed;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -84,36 +127,70 @@ h1{
   background-repeat: no-repeat;
   @include desktop-and-up {
     height: 100%;
-    overflow: hidden;
+    // overflow: hidden;
   }
+  .logo {           // MLH logo
+        display:block;
+        max-width:100px;
+        min-width:60px;
+        position:fixed;
+        top:0;
+        margin-top: 50px;
+        width:8%;
+        z-index:10000;
+        img {
+            padding: 0;
+            left: 50px;
+        }
+        @media screen and (min-width: 992px){
+            img {
+                padding-left: 30px;
+            }
+            right: 50px;
+        }
+    }
 }
 
-.page {
-  min-height: 100vh;
-  width: 100%;
+// .page {
+//   min-height: 100vh;
+//   width: 100%;
+// }
 
-}
 .smaller-page {
   min-height: 70vh;
 }
 
 .padding-top {
-  padding: 120px 20px 0 20px;
+  padding: 20px 20px 20px 20px;
   @include desktop-and-up {
-    padding: 180px 20px 0 20px;
+    padding: 75px 50px 75px 50px;
   }
+}
+
+.homepage {
+    padding-top: 75px;
+    @include desktop-and-up {
+        padding-bottom: 25px;
+    }
 }
 
 .btn {
   color: white;
   background-color: transparent;
-  font-size: 1.2em;
+  font-size: 1.1em;
+  font-weight: 900;
+  font-weight: heavy;
   padding: 5px 20px;
   text-align: center;
-  border-radius: 20px;  
+  border-radius: 7px;
   margin: 0 20px;
+  margin-bottom: 20px;
   border: 2px solid #72adc4;
   transition: all 0.300s ease-in;
+  width: 200px; //initially 250
+  height: 60px;
+  margin-bottom: 20px;
+  letter-spacing: 1.3pt;
   &:hover{
     background-color: $yellow;
     border: 2px solid $yellow;
@@ -121,13 +198,14 @@ h1{
   }
   &:focus {
     outline: 0;
-  }  
+  }
 }
 
 .btn-home {
+  border: 1px solid white;
   &:hover {
     background-color: $blue;
-    border: 2px solid $blue;
+    border: 2px solid white;
     cursor: pointer;
   }
 }

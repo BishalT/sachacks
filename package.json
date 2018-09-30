@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "NODE_ENV=development webpack-dev-server --entry ./src/js/index.js --output-filename ./dist/bundle.js",
-    "build": "NODE_ENV=production webpack"
+    "start": "SET NODE_ENV=development & webpack-dev-server --entry ./src/js/index.js --output-filename ./dist/bundle.js",
+    "build": "SET NODE_ENV=production & webpack"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
     "resolve-url-loader": "^2.3.0",
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.3",
+    "url-loader": "^1.1.1",
     "webpack": "^3.11.0",
     "webpack-dev-server": "^2.11.2"
   },
@@ -33,6 +34,7 @@
   },
   "homepage": "https://github.com/LambertTran/sachacks#readme",
   "dependencies": {
-    "animate.css": "^3.6.1"
+    "animate.css": "^3.6.1",
+    "fontface-loader": "0.0.8"
   }
 }
