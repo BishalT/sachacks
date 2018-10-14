@@ -120,7 +120,10 @@
   text-align: center; }
   .homepage img {
     max-width: 100%;
-    width: 100%; }
+    width: 95%; }
+    @media screen and (min-width: 768px) {
+      .homepage img {
+        width: 80vw; } }
     @media screen and (min-width: 1023px) {
       .homepage img {
         width: 50vw; } }
