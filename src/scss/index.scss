@@ -99,6 +99,7 @@ html, body {
   padding: 0;
   background-size: cover;
   overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
   font-family: 'Avenir-Regular', 'Avenir-Thin';
 }
 p{
