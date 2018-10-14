@@ -543,8 +543,7 @@ html, body {
   margin: 0;
   padding: 0;
   background-size: cover;
-  overflow-x: hidden;
-  overflow: scroll;
+  overflow: scroll, hidden;
   -webkit-overflow-scrolling: touch;
   font-family: 'Avenir-Regular', 'Avenir-Thin'; }
 
