@@ -24,7 +24,6 @@
 
 .navbar {
   background-color: white;
-  position: sticky;
   width: 100%;
   z-index: 5;
   display: flex;
