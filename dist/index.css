@@ -436,6 +436,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 90%;
   padding-top: 25px; }
 
 .tracks h1 {
@@ -492,14 +493,15 @@
     justify-content: center;
     padding-top: 25px; }
   .tracks .track {
-    width: 25%;
-    height: 90%;
+    width: 30%;
+    height: 100%;
     transition: transform .2s; }
     .tracks .track p {
-      text-align: center; }
+      text-align: center;
+      font-size: 1em; }
   .tracks .track:hover {
     transform: scale(1.1); }
-  .tracks .e-sports {
+  .tracks .game-track {
     float: left;
     margin-left: 25px; }
   .tracks .blockchain {
