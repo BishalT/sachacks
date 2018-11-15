@@ -1,0 +1,120 @@
+// schedule page
+.schedule, .workshops {
+  text-align: left;
+  background-color: white;
+  td {
+    color: $gray;
+  }
+
+
+  .schedule-header{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-bottom: 30px;
+      h1{
+        color: $navy;
+        font-size: $titleMobile;
+        font-weight: $titleWeight;
+        margin-bottom: 10px;
+      }
+      h3{
+        color: white;
+        font-size: 2.0em;
+      }
+  }
+
+  .schedule-buttons{
+      display: flex;
+      flex-direction: row;
+  }
+
+table {
+    border: none;
+}
+
+    .btn-sched, .btn-workshop {
+        margin-left: 10px;
+        padding: 0;
+        border: none;
+        background: none;
+        font-weight: 900;
+        color: $yellow;
+        font-size: 1.0em;
+        width: 100%; //100px;
+        height: 45%;
+        text-align: center;
+        margin-bottom: 20px;
+        transition: all 0.300s ease-in;
+        height: 75px;
+        // box-shadow: 0 8px 16px 0 rgba(0,0,0,0.08), 0 6px 20px 0 rgba(0,0,0,0.08);
+        &:focus {
+            outline: 0;
+        }
+    }
+    .btn-active{
+        box-shadow: 0 8px 2px -2px $yellow;
+    }
+    .btn-inactive {
+        color: $gray;
+        background: white;
+        cursor: pointer;
+        box-shadow: 0 4px 2px -2px $yellow;
+    }
+
+  .tb-active {
+      tr:nth-child(even) {
+          background-color: #F8F8F8;
+      }
+      td:nth-child(3) {
+          display: none;
+      }
+      td:nth-child(1){
+          width: 35%;
+      }
+      td:nth-child(2){
+          font-family: Avenir-Bold;
+          font-weight: bold;
+      }
+      tr {
+          padding: 20px 20px 20px 20px;
+      }
+      td {
+          padding: 20px;
+          text-align: left;
+      }
+      height: 100px;
+      font-size: $mobileDetail;
+      width: 100%;
+  }
+
+  .tb-inactive {
+      display: none;
+  }
+
+   @media screen and (min-width:1024px){
+       .tb-active {
+           td:nth-child(3) {
+               display: block;
+           }
+           td:nth-child(1){
+               width: 20%;
+           }
+           font-size: $detail
+       }
+       .btn-sched {
+         width: 100%; //100px;
+         height: 45%;
+         margin-bottom: 0px;
+         font-size: 1.0em;
+         }
+       .schedule-header{
+           display: flex;
+           flex-direction: row;
+           h1{
+             font-size: $title;
+             margin-bottom: 25px;
+           }
+       }
+   }
+}
