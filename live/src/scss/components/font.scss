@@ -1,0 +1,38 @@
+@font-face {
+    font-family: "Avenir-Thin";
+    src: url('./font/avenir/thin.woff2') format('woff2'),
+            url('./font/avenir/thin.woff') format('woff'),
+            url('./font/avenir/thin.eot') format('embedded-opentype'),
+            url('./font/avenir/thin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+ }
+
+ @font-face {
+     font-family: "Avenir-Bold";
+     src: url('./font/avenir/bold.woff2') format('woff2'),
+             url('./font/avenir/bold.woff') format('woff'),
+             url('./font/avenir/bold.eot') format('embedded-opentype'),
+             url('./font/avenir/bold.ttf') format('truetype');
+     font-weight: normal;
+     font-style: normal;
+  }
+
+@font-face {
+  font-family: "Avenir-Demi";
+  src: url('./font/avenir/demi.woff2') format('woff2'),
+          url('./font/avenir/demi.woff') format('woff'),
+          url('./font/avenir/demi.eot') format('embedded-opentype'),
+          url('./font/avenir/demi.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avenir-Regular";
+  src: url('./font/avenir/regular.woff') format('woff'),
+          url('./font/avenir/regular.eot') format('embedded-opentype'),
+          url('./font/avenir/regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
