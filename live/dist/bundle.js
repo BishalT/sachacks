@@ -76,8 +76,7 @@ __webpack_require__(6);
 
 // scss
 var btns = document.querySelectorAll('.btn-click');
-
-// schedule changing
+var map_overlay_button = document.querySelectorAll('.btn-map');
 
 btns.forEach(function (elem) {
     elem.addEventListener("click", function () {
@@ -103,6 +102,17 @@ function tb_switch_inactive(btn, table) {
     btn.classList.add("btn-inactive");
     btn.classList.remove("btn-active");
 }
+
+map_overlay_button.forEach(function (elem) {
+    elem.addEventListener("click", function () {
+        var map_overlay = document.getElementById("map_overlay");
+        if (map_overlay.style.display == "none") {
+            map_overlay.style.display = "flex";
+        } else {
+            map_overlay.style.display = "none";
+        }
+    });
+});
 
 function timer(date) {
     var end = new Date(date);
@@ -137,7 +147,7 @@ function timer(date) {
 }
 
 $(document).ready(function () {
-    var hackEnd = '11/18/2018 04:00:00 PM';
+    var hackEnd = '11/18/2018 11:00:00 AM';
     timer(hackEnd);
 });
 

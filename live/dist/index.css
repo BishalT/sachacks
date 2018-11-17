@@ -32,7 +32,6 @@
     width: 100%;
     justify-content: center; }
   .timer .timer-number, .timer span {
-    font-family: 'Avenir-Bold';
     text-align: center;
     color: #002561;
     font-size: 2.5em;
@@ -44,15 +43,18 @@
         font-size: 3.0em; } }
   .timer span, .timer #days, .timer #sec {
     font-family: "Avenir-Regular" !important; }
+  .timer #hours, .timer #min {
+    font-weight: 1000; }
 
-.map div {
+.map .map_small {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-end; }
+  justify-content: center;
+  height: 90%; }
 
 .map img {
-  width: 75%; }
+  width: 50%; }
 
 @font-face {
   font-family: "Avenir-Thin";
@@ -170,8 +172,7 @@
     padding-left: 20px; }
   .lists li {
     font-size: 1.15em;
-    padding-bottom: 10px;
-    font-family: "Avenir-Bold" !important; }
+    padding-bottom: 10px; }
 
 .contact-mentor .mentor-buttons {
   display: flex;
@@ -246,11 +247,58 @@ h1 {
     .wrapper {
       height: 100%; } }
 
+#map_overlay {
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all .5s ease;
+  z-index: 2;
+  cursor: pointer; }
+  #map_overlay img {
+    width: 80%; }
+    @media screen and (min-width: 1024px) {
+      #map_overlay img {
+        width: 50%; } }
+  #map_overlay .btn-map {
+    margin-top: 10px;
+    width: 25%; }
+
+.map-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%; }
+  .map-button .btn-map {
+    font-weight: 900;
+    color: white;
+    background-color: #002561;
+    font-size: 1.0em;
+    width: 35%;
+    padding: 5px 20px;
+    text-align: center;
+    margin: 0 20px;
+    margin-bottom: 20px;
+    transition: all 0.300s ease-in;
+    height: 75px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.08), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+    border-radius: 7px; }
+    .map-button .btn-map:focus {
+      outline: 0; }
+
 .smaller-page {
   min-height: 70vh; }
 
 .padding-top {
-  padding: 40px 40px 40px 40px; }
+  padding: 40px 30px 40px 30px; }
   @media screen and (max-width: 767px) {
     .padding-top {
       padding-left: 10px;

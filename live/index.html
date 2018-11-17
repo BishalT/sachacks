@@ -11,7 +11,7 @@
   <meta property="og:image:width" content="1024" />
   <meta property="og:image:height" content="172" />
   <meta property="og:description" content="SacHacks is Sacramento's first upcoming intercollegiate hackathon, characterized by remarkable rounds of intense coding and brainstorming! Come together for 30 hours with the brightest developers and designers to create something amazing." />
-  <meta name="description" content="SacHacks | Sacramento's first intercollegiate Hackathon" />
+  <meta name="description" content="SacHacks | Sacramento's first intercollegiate Hackathon Live Website" />
   <meta name="keywords" content="hackathon, Sacramento, California, hackathon, technology, startups, innovation, hacks" />
   <meta name="author" content="SacHacks" />
   <meta name="theme-color" content="#ffffff" />
@@ -31,6 +31,12 @@
 </head>
 <body>
   <div class="wrapper">
+      <div id="map_overlay">
+          <img src="images/map.jpg"/>
+          <div class="map-button">
+              <button class="btn-map">Close</button>
+          </div>
+      </div>
     <div class="homepage padding-top">
         <img src="images/sachack_3.png" alt="">
         <div class="detail">
@@ -62,8 +68,19 @@
               </div>
               <div class="tile map padding-top">
                   <h1>MAP</h1>
-                  <div class="map">
-                      <img src="images/map_place_holder.png"/>
+                  <div class="map_small">
+                      <img src="images/map_layout.png"/>
+                      <img src="images/map_legend.png"/>
+                  </div>
+                  <div class="map-button">
+                      <button class="btn-map">Expand</button>
+                  </div>
+              </div>
+              <div class="tile contact-mentor padding-top">
+                  <h1>CONTACT A MENTOR</h1>
+                  <div class="mentor-buttons">
+                      <button class="btn-mentor" onclick="location.href='https://sachacks2018.slack.com/messages/mentors'">Technical Question</button>
+                      <button class="btn-mentor" onclick="location.href='https://sachacks2018.slack.com/messages/general'">Other Inquiries</button>
                   </div>
               </div>
               <div class="tile workshops padding-top">
@@ -103,7 +120,7 @@
                     <tr>
                         <td class="t-time"> 7:15 PM </td>
                         <td class="t-event"> Connect My Car: OAuth2 Workshop with Smartcar's CTO</td>
-                        <td class="t-desc"> Want to know how to quickly and securely connect your car to any application? Come to Smartcar’s session on OAuth2 with Smartcar’s CTO, Sanketh Katta, to learn more! Smartcar is a connected car developer platform, making it possible for developers to build apps for cars in minutes - hardware free.  </td>
+                        <td class="t-desc"> Want to know how to quickly and securely connect your car to any application? Come to Smartcar’s session on OAuth2 with Smartcar’s CTO, Sanketh Katta, to learn more!</td>
                     </tr>
                     <tr>
                         <td class="t-time"> 8:30 PM </td>
@@ -130,47 +147,34 @@
                   </table> -->
               </div>
               <div class="tile prizes-awards padding-top">
-                  <h1>PRIZES & AWARDS</h1>
+                  <h1>Tracks Prizes</h1>
                   <div class="lists">
                       <ul class="left-list">
-                          <li>Overall Best: MLH Medal, Prize by the Kings </li>
-                          <li>2nd Overall Best: MLH Medal, Prize by the Kings </li>
-                          <li>3rd Overall Best: MLH Medal, Prize by the Kings</li>
-                          <li>Best Domain Name: $200 Amazon Gift Card </li>
-                      </ul>
-                      <ul class="right-list">
-                          <li>Best First Hack: Makey Makey Kits + Possible Gift Card</li>
-                          <li>Best UI/UX: Sketch Subscription </li>
-                          <li>Best Use of Visual Design: Adobe Products </li>
-                          <li>Best Team Branding: Adobe Prizes</li>
-                          <li>Best Smartcar Tesla Hack: Google Home</li>
+                          <li><strong>Esports Track</strong>: King's Tickets </li>
+                          <li><strong>Social Media Track</strong>: King's Tickets </li>
+                          <li><strong>Analytics Track</strong>: King's Tickets </li>
+                          <li><strong>Blockchain Track</strong>: XYO Geo Mining Tickets </li>
+                          <li><strong>Game Dev Track</strong>: Tour, EA Game, Swag Items </li>
                       </ul>
                   </div>
               </div>
               <div class="tile prizes-awards padding-top">
-                  <h1>PRIZES & AWARDS</h1>
+                  <h1>Overall Hack Prizes</h1>
                   <div class="lists">
                       <ul class="left-list">
-                          <li>Best GCP Hack: Tour of Sacramento Kings Stuff</li>
-                          <li>Best Hack - Digital Ocean: Makey Makey Kits + Possible Gift Card</li>
-                          <li>Best Hardware Hack: Adobe Stuff</li>
-                          <li>Best Domain Name: Tesla Prize</li>
+                          <li><strong>Overall Best</strong>: MLH Medal, Prize by the Kings </li>
+                          <li><strong>2nd Overall Best</strong>: MLH Medal, Prize by the Kings </li>
+                          <li><strong>3rd Overall Best</strong>: MLH Medal, Prize by the Kings</li>
+                          <li><strong>Best Domain Name</strong>: $200 Amazon Gift Card </li>
+                          <li><strong>Best First Hack</strong>: Makey Makey Kits + Possible Gift Card</li>
+                          <li><strong>Best UI/UX</strong>: Sketch Subscription </li>
+                          <li><strong>Best Use of Visual Design</strong>: $25 Dollar Amazon Gift Cards + Design Notebook </li>
+                          <li><strong>Best Team Branding</strong>:  $25 Dollar Amazon Gift Cards + Design Pens </li>
+                          <li><strong>Best Smartcar Tesla Hack</strong>: Google Home</li>
+                          <li><strong>Best GCP Hack</strong>: Google Home Minis </li>
+                          <li><strong>Best Hack - Digital Ocean</strong>: $125 - $500 API Credit </li>
+                          <li><strong>Best Hardware Hack</strong>: Arduino Starter Kits</li>
                       </ul>
-                      <ul class="right-list">
-                          <li>Esports Track: Sketch Subscription + Swag </li>
-                          <li>Social Media Track: Adobe Products </li>
-                          <li>Analytics Track: Google Homes</li>
-                          <li>Blockchain Track: Makey Makey Kits + Possible Gift Card</li>
-                          <li>Game Dev Track: Sketch Subscription + Schwag </li>
-                      </ul>
-                  </div>
-              </div>
-              <div class="tile live-feed-1 padding-top">
-                  <h1>GET FEATURED</h1>
-                  <div class="live-feed-items">
-                      <img class="twitter-logo" src="images/twitter_logo.png"/>
-                      <p> Want to keep up with all the action? </p>
-                      <p> Use <strong>#SacHacks18</strong> to be featured! </p>
                   </div>
               </div>
           </div>
@@ -269,13 +273,6 @@
                       </tr>
                   </table>
               </div>
-              <div class="tile contact-mentor padding-top">
-                  <h1>CONTACT A MENTOR</h1>
-                  <div class="mentor-buttons">
-                      <button class="btn-mentor" onclick="location.href='https://sachacks2018.slack.com/messages/mentors'">Technical Question</button>
-                      <button class="btn-mentor" onclick="location.href='https://sachacks2018.slack.com/messages/general'">Other Inquiries</button>
-                  </div>
-              </div>
               <div class="tile hardware-api padding-top">
                   <h1>HARDWARE & API</h1>
                   <div class="lists">
@@ -294,6 +291,14 @@
               <div class="tile live-feed-2 padding-top">
                   <h1>LIVE FEED</h1>
                   <a class="twitter-timeline" data-height="1250" href="https://twitter.com/SacHacks18?ref_src=twsrc%5Etfw">Tweets by SacHacks18</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+              </div>
+              <div class="tile live-feed-1 padding-top">
+                  <h1>GET FEATURED</h1>
+                  <div class="live-feed-items">
+                      <img class="twitter-logo" src="images/twitter_logo.png"/>
+                      <p> Want to keep up with all the action? </p>
+                      <p> Use <strong>#SacHacks18</strong> to be featured! </p>
+                  </div>
               </div>
           </div>
       </div>
