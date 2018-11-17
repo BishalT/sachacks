@@ -1,11 +1,12 @@
 .map{
-    div {
+    .map_small {
         width: 100%;
         display: flex;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: center;
+        height: 90%;
     }
     img{
-        width: 75%;
+        width: 50%;
     }
 }
