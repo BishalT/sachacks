@@ -12,7 +12,7 @@
         justify-content: center;
     }
     .timer-number, span {
-        font-family: 'Avenir-Bold';
+        // font-family: 'Avenir-Bold';
     	text-align: center;
     	color: $navy;
         font-size: 2.5em;
@@ -25,5 +25,8 @@
     }
     span, #days, #sec {
         font-family: 'Avenir-Regular'!important;
+    }
+    #hours, #min {
+        font-weight: 1000;
     }
 }
