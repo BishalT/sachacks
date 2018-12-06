@@ -650,3 +650,72 @@ h1 {
 
 .btn-sponsor {
   border: 2px solid #fbb03a; }
+
+.winners h1 {
+  color: white;
+  text-align: left;
+  font-size: 2em;
+  margin-bottom: 25px;
+  font-weight: 500; }
+
+.winners h3 {
+  color: #002561;
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: 200; }
+
+.winners li {
+  text-align: left;
+  padding-bottom: 15px;
+  font-size: 1.2em;
+  color: #5A5A5A; }
+
+.winners ul {
+  list-style-type: none; }
+
+.winners .winners-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.winners .tracks-winners, .winners .overall-lists {
+  width: 80%;
+  display: flex 1 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 0px;
+  margin-bottom: 20px; }
+
+.winners .overall-list-div {
+  display: flex;
+  flex-direction: column; }
+
+.winners .left-list, .winners .right-list {
+  margin-left: 10px;
+  margin-top: 10px; }
+
+@media screen and (min-width: 1023px) {
+  .winners h1 {
+    font-size: 3.5em; }
+  .winners h3 {
+    font-size: 2em;
+    padding: 20px 0 20px 0;
+    margin: 0; }
+  .winners li {
+    font-size: 1em; }
+  .winners .overall-list-div {
+    display: flex;
+    flex-direction: row; }
+  .winners .tracks-winners, .winners .overall-lists {
+    width: 40%;
+    padding-right: 20px;
+    margin-left: 20px; } }
