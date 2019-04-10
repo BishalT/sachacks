@@ -1,0 +1,36 @@
+.footer-bar{
+    padding-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    .icon-bar{
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 0;
+        li {
+            padding: 5px 5px 5px 5px;
+            .svg-inline--fa {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+    a{
+        color: white;
+        text-decoration: none;
+    }
+    @media screen and (min-width:1024px){
+        flex-direction: row;
+        p {
+            font-size: $detail;
+        }
+        .icon-bar{
+            width: 50%;
+        }
+    }
+}

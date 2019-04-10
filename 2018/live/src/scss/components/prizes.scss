@@ -1,0 +1,11 @@
+.lists {
+    display: flex;
+    justify-content: space-between;
+    ul{
+        padding-left: 20px;
+    }
+    li {
+        font-size: 1.15em;
+        padding-bottom: 10px;
+    }
+}

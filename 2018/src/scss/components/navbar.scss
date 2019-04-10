@@ -1,0 +1,87 @@
+// navbar
+.navbar{
+    background-color: white;
+    //position: fixed;
+    width: 100%;
+    //top: 0;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+  // .container{
+  //   display: flex;
+  //   flex-direction: row;
+  //   position: relative;
+  //   justify-content: space-between;
+  //   align-items: center;
+  //   width: 100%;
+  // }
+  // @media screen and (min-width:1024px){
+  //   display: flex;
+  // }
+  .container-fluid{
+      align-items: center;
+  }
+  .navbar-header{
+       align-items: center;
+  }
+}
+
+.navbar-toggler{
+    margin-right: 20px;
+}
+
+.rocket{
+  height: 100%;
+  width: 60px;
+  position: relative;
+  left: 0px;
+  text-align: center;
+  img{
+    transform: rotate(90deg);
+    width: 60px;
+    height: 60px;
+    margin-left: 10px;
+  }
+  /** this is for the line underneath the rocket **/
+  // div{
+  //   width: 1px;
+  //   background-color: #72adc4;
+  //   height: 100%;
+  //   z-index: -1;
+  //   margin: 0 auto;
+  // }
+}
+
+.control-btn {
+    li{
+        font-weight: 600;
+        letter-spacing: 1.1pt;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        font-size: $mobileDetail;
+        padding: 0 30px 0 30px;
+        font-size: $detail;
+        color: $gray;
+        filter: grayscale(0%);
+        &:hover{
+          cursor: pointer;
+        }
+        a {color:$hoverblue; text-decoration: none; }      /* unvisited link */
+        a:visited {color:$gray; text-decoration: none;}  /* visited link */
+        a:hover {color:$hoverblue; text-decoration: none;}  /* mouse over link */
+        a:active {color:$gray;}  /* selected link */
+    }
+    @media screen and (min-width: 768px){
+        margin-left: auto;
+        height: 100%;
+        list-style: none;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

@@ -1,0 +1,77 @@
+.FAQ {
+  text-align: left;
+  h1{
+    color: white;
+    font-size: $titleMobile;
+    margin-bottom: 10px;
+    font-weight: $titleWeight;
+  }
+  .Q-and-A{
+    width: 100%;
+    display: block;
+    li{
+      list-style: none;
+      width: 100%;
+      h3{
+          font-family: 'Avenir-Bold';
+        color: $yellow;
+        font-size: $mobileHeader3;
+        margin: 20px 0 5px 35px;
+        text-align: left;
+        text-transform: uppercase;
+        font-size: 23px!important;
+      }
+      p{
+        color:white;
+        font-size: $mobileDetail;
+        line-height: 30px;
+        text-align: left;
+        margin-left: 35px;
+        a {
+          text-decoration: underline;
+          font-weight: bold;
+          text-underline-position: under;
+          color: white;
+        }
+      }
+    }
+  }
+
+  h3{
+    color: white;
+    font-size: $mobileHeader3;
+    a{
+      color: $yellow;
+      text-decoration: underline;
+      &:hover {
+          color: $blue;
+          opacity: 50%;
+      }
+    }
+
+    // @include tablet-to-desktop {
+    //   margin-top: 20px;
+    // }
+  }
+
+  @media screen and (min-width:1024px){
+      h1{
+        color: white;
+        font-size: $title;
+        margin-bottom: 25px;
+      }
+      .Q-and-A {
+          li {
+              h3{
+                font-size: $header;
+              }
+              p{
+                font-size: $detail;
+            }
+          }
+      }
+      h3{
+          font-size: $header;
+      }
+  }
+}

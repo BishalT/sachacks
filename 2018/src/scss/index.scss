@@ -1,0 +1,310 @@
+// font size
+$title : 3.5em;
+$titleWeight: 500;
+$header: 2.0em;
+$titleMobile: 2.0em;
+$detail: 1.0em;
+$detailHeight: 25pt;
+$detailWeight: 400;
+$mobileDetail: 1.2em;
+$mobileHeader3: 1.0em; //20pt
+$sponsorshipSub: 20px;
+$spacing: normal;
+$spacingDesktop: 1.2pt;
+
+// color
+$yellow : #fbb03a;
+$blue: #72adc4;
+$navy: #002561;
+$gray: #5A5A5A;
+$hoverblue: #0c6298;
+
+// layout
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+}
+@mixin flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+// // break points
+// @mixin phone-to-tablet {
+//   @media screen and (max-width: 767px) {
+//     @content;
+//   }
+// }
+//
+// @mixin tablet-to-laptop {
+//   @media screen and (min-width: 768px) {
+//     @content;
+//   }
+// }
+//
+// @mixin laptop-to-desktop {
+//   @media screen and (max-width: 1679) {
+//     @content;
+//   }
+// }
+//
+// @mixin desktop-and-up {
+//   @media screen and (min-width: 1680px) {
+//     @content;
+//   }
+// }
+
+// break points
+@mixin phone-to-tablet {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin tablet-to-desktop {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin desktop-and-up {
+  @media screen and (min-width: 1023px) {
+    @content;
+  }
+}
+
+@import './components/font.scss';
+@import './components/navbar.scss';
+@import './components/header.scss';
+@import './components/homepage.scss';
+@import './components/about.scss';
+@import './components/schedule.scss';
+@import './components/FAQ.scss';
+@import './components/sponsor.scss';
+@import './components/tracks.scss';
+@import './components/footer.scss';
+
+html {
+    background-image: url('/images/galaxy_rawtexture.jpeg');
+}
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  overflow: scroll, hidden;
+  -webkit-overflow-scrolling: touch;
+  font-family: 'Avenir-Regular', 'Avenir-Thin';
+}
+p{
+  letter-spacing: $spacing;
+  @include desktop-and-up {
+    letter-spacing: $spacingDesktop;
+  }
+}
+h1{
+  margin: 0;
+  padding: 0;
+}
+
+// main background
+.wrapper {
+    background-image: url('../../images/galaxy_rawtexture.jpeg');
+  position: relative;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  // background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include desktop-and-up {
+    height: 100%;
+    // overflow: hidden;
+  }
+  .logo {           // MLH logo
+        display:block;
+        max-width:100px;
+        min-width:60px;
+        position:fixed;
+        top:0;
+        margin-top: 50px;
+        width:8%;
+        z-index:10000;
+        img {
+            padding: 0;
+            left: 50px;
+        }
+        @media screen and (min-width: 992px){
+            img {
+                padding-left: 30px;
+            }
+            right: 50px;
+        }
+    }
+}
+
+// .page {
+//   min-height: 100vh;
+//   width: 100%;
+// }
+
+.smaller-page {
+  min-height: 70vh;
+}
+
+.padding-top {
+  padding: 20px 20px 20px 20px;
+  @include desktop-and-up {
+    padding: 75px 50px 75px 50px;
+  }
+}
+
+.homepage {
+    padding-top: 75px;
+    @include desktop-and-up {
+        padding-bottom: 25px;
+    }
+}
+
+.btn {
+  color: white;
+  background-color: transparent;
+  font-size: 1.1em;
+  font-weight: 900;
+  font-weight: heavy;
+  padding: 5px 20px;
+  text-align: center;
+  border-radius: 7px;
+  margin: 0 20px;
+  margin-bottom: 20px;
+  border: 2px solid #72adc4;
+  transition: all 0.300s ease-in;
+  width: 200px; //initially 250
+  height: 60px;
+  margin-bottom: 20px;
+  letter-spacing: 1.3pt;
+  &:hover{
+    background-color: $yellow;
+    border: 2px solid $yellow;
+    cursor: pointer;
+  }
+  &:focus {
+    outline: 0;
+  }
+}
+
+.btn-home {
+  border: 1px solid white;
+  &:hover {
+    background-color: $blue;
+    border: 2px solid white;
+    cursor: pointer;
+  }
+}
+
+.btn-active {
+  background-color: #fbb03a;
+  border: 2px solid #fbb03a;
+  cursor: pointer;
+}
+
+.btn-sponsor {
+  border: 2px solid #fbb03a;
+}
+
+.winners {
+    h1{
+      color: white;
+      text-align: left;
+      font-size: $titleMobile;
+      margin-bottom: 25px;
+      font-weight: $titleWeight;
+    }
+
+    h3{
+        color: $navy;
+        text-align: center;
+        font-size: $mobileDetail;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-weight: 200;
+    }
+
+    li{
+        text-align: left;
+        padding-bottom: 15px;
+        font-size: $mobileDetail;
+        color: $gray;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    .winners-list {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tracks-winners, .overall-lists{
+        width: 80%;
+        display: flex 1 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        border-radius: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-left: 0px;
+        margin-bottom: 20px;
+    }
+
+    .overall-list-div {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .left-list, .right-list{
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+
+    @include desktop-and-up{
+        h1{
+            font-size: $title;
+        }
+        h3{
+            font-size: $header;
+            padding: 20px 0 20px 0;
+            margin: 0;
+        }
+        li{
+            font-size: $detail;
+        }
+        .overall-list-div {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .tracks-winners, .overall-lists{
+            width: 40%;
+            padding-right: 20px;
+            margin-left: 20px;
+        }
+    }
+
+}

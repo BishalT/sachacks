@@ -1,0 +1,32 @@
+
+// about page
+.timer{
+    	/*border: 2px solid transparent;*/
+    .timer-title {
+    	font-size: 30px;
+    	padding: 2px 5px 2px 5px;
+    }
+    #timer-box{
+        display:flex;
+        width: 100%;
+        justify-content: center;
+    }
+    .timer-number, span {
+        // font-family: 'Avenir-Bold';
+    	text-align: center;
+    	color: $navy;
+        font-size: 2.5em;
+    	display: inline-block;
+    	padding-top: 15px;
+        padding-bottom: 15px;
+        @media screen and (min-width: 768px){
+            font-size: 3.0em;
+        }
+    }
+    span, #days, #sec {
+        font-family: 'Avenir-Regular'!important;
+    }
+    #hours, #min {
+        font-weight: 1000;
+    }
+}

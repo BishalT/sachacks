@@ -1,0 +1,33 @@
+// main header
+.header {
+  margin: 0px 2%;
+  max-width: 800px;
+  position: absolute;
+  display: flex;
+  font-weight: $titleWeight;
+  h5 {
+    color: $yellow!important;
+  }
+  .logo {
+    // width: 80%;
+    display: inline-block;
+    img {
+      padding-left: 3vh;
+      max-height: 100px;
+      @media screen and (min-width:1024px){
+        max-height: 180px;
+      }
+    }
+  }
+  .header-title {
+    width: 200px;
+    display: none;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    img {
+      max-width: 100%;
+      margin: 40px;
+    }
+  }
+}

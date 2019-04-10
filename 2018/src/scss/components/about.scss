@@ -1,0 +1,46 @@
+
+// about page
+.about{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+  h1{
+    color: $navy;
+    text-align: left;
+    font-size: $titleMobile;
+    margin-bottom: 10px;
+    font-weight: $titleWeight;
+    letter-spacing: -1.7px;
+  }
+  .yellow {
+   color: $yellow;
+   font-weight: 900;
+  }
+
+
+
+  .detail {
+    p{
+      color: $gray;
+      font-size: $mobileDetail;
+      line-height: $detailHeight;
+      text-align: left;
+      font-weight: $detailWeight;
+    }
+  }
+  @media screen and (min-width:1023px) {
+      flex-direction: row;
+      text-align: center;
+      h1{
+          text-align: left;
+          max-width: 300px;
+          font-size: $title;
+      }
+      p{
+          margin: 10px 0px 30px 100px;
+          max-width: 1000px;
+          font-size: $detail;
+          letter-spacing: $spacingDesktop;
+      }
+  }
+}

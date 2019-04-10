@@ -1,0 +1,114 @@
+// homepage
+.homepage{
+  text-align: center;
+  img{
+    max-width: 100%;
+    width: 75%;
+    @media screen and (min-width:768px) {
+      width: 80vw;
+    }
+    @media screen and (min-width: 1023px) {
+      width: 50vw;
+    }
+  }
+
+  .mainButtons {
+     margin-bottom: 10vh;
+  }
+
+ #space {
+   margin-top: 4vh!important;
+   margin-bottom: -2vh;
+ }
+
+ .homepagespace {
+  height: 11vh;
+ }
+
+  h5 {
+    color: $yellow;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 100!important;
+  }
+
+
+  .detail {
+    max-width: 800px;
+    margin: 0 auto;
+    h2{
+      margin: 20px 0 10px 0;
+      font-size: 2.0em;
+      color: $yellow;
+      font-weight: $titleWeight;
+    }
+    h3{
+      white-space: pre-wrap;
+      color:white;
+      font-size: $titleMobile;
+      font-weight: $titleWeight;
+      letter-spacing: 1.1pt;
+      word-spacing: 1.05pt;
+      -webkit-margin-before: 0;
+      padding: 10px 0 25px 0;
+    }
+    h4 {
+      color: #72aec4;
+      line-height: $detailHeight;
+      letter-spacing: $spacing;
+      img {
+        width: 120px;
+        height: 100%;
+        margin: 0 5px;
+        vertical-align: middle;
+      }
+      @media screen and (min-width: 768px) {
+        font-size: 1.2em;
+        img{
+          width: 150px;
+        }
+      }
+    }
+    div{
+      width: 100%;
+      @include flex-col;
+      justify-content: space-between;
+      text-align: center;
+    }
+        
+    @media screen and (min-width:1023px) {
+      h3 {
+        font-size: 1.5em;
+      }
+      div{
+        width: 100%;
+        justify-content: center;
+        @include flex-row;
+      }
+      .btn{
+          margin-bottom: 0px;
+      }
+    }
+    .host {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        h3 {
+            white-space: pre-wrap;
+            color:white;
+            font-size: $titleMobile;
+            font-weight: $titleWeight;
+            letter-spacing: 1.1pt;
+            word-spacing: 1.05pt;
+            -webkit-margin-before: 0;
+            padding: 10px 0 25px 0;
+        }
+        img {
+            height: 95px;
+            width: 80px;
+        }
+        padding-bottom: 5vh;
+    }
+  }
+}
