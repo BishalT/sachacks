@@ -12,9 +12,9 @@
     }
   }
 
-  .mainButtons {
-     margin-bottom: 10vh;
-  }
+.mainButtons {
+    margin-bottom: 10vh;
+}
 
  #space {
    margin-top: 4vh!important;
@@ -89,6 +89,11 @@
           margin-bottom: 0px;
       }
     }
+
+    .nextteam {
+      padding-bottom: 10px
+    }
+    
     .host {
         display: flex;
         flex-direction: row;

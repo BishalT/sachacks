@@ -53,9 +53,11 @@ home
 ## Contributor
 #### Developers
 * [BishalT](https://github.com/BishalT) - **Bishal Thapa**
-* [code-io](https://github.com/code-io) - **Munir Sayani**
 * [DerLee4](https://github.com/DerLee4) - **Derek Lee**
-* [LambertTran](https://github.com/LambertTran) - **Lambert Tran**
 
 #### Designers
 * [genesiating](https://www.linkedin.com/in/genesiating/) - **Genesia Ting**
+
+#### Previous Developers
+* [code-io](https://github.com/code-io) - **Munir Sayani**
+* [LambertTran](https://github.com/LambertTran) - **Lambert Tran**

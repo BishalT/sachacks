@@ -186,6 +186,8 @@
         flex-direction: row; }
       .homepage .detail .btn {
         margin-bottom: 0px; } }
+    .homepage .detail .nextteam {
+      padding-bottom: 10px; }
     .homepage .detail .host {
       display: flex;
       flex-direction: row;
