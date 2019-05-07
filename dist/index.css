@@ -118,111 +118,94 @@
 
 .homepage {
   text-align: center; }
-
-.homepage img {
-  max-width: 100%;
-  width: 75%; }
-
-@media screen and (min-width: 768px) {
   .homepage img {
-    width: 80vw; } }
-
-@media screen and (min-width: 1023px) {
-  .homepage img {
-    width: 50vw; } }
-
-.homepage .mainButtons {
-  margin-bottom: 10vh; }
-
-.homepage #space {
-  margin-top: 4vh !important;
-  margin-bottom: -2vh; }
-
-.homepage .homepagespace {
-  height: 11vh; }
-
-.homepage h5 {
-  color: #fbb03a;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: 100 !important; }
-
-.homepage .detail {
-  max-width: 800px;
-  margin: 0 auto; }
-
-.homepage .detail h2 {
-  margin: 20px 0 10px 0;
-  font-size: 2.0em;
-  color: #fbb03a;
-  font-weight: 500; }
-
-.homepage .detail h3 {
-  white-space: pre-wrap;
-  color: white;
-  font-size: 2em;
-  font-weight: 500;
-  letter-spacing: 1.1pt;
-  word-spacing: 1.05pt;
-  -webkit-margin-before: 0;
-  padding: 10px 0 25px 0; }
-
-.homepage .detail h4 {
-  color: #72aec4;
-  line-height: 25pt;
-  letter-spacing: normal; }
-
-.homepage .detail h4 img {
-  width: 120px;
-  height: 100%;
-  margin: 0 5px;
-  vertical-align: middle; }
-
-@media screen and (min-width: 768px) {
-  .homepage .detail h4 {
-    font-size: 1.2em; }
-  .homepage .detail h4 img {
-    width: 150px; } }
-
-.homepage .detail div {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: center; }
-
-@media screen and (min-width: 1023px) {
-  .homepage .detail h3 {
-    font-size: 1.5em; }
-  .homepage .detail div {
-    width: 100%;
-    justify-content: center; }
-  .homepage .detail .btn {
-    margin-bottom: 20px; } }
-
-.homepage .detail .nextteam {
-  padding-bottom: 10px; }
-
-.homepage .detail .host {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 5vh; }
-
-.homepage .detail .host h3 {
-  white-space: pre-wrap;
-  color: white;
-  font-size: 2em;
-  font-weight: 500;
-  letter-spacing: 1.1pt;
-  word-spacing: 1.05pt;
-  -webkit-margin-before: 0;
-  padding: 10px 0 25px 0; }
-
-.homepage .detail .host img {
-  height: 95px;
-  width: 80px; }
+    max-width: 100%;
+    width: 75%; }
+    @media screen and (min-width: 768px) {
+      .homepage img {
+        width: 80vw; } }
+    @media screen and (min-width: 1023px) {
+      .homepage img {
+        width: 50vw; } }
+  .homepage .mainButtons {
+    margin-bottom: 10vh; }
+  .homepage #space {
+    margin-top: 4vh !important;
+    margin-bottom: -2vh; }
+  .homepage .homepagespace {
+    height: 11vh; }
+  .homepage h5 {
+    color: #fbb03a;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 100 !important; }
+  .homepage .detail {
+    max-width: 800px;
+    margin: 0 auto; }
+    .homepage .detail h2 {
+      margin: 20px 0 10px 0;
+      font-size: 2.0em;
+      color: #fbb03a;
+      font-weight: 500; }
+    .homepage .detail h3 {
+      white-space: pre-wrap;
+      color: white;
+      font-size: 2em;
+      font-weight: 500;
+      letter-spacing: 1.1pt;
+      word-spacing: 1.05pt;
+      -webkit-margin-before: 0;
+      padding: 10px 0 25px 0; }
+    .homepage .detail h4 {
+      color: #72aec4;
+      line-height: 25pt;
+      letter-spacing: normal; }
+      .homepage .detail h4 img {
+        width: 120px;
+        height: 100%;
+        margin: 0 5px;
+        vertical-align: middle; }
+      @media screen and (min-width: 768px) {
+        .homepage .detail h4 {
+          font-size: 1.2em; }
+          .homepage .detail h4 img {
+            width: 150px; } }
+    .homepage .detail div {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center; }
+    @media screen and (min-width: 1023px) {
+      .homepage .detail h3 {
+        font-size: 1.5em; }
+      .homepage .detail div {
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        flex-direction: row; }
+      .homepage .detail .btn {
+        margin-bottom: 0px; } }
+    .homepage .detail .nextteam {
+      padding-bottom: 10px; }
+    .homepage .detail .host {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 5vh; }
+      .homepage .detail .host h3 {
+        white-space: pre-wrap;
+        color: white;
+        font-size: 2em;
+        font-weight: 500;
+        letter-spacing: 1.1pt;
+        word-spacing: 1.05pt;
+        -webkit-margin-before: 0;
+        padding: 10px 0 25px 0; }
+      .homepage .detail .host img {
+        height: 95px;
+        width: 80px; }
 
 .about {
   display: flex;
@@ -312,48 +295,27 @@
 
 .sponsor {
   text-align: left;
-  background-color: white;
   display: flex;
   flex-direction: column; }
   .sponsor h1 {
-    color: #002561;
+    color: white;
     font-size: 2em;
     margin-bottom: 25px;
     font-weight: 500; }
-  .sponsor .list-sponsor {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%; }
-  .sponsor .list-sponsor-row {
-    text-align: center;
-    width: 100%;
-    display: flex;
-    flex-direction: column; }
-    .sponsor .list-sponsor-row img {
-      margin-bottom: 10px;
-      margin-top: 10px; }
-    @media screen and (max-width: 767px) {
-      .sponsor .list-sponsor-row .VMware {
-        height: 121px;
-        width: 300px; }
-      .sponsor .list-sponsor-row .hackerEarth {
-        height: 60px;
-        width: 285px; } }
   .sponsor h3 {
-    color: #5A5A5A;
+    color: white;
     width: 100%;
     font-size: 1em;
     font-weight: normal; }
     .sponsor h3 span {
       color: #fbb03a; }
-    .sponsor h3 h4 {
-      font-size: 20px;
-      color: #5A5A5A; }
-    .sponsor h3 a {
-      color: #fbb03a;
-      text-decoration: none;
-      font-weight: bold; }
+  .sponsor h4 {
+    font-size: 20px;
+    color: white; }
+  .sponsor a {
+    color: #fbb03a;
+    text-decoration: none;
+    font-weight: bold; }
   @media screen and (min-width: 1024px) {
     .sponsor h1 {
       font-size: 3.5em;

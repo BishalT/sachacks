@@ -1,8 +1,7 @@
 .sponsor{
   text-align: left;
-  background-color: white;
   h1 {
-    color: $navy;
+    color: white;
     font-size: $titleMobile;
     margin-bottom: 25px;
     font-weight: $titleWeight;
@@ -10,51 +9,25 @@
   display: flex;
   flex-direction: column;
 
-  .list-sponsor {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-  }
-  .list-sponsor-row {
-      text-align: center;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      img{
-          margin-bottom: 10px;
-          margin-top: 10px;
-      }
-      @media screen and (max-width: 767px){
-          .VMware {
-              height: 121px;
-              width: 300px;
-          }
-          .hackerEarth{
-              height: 60px;
-              width: 285px;
-          }
-      }
-  }
   h3 {
-    color: $gray;
+    color: white;
     width: 100%;
     font-size: $mobileHeader3;
     font-weight: normal;
     span{
       color: $yellow;
     }
+  }
 
   h4 {
     font-size: $sponsorshipSub;
-    color: $gray;
+    color: white;
   }
     a{
       color: $yellow;
       text-decoration: none;
       font-weight: bold;
     }
-  }
 
   @media screen and (min-width:1024px){
       h1 {
