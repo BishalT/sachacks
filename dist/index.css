@@ -118,101 +118,117 @@
 
 .homepage {
   text-align: center; }
+
+.homepage img {
+  max-width: 100%;
+  width: 75%; }
+
+@media screen and (min-width: 768px) {
   .homepage img {
-    max-width: 100%;
-    width: 75%; }
-    @media screen and (min-width: 768px) {
-      .homepage img {
-        width: 80vw; } }
-    @media screen and (min-width: 1023px) {
-      .homepage img {
-        width: 50vw; } }
-  .homepage .mainButtons {
-    margin-bottom: 10vh; }
-  .homepage #space {
-    margin-top: 4vh !important;
-    margin-bottom: -2vh; }
-  .homepage .homepagespace {
-    height: 11vh; }
-  .homepage h5 {
-    color: #fbb03a;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 100 !important; }
-  .homepage .detail {
-    max-width: 800px;
-    margin: 0 auto; }
-    .homepage .detail h2 {
-      margin: 20px 0 10px 0;
-      font-size: 2.0em;
-      color: #fbb03a;
-      font-weight: 500; }
-    .homepage .detail h3 {
-      white-space: pre-wrap;
-      color: white;
-      font-size: 2em;
-      font-weight: 500;
-      letter-spacing: 1.1pt;
-      word-spacing: 1.05pt;
-      -webkit-margin-before: 0;
-      padding: 10px 0 25px 0; }
-    .homepage .detail h4 {
-      color: #72aec4;
-      line-height: 25pt;
-      letter-spacing: normal; }
-      .homepage .detail h4 img {
-        width: 120px;
-        height: 100%;
-        margin: 0 5px;
-        vertical-align: middle; }
-      @media screen and (min-width: 768px) {
-        .homepage .detail h4 {
-          font-size: 1.2em; }
-          .homepage .detail h4 img {
-            width: 150px; } }
-    .homepage .detail div {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      text-align: center; }
-    @media screen and (min-width: 1023px) {
-      .homepage .detail h3 {
-        font-size: 1.5em; }
-      .homepage .detail div {
-        width: 100%;
-        justify-content: center;
-        display: flex;
-        flex-direction: row; }
-      .homepage .detail .btn {
-        margin-bottom: 0px; } }
-    .homepage .detail .nextteam {
-      padding-bottom: 10px; }
-    .homepage .detail .host {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      padding-bottom: 5vh; }
-      .homepage .detail .host h3 {
-        white-space: pre-wrap;
-        color: white;
-        font-size: 2em;
-        font-weight: 500;
-        letter-spacing: 1.1pt;
-        word-spacing: 1.05pt;
-        -webkit-margin-before: 0;
-        padding: 10px 0 25px 0; }
-      .homepage .detail .host img {
-        height: 95px;
-        width: 80px; }
+    width: 80vw; } }
+
+@media screen and (min-width: 1023px) {
+  .homepage img {
+    width: 50vw; } }
+
+.homepage .mainButtons {
+  margin-bottom: 10vh; }
+
+.homepage #space {
+  margin-top: 4vh !important;
+  margin-bottom: -2vh; }
+
+.homepage .homepagespace {
+  height: 11vh; }
+
+.homepage h5 {
+  color: #fbb03a;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 100 !important; }
+
+.homepage .detail {
+  max-width: 800px;
+  margin: 0 auto; }
+
+.homepage .detail h2 {
+  margin: 20px 0 10px 0;
+  font-size: 2.0em;
+  color: #fbb03a;
+  font-weight: 500; }
+
+.homepage .detail h3 {
+  white-space: pre-wrap;
+  color: white;
+  font-size: 2em;
+  font-weight: 500;
+  letter-spacing: 1.1pt;
+  word-spacing: 1.05pt;
+  -webkit-margin-before: 0;
+  padding: 10px 0 25px 0; }
+
+.homepage .detail h4 {
+  color: #72aec4;
+  line-height: 25pt;
+  letter-spacing: normal; }
+
+.homepage .detail h4 img {
+  width: 120px;
+  height: 100%;
+  margin: 0 5px;
+  vertical-align: middle; }
+
+@media screen and (min-width: 768px) {
+  .homepage .detail h4 {
+    font-size: 1.2em; }
+  .homepage .detail h4 img {
+    width: 150px; } }
+
+.homepage .detail div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center; }
+
+@media screen and (min-width: 1023px) {
+  .homepage .detail h3 {
+    font-size: 1.5em; }
+  .homepage .detail div {
+    width: 100%;
+    justify-content: center; }
+  .homepage .detail .btn {
+    margin-bottom: 20px; } }
+
+.homepage .detail .nextteam {
+  padding-bottom: 10px; }
+
+.homepage .detail .host {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5vh; }
+
+.homepage .detail .host h3 {
+  white-space: pre-wrap;
+  color: white;
+  font-size: 2em;
+  font-weight: 500;
+  letter-spacing: 1.1pt;
+  word-spacing: 1.05pt;
+  -webkit-margin-before: 0;
+  padding: 10px 0 25px 0; }
+
+.homepage .detail .host img {
+  height: 95px;
+  width: 80px; }
 
 .about {
-  background-color: white;
   display: flex;
   flex-direction: column; }
   .about h1 {
-    color: #002561;
+    color: white;
     text-align: left;
     font-size: 2em;
     margin-bottom: 10px;
@@ -222,7 +238,7 @@
     color: #fbb03a;
     font-weight: 900; }
   .about .detail p {
-    color: #5A5A5A;
+    color: white;
     font-size: 1.2em;
     line-height: 25pt;
     text-align: left;
@@ -240,87 +256,6 @@
         max-width: 1000px;
         font-size: 1em;
         letter-spacing: 1.2pt; } }
-
-.schedule {
-  text-align: left;
-  background-color: white; }
-  .schedule td {
-    color: #5A5A5A; }
-  .schedule .schedule-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-bottom: 30px; }
-    .schedule .schedule-header h1 {
-      color: #002561;
-      font-size: 2em;
-      font-weight: 500;
-      margin-bottom: 10px; }
-    .schedule .schedule-header h3 {
-      color: white;
-      font-size: 2.0em; }
-  .schedule .schedule-buttons {
-    display: flex;
-    flex-direction: row; }
-  .schedule table {
-    border: none; }
-  .schedule .btn-sched {
-    font-weight: 900;
-    color: white;
-    background-color: #fbb03a;
-    font-size: 1.0em;
-    width: 200px;
-    padding: 5px 20px;
-    text-align: center;
-    margin: 0 20px;
-    margin-bottom: 20px;
-    transition: all 0.300s ease-in;
-    height: 75px;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.08), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
-    border-radius: 7px; }
-    .schedule .btn-sched:focus {
-      outline: 0; }
-  .schedule .btn-inactive {
-    color: #fbb03a;
-    background: white;
-    cursor: pointer; }
-  .schedule .tb-active {
-    height: 100px;
-    font-size: 1.2em;
-    width: 100%; }
-    .schedule .tb-active tr:nth-child(even) {
-      background-color: #F8F8F8; }
-    .schedule .tb-active td:nth-child(3) {
-      display: none; }
-    .schedule .tb-active td:nth-child(1) {
-      width: 35%; }
-    .schedule .tb-active td:nth-child(2) {
-      font-family: Avenir-Bold;
-      font-weight: bold; }
-    .schedule .tb-active tr {
-      padding: 20px 20px 20px 20px; }
-    .schedule .tb-active td {
-      padding: 20px;
-      text-align: left; }
-  .schedule .tb-inactive {
-    display: none; }
-  @media screen and (min-width: 1024px) {
-    .schedule .tb-active {
-      font-size: 1em; }
-      .schedule .tb-active td:nth-child(3) {
-        display: block; }
-      .schedule .tb-active td:nth-child(1) {
-        width: 10%; }
-    .schedule .btn-sched {
-      width: 250px;
-      margin-bottom: 0px;
-      font-size: 1.5em; }
-    .schedule .schedule-header {
-      display: flex;
-      flex-direction: row; }
-      .schedule .schedule-header h1 {
-        font-size: 3.5em;
-        margin-bottom: 25px; } }
 
 .FAQ {
   text-align: left; }
@@ -435,85 +370,6 @@
       .sponsor .list-sponsor-row img {
         margin: 40px; } }
 
-.tracks .lower-tracks {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 90%;
-  padding-top: 25px; }
-
-.tracks h1 {
-  color: white;
-  text-align: left;
-  font-size: 2em;
-  margin-bottom: 25px;
-  font-weight: 500; }
-
-.tracks h3 {
-  color: #002561;
-  text-align: center;
-  font-size: 1.2em;
-  margin-bottom: 10px;
-  font-weight: 200; }
-
-.tracks .track {
-  background-color: white;
-  border-radius: 20px;
-  width: 85%;
-  height: 415px;
-  margin: 35px;
-  display: flex;
-  padding: 15px;
-  justify-content: space-between;
-  flex-direction: column; }
-  .tracks .track p {
-    text-align: center;
-    padding-bottom: 15px;
-    font-size: 1.2em;
-    color: #5A5A5A; }
-  .tracks .track img {
-    max-height: 90%;
-    max-width: 90%;
-    padding-left: 20px; }
-
-@media screen and (min-width: 768px) {
-  .tracks .track {
-    width: 65%;
-    height: 65%; }
-    .tracks .track p {
-      text-align: center;
-      padding: 0px 10px 0px 10px; } }
-
-@media screen and (min-width: 1023px) {
-  .tracks h1 {
-    font-size: 3.5em; }
-  .tracks h3 {
-    font-size: 2em;
-    padding: 20px 0 20px 0;
-    margin: 0; }
-  .tracks .lower-tracks {
-    flex-direction: row;
-    justify-content: center;
-    padding-top: 25px; }
-  .tracks .track {
-    width: 30%;
-    height: 100%;
-    transition: transform .2s; }
-    .tracks .track p {
-      text-align: center;
-      font-size: 1em; }
-  .tracks .track:hover {
-    transform: scale(1.1); }
-  .tracks .game-track {
-    float: left;
-    margin-left: 25px; }
-  .tracks .blockchain {
-    margin-left: 25px; }
-  .tracks .social-media {
-    float: right;
-    margin-left: 25px; } }
-
 .footer-bar {
   padding-top: 20px;
   width: 100%;
@@ -544,9 +400,6 @@
       .footer-bar .icon-bar {
         width: 50%; } }
 
-html {
-  background-image: url("/images/galaxy_rawtexture.jpeg"); }
-
 html, body {
   width: 100%;
   height: 100%;
@@ -568,7 +421,7 @@ h1 {
   padding: 0; }
 
 .wrapper {
-  background-image: url(98ee80e2e8f43d3c6d65d39aaac97e4a.jpeg);
+  background-color: #002561;
   position: relative;
   background-attachment: fixed;
   margin: 0;
@@ -609,7 +462,12 @@ h1 {
       padding: 75px 50px 75px 50px; } }
 
 .homepage {
-  padding-top: 75px; }
+  padding-top: 75px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
   @media screen and (min-width: 1023px) {
     .homepage {
       padding-bottom: 25px; } }
@@ -627,23 +485,26 @@ h1 {
   margin-bottom: 20px;
   border: 2px solid #72adc4;
   transition: all 0.300s ease-in;
-  width: 200px;
-  height: 60px;
+  width: 300px;
+  height: 90px;
   margin-bottom: 20px;
   letter-spacing: 1.3pt; }
-  .btn:hover {
-    background-color: #fbb03a;
-    border: 2px solid #fbb03a;
-    cursor: pointer; }
-  .btn:focus {
-    outline: 0; }
+
+.btn:hover {
+  background-color: #fbb03a;
+  border: 2px solid #fbb03a;
+  cursor: pointer; }
+
+.btn:focus {
+  outline: 0; }
 
 .btn-home {
   border: 1px solid white; }
-  .btn-home:hover {
-    background-color: #72adc4;
-    border: 2px solid white;
-    cursor: pointer; }
+
+.btn-home:hover {
+  background-color: #72adc4;
+  border: 2px solid white;
+  cursor: pointer; }
 
 .btn-active {
   background-color: #fbb03a;
@@ -652,72 +513,3 @@ h1 {
 
 .btn-sponsor {
   border: 2px solid #fbb03a; }
-
-.winners h1 {
-  color: white;
-  text-align: left;
-  font-size: 2em;
-  margin-bottom: 25px;
-  font-weight: 500; }
-
-.winners h3 {
-  color: #002561;
-  text-align: center;
-  font-size: 1.2em;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-weight: 200; }
-
-.winners li {
-  text-align: left;
-  padding-bottom: 15px;
-  font-size: 1.2em;
-  color: #5A5A5A; }
-
-.winners ul {
-  list-style-type: none; }
-
-.winners .winners-list {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-
-.winners .tracks-winners, .winners .overall-lists {
-  width: 80%;
-  display: flex 1 0;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  border-radius: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-left: 0px;
-  margin-bottom: 20px; }
-
-.winners .overall-list-div {
-  display: flex;
-  flex-direction: column; }
-
-.winners .left-list, .winners .right-list {
-  margin-left: 10px;
-  margin-top: 10px; }
-
-@media screen and (min-width: 1023px) {
-  .winners h1 {
-    font-size: 3.5em; }
-  .winners h3 {
-    font-size: 2em;
-    padding: 20px 0 20px 0;
-    margin: 0; }
-  .winners li {
-    font-size: 1em; }
-  .winners .overall-list-div {
-    display: flex;
-    flex-direction: row; }
-  .winners .tracks-winners, .winners .overall-lists {
-    width: 40%;
-    padding-right: 20px;
-    margin-left: 20px; } }

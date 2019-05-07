@@ -1,11 +1,9 @@
-
-// about page
+// about div
 .about{
-    background-color: white;
     display: flex;
     flex-direction: column;
   h1{
-    color: $navy;
+    color: white;
     text-align: left;
     font-size: $titleMobile;
     margin-bottom: 10px;
@@ -17,11 +15,9 @@
    font-weight: 900;
   }
 
-
-
   .detail {
     p{
-      color: $gray;
+      color: white;
       font-size: $mobileDetail;
       line-height: $detailHeight;
       text-align: left;
