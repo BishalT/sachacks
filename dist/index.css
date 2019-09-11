@@ -215,10 +215,9 @@
     text-align: left;
     font-size: 2em;
     margin-bottom: 10px;
-    font-weight: 500;
-    letter-spacing: -1.7px; }
+    font-weight: 700; }
   .about .yellow {
-    color: #fbb03a;
+    color: white;
     font-weight: 900; }
   .about .detail p {
     color: white;
@@ -233,11 +232,12 @@
       .about h1 {
         text-align: left;
         max-width: 300px;
-        font-size: 3.5em; }
-      .about p {
-        margin: 10px 0px 30px 100px;
-        max-width: 1000px;
-        font-size: 1em;
+        font-size: 2em;
+        margin-bottom: 25px; }
+      .about .detail p {
+        margin: 10px 0px 30px 0px;
+        /*max-width: 1000px;*/
+        font-size: .9em;
         letter-spacing: 1.2pt; } }
 
 .FAQ {
@@ -246,7 +246,7 @@
     color: white;
     font-size: 2em;
     margin-bottom: 10px;
-    font-weight: 500; }
+    font-weight: 700; }
   .FAQ .Q-and-A {
     width: 100%;
     display: block; }
@@ -254,22 +254,20 @@
       list-style: none;
       width: 100%; }
       .FAQ .Q-and-A li h3 {
-        font-family: 'Avenir-Bold';
-        color: #fbb03a;
+        font-family: 'Avenir-Demi';
+        color: white;
         font-size: 1em;
-        margin: 20px 0 5px 35px;
+        margin: 30px 0 20px 0;
         text-align: left;
-        text-transform: uppercase;
         font-size: 23px !important; }
       .FAQ .Q-and-A li p {
         color: white;
         font-size: 1.2em;
         line-height: 30px;
         text-align: left;
-        margin-left: 35px; }
+        margin-left: 0; }
         .FAQ .Q-and-A li p a {
           text-decoration: underline;
-          font-weight: bold;
           text-underline-position: under;
           color: white; }
   .FAQ h3 {
@@ -282,14 +280,17 @@
         color: #72adc4;
         opacity: 50%; }
   @media screen and (min-width: 1024px) {
+    .FAQ .Q-and-A {
+      column-count: 2;
+      column-gap: 120px; }
     .FAQ h1 {
       color: white;
-      font-size: 3.5em;
+      font-size: 2em;
       margin-bottom: 25px; }
     .FAQ .Q-and-A li h3 {
-      font-size: 2em; }
+      font-size: .8em; }
     .FAQ .Q-and-A li p {
-      font-size: 1em; }
+      font-size: .9em; }
     .FAQ h3 {
       font-size: 2em; } }
 
@@ -301,25 +302,26 @@
     color: white;
     font-size: 2em;
     margin-bottom: 25px;
-    font-weight: 500; }
+    text-align: center;
+    font-weight: 700; }
   .sponsor h3 {
     color: white;
     width: 100%;
     font-size: 1em;
     font-weight: normal; }
-    .sponsor h3 span {
+  .sponsor h3 span {
       color: #fbb03a; }
   .sponsor h4 {
     font-size: 20px;
     color: white; }
   .sponsor a {
-    color: #fbb03a;
-    text-decoration: none;
-    font-weight: bold; }
+    color: white;
+    text-decoration: underline;
+    font-weight: none; }
   @media screen and (min-width: 1024px) {
     .sponsor h1 {
-      font-size: 3.5em;
-      margin-bottom: 25px; }
+      font-size: 2em;
+      margin-bottom: 55px; }
     .sponsor h3 {
       font-size: 2em;
       line-height: 25pt; }
@@ -376,7 +378,7 @@ p {
   letter-spacing: normal; }
   @media screen and (min-width: 1023px) {
     p {
-      letter-spacing: 1.2pt; } }
+      letter-spacing: 1pt; } }
 
 h1 {
   margin: 0;
@@ -421,7 +423,7 @@ h1 {
   padding: 20px 20px 20px 20px; }
   @media screen and (min-width: 1023px) {
     .padding-top {
-      padding: 75px 50px 75px 50px; } }
+      padding: 75px 150px 75px 150px; } }
 
 .homepage {
   padding-top: 75px;
