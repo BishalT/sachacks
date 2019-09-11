@@ -1,10 +1,10 @@
 // about div
 .about{
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+    height: 75vh;
+
   h1{
     color: white;
-    text-align: left;
     font-size: $titleMobile;
     margin-bottom: 10px;
     font-weight: $titleWeight;
@@ -15,28 +15,62 @@
    font-weight: 900;
   }
 
+  .about-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+  }
+
+  .about-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+  }
+
   .detail {
     p{
       color: white;
       font-size: $mobileDetail;
       line-height: $detailHeight;
-      text-align: left;
       font-weight: $detailWeight;
     }
+    width: 75%;
   }
-  @media screen and (min-width:1023px) {
+  .about-image {
+    height: 300px;
+    width: 300px;
+  }
+
+  @media screen and (min-width:1025px) {
       flex-direction: row;
       text-align: center;
       h1{
           text-align: left;
-          max-width: 300px;
           font-size: $title;
       }
       p{
-          margin: 10px 0px 30px 100px;
-          max-width: 1000px;
+          text-align: left;
           font-size: $detail;
           letter-spacing: $spacingDesktop;
+      }
+      .about-description {
+        display: block;
+        margin-left: 100px;
+      }
+
+      .about-content {
+        flex-direction: row;
+      }
+
+      .about-image {
+        max-width: 650px;
+        max-height: 650px;
+        height: auto;
+        width: auto;
       }
   }
 }

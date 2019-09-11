@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LambertTran/sachacks.git"
+    "url": "git+https://github.com/BishalT/sachacks.git"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -25,14 +25,15 @@
     "style-loader": "^0.20.3",
     "url-loader": "^1.1.1",
     "webpack": "^3.11.0",
+    "webpack-cli": "^3.3.8",
     "webpack-dev-server": "^2.11.2"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/LambertTran/sachacks/issues"
+    "url": "https://github.com/BishalT/sachacks/issues"
   },
-  "homepage": "https://github.com/LambertTran/sachacks#readme",
+  "homepage": "https://github.com/BishalT/sachacks#readme",
   "dependencies": {
     "animate.css": "^3.6.1",
     "fontface-loader": "0.0.8"
